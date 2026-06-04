@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Home — Jewel Hossain</title>
+    <meta name="description"
+        content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%233b82f6'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif' font-weight='800' font-size='14'>JH</text></svg>">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">JH</div>
+        <div class="loader-bar">
+            <div class="loader-fill"></div>
+        </div>
+        <div class="loader-percent" id="loader-percent">0%</div>
+    </div>
+    <!-- Cursor -->
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="mouse-glow" id="mouse-glow"></div>
+    <!-- Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <!-- Overlays -->
+    <div class="noise"></div>
+    <div class="grid-overlay"></div>
+    <div class="blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <!-- Command Palette -->
+    <div class="cmd-palette" id="cmd-palette">
+        <div class="cmd-box">
+            <div class="cmd-input-wrap"><span class="cmd-icon">⌘</span><input class="cmd-input" id="cmd-input"
+                    placeholder="Type a command or search..." autocomplete="off"></div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-item" data-href="index.html"><span class="cmd-item-icon">🏠</span> Home</div>
+                <div class="cmd-item" data-href="pages/about.html"><span class="cmd-item-icon">👤</span> About</div>
+                <div class="cmd-item" data-href="pages/resume.html"><span class="cmd-item-icon">📄</span> Resume</div>
+                <div class="cmd-item" data-href="pages/projects/projects.html"><span class="cmd-item-icon">🚀</span>
+                    Projects</div>
+                <div class="cmd-item" data-href="pages/services/services.html"><span class="cmd-item-icon">⚡</span>
+                    Services</div>
+                <div class="cmd-item" data-href="pages/blog/blog.html"><span class="cmd-item-icon">📝</span> Blog</div>
+                <div class="cmd-item" data-href="pages/contact.html"><span class="cmd-item-icon">📬</span> Contact</div>
+                <div class="cmd-item" data-href="pages/tech-stack.html"><span class="cmd-item-icon">🛠️</span> Tech
+                    Stack</div>
+                <div class="cmd-item" data-href="pages/case-studies/wpforms-google-sheets.html"><span
+                        class="cmd-item-icon">📊</span> Case Study</div>
+            </div>
+            <div class="cmd-hint">⌘K to toggle · ESC to close</div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a class="nav-logo" href="index.html">
+            <div class="nav-logo-icon">JH</div><span>Jewel Hossain</span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="pages/about.html">About</a>
+            <a class="nav-link" href="pages/resume.html">Resume</a>
+            <a class="nav-link" href="pages/projects/projects.html">Projects</a>
+            <a class="nav-link" href="pages/services/services.html">Services</a>
+            <a class="nav-link" href="pages/blog/blog.html">Blog</a>
+            <a class="nav-link" href="pages/contact.html">Contact</a>
+        </div>
+        <a class="nav-cta magnetic" href="pages/contact.html">Let's Talk</a>
+        <button class="nav-mobile-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="15" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg></button>
+    </nav>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-close" id="mobile-close-btn">✕</button>
+        <a href="index.html">Home</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/resume.html">Resume</a>
+        <a href="pages/projects/projects.html">Projects</a>
+        <a href="pages/services/services.html">Services</a>
+        <a href="pages/blog/blog.html">Blog</a>
+        <a href="pages/tech-stack.html">Tech Stack</a>
+        <a href="pages/contact.html">Contact</a>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <main class="page-wrap">
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge hero-animate hero-animate-1"><span class="badge-dot"></span>Available for
+                            Freelance</div>
+                        <h1 class="hero-title hero-animate hero-animate-2">Hi, I'm<br><span class="gradient-text">Jewel
+                                Hossain</span></h1>
+                        <p class="hero-subtitle hero-animate hero-animate-3">WordPress Plugin Engineer <span
+                                class="hero-dot">•</span> Full Stack Developer <span class="hero-dot">•</span>
+                            Automation Specialist</p>
+                        <p class="hero-desc hero-animate hero-animate-4">I build powerful WordPress plugins, SaaS
+                            integrations, and automation solutions that help businesses save time, scale faster, and
+                            work smarter.</p>
+                        <div class="hero-ctas hero-animate hero-animate-5">
+                            <a class="btn btn-primary magnetic" href="pages/projects/projects.html"><svg
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" rx="1" />
+                                    <rect x="14" y="3" width="7" height="7" rx="1" />
+                                    <rect x="3" y="14" width="7" height="7" rx="1" />
+                                    <rect x="14" y="14" width="7" height="7" rx="1" />
+                                </svg>View Projects</a>
+                            <button class="btn btn-secondary magnetic"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
+                                </svg>Download Resume</button>
+                            <a class="btn btn-ghost" href="pages/contact.html">Contact Me →</a>
+                        </div>
+                        <div class="hero-stats hero-animate hero-animate-6">
+                            <div class="hero-stat">
+                                <div class="hero-stat-value gradient-text-cool">07+</div>
+                                <div class="hero-stat-label">Years Experience</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-value gradient-text-cool">120+</div>
+                                <div class="hero-stat-label">Projects Completed</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-value gradient-text-cool">80+</div>
+                                <div class="hero-stat-label">Happy Clients</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-value gradient-text-cool">20+</div>
+                                <div class="hero-stat-label">Plugins Published</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual hero-animate hero-animate-3">
+                        <div class="hero-image-wrapper">
+                            <div class="hero-glow glow-pulse"></div>
+                            <div class="hero-avatar"><img src="assets/images/profile.jpg" alt="Jewel Hossain"
+                                    class="hero-photo"></div>
+                            <div class="float-card float float-delay-1" style="top:8%;right:-8%"><span class="fc-dot"
+                                    style="background:#3b82f6"></span>React</div>
+                            <div class="float-card float float-delay-2" style="top:35%;left:-14%"><span class="fc-dot"
+                                    style="background:#8b5cf6"></span>WordPress</div>
+                            <div class="float-card float float-delay-3" style="bottom:28%;right:-4%"><span
+                                    class="fc-dot" style="background:#06b6d4"></span>Node.js</div>
+                            <div class="float-card float float-delay-4" style="bottom:6%;left:-8%"><span class="fc-dot"
+                                    style="background:#84cc16"></span>APIs</div>
+                            <div class="float-card float float-delay-1" style="top:4%;left:8%"><span class="fc-dot"
+                                    style="background:#ec4899"></span>PHP</div>
+                        </div>
+                        <div class="hero-terminal float-slow">
+                            <div class="terminal-dots"><span class="td td-r"></span><span class="td td-y"></span><span
+                                    class="td td-g"></span></div>
+                            <div class="terminal-code"><span class="t-comment">// Building digital
+                                    solutions</span><br><span class="t-kw">const</span> dev = {<br>&nbsp;&nbsp;name:
+                                <span class="t-str">'Jewel Hossain'</span>,<br>&nbsp;&nbsp;role: <span
+                                    class="t-str">'Plugin Engineer'</span>,<br>&nbsp;&nbsp;<span
+                                    class="t-fn">build</span>: () =&gt; <span class="t-str">'magic ✨'</span><br>};</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients -->
+        <section class="clients-section">
+            <div class="container">
+                <div class="clients-label">Trusted By Amazing Clients</div>
+            </div>
+            <div class="marquee-wrapper">
+                <div class="marquee"><span class="client-name">WPForms</span><span
+                        class="client-name">GoDaddy</span><span class="client-name">CloudWays</span><span
+                        class="client-name">HubSpot</span><span class="client-name">ThemeForest</span><span
+                        class="client-name">Envato</span><span class="client-name">Jetwoo</span><span
+                        class="client-name">WPForms</span><span class="client-name">GoDaddy</span><span
+                        class="client-name">CloudWays</span><span class="client-name">HubSpot</span><span
+                        class="client-name">ThemeForest</span><span class="client-name">Envato</span><span
+                        class="client-name">Jetwoo</span></div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section>
+            <div class="container">
+                <div class="stats-bar" data-animate="fade-up">
+                    <div class="stat-card tilt-card">
+                        <div class="stat-value gradient-text">07+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card tilt-card">
+                        <div class="stat-value gradient-text">120+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card tilt-card">
+                        <div class="stat-value gradient-text">80+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-card tilt-card">
+                        <div class="stat-value gradient-text">20+</div>
+                        <div class="stat-label">Plugins Published</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section>
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">My Projects</div>
+                    <h2 class="section-title">Solutions That Make<br>an Impact</h2>
+                </div>
+                <div class="projects-grid">
+                    <a class="project-card tilt-card" data-animate="fade-up"
+                        href="pages/projects/wpforms-google-sheets.html">
+                        <div class="project-preview">
+                            <div class="project-preview-bg">📊</div>
+                            <div class="project-overlay"></div>
+                            <div class="project-tags"><span class="tag">WordPress</span><span
+                                    class="tag">Integration</span></div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-name">WPForms Google Sheets Addon</div>
+                            <div class="project-desc">Real-time form sync to Google Sheets with advanced field mapping.
+                            </div>
+                            <div class="project-meta">
+                                <div class="project-stats"><span>10K+ installs</span><span>⭐ 4.9</span></div><span
+                                    class="project-link">View Case Study →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="1"
+                        href="pages/projects/save-resume-addon.html">
+                        <div class="project-preview">
+                            <div class="project-preview-bg">💾</div>
+                            <div class="project-overlay"></div>
+                            <div class="project-tags"><span class="tag">WordPress</span><span class="tag">SaaS</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-name">Save & Resume Addon</div>
+                            <div class="project-desc">Save partial form entries and resume later with secure token
+                                links.</div>
+                            <div class="project-meta">
+                                <div class="project-stats"><span>5K+ installs</span><span>⭐ 4.8</span></div><span
+                                    class="project-link">View Case Study →</span>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="2"
+                        href="pages/projects/salesforce-integration.html">
+                        <div class="project-preview">
+                            <div class="project-preview-bg">⚡</div>
+                            <div class="project-overlay"></div>
+                            <div class="project-tags"><span class="tag">CRM</span><span class="tag">Automation</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-name">Salesforce Integration</div>
+                            <div class="project-desc">Enterprise CRM integration with bidirectional sync and OAuth 2.0.
+                            </div>
+                            <div class="project-meta">
+                                <div class="project-stats"><span>3K+ installs</span><span>⭐ 4.7</span></div><span
+                                    class="project-link">View Case Study →</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div style="text-align:center;margin-top:var(--space-10)" data-animate="fade-up"><a
+                        class="btn btn-secondary magnetic" href="pages/projects/projects.html">View All Projects →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Services -->
+        <section>
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">My Services</div>
+                    <h2 class="section-title">What I Can Help<br>You Build</h2>
+                    <p class="section-desc">From custom plugins to complex integrations, I deliver scalable solutions
+                        for your business.</p>
+                </div>
+                <div class="services-grid">
+                    <a class="service-card tilt-card" data-animate="fade-up"
+                        href="pages/services/wordpress-plugin-dev.html">
+                        <div class="service-icon">🔌</div>
+                        <h3>WordPress Plugin Development</h3>
+                        <p>Custom plugins built with modern architecture, clean code, and enterprise-level patterns.</p>
+                    </a>
+                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="1"
+                        href="pages/services/saas-integration.html">
+                        <div class="service-icon">🔗</div>
+                        <h3>SaaS Integration Solutions</h3>
+                        <p>Connect WordPress with any SaaS platform through custom API integrations and webhooks.</p>
+                    </a>
+                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="2"
+                        href="pages/services/custom-api-dev.html">
+                        <div class="service-icon">⚙️</div>
+                        <h3>Custom API Development</h3>
+                        <p>RESTful API design, OAuth implementations, and third-party service connectors.</p>
+                    </a>
+                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="3"
+                        href="pages/services/woocommerce-dev.html">
+                        <div class="service-icon">🛒</div>
+                        <h3>WooCommerce Development</h3>
+                        <p>Custom extensions, payment gateways, partial payments, and checkout flows.</p>
+                    </a>
+                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="4"
+                        href="pages/services/automation-solutions.html">
+                        <div class="service-icon">🤖</div>
+                        <h3>Automation Solutions</h3>
+                        <p>Workflow automation, data sync systems, and intelligent business process automation.</p>
+                    </a>
+                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="5"
+                        href="pages/services/frontend-dev.html">
+                        <div class="service-icon">🎨</div>
+                        <h3>Frontend Development</h3>
+                        <p>Modern React/Next.js interfaces with Tailwind CSS, GSAP animations, and responsive design.
+                        </p>
+                    </a>
+                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="6"
+                        href="pages/services/performance-optimization.html">
+                        <div class="service-icon">🚀</div>
+                        <h3>Performance Optimization</h3>
+                        <p>Speed audits, database optimization, caching strategies, and scalability improvements.</p>
+                    </a>
+                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="7"
+                        href="pages/services/technical-consultation.html">
+                        <div class="service-icon">💡</div>
+                        <h3>Technical Consultation</h3>
+                        <p>Architecture planning, code reviews, technology decisions, and scaling strategies.</p>
+                    </a>
+                </div>
+                <div style="text-align:center;margin-top:var(--space-10)" data-animate="fade-up"><a
+                        class="btn btn-secondary magnetic" href="pages/services/services.html">View All Services →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials with Slider -->
+        <section>
+            <div class="container">
+                <div class="section-header center" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">What Clients Say</div>
+                    <h2 class="section-title">Client Testimonials</h2>
+                </div>
+                <div class="testimonials-section" data-animate="fade-up">
+                    <div class="testimonials-track" id="testimonials-track">
+                        <div class="testimonial-card">
+                            <div class="t-stars">★★★★★</div>
+                            <p class="t-text">"Jewel is an exceptional developer! His WordPress plugins are
+                                high-quality, reliable and scalable. He delivers on time and communicates clearly."</p>
+                            <div class="t-author">
+                                <div class="t-avatar">SJ</div>
+                                <div>
+                                    <div class="t-name">Sarah Johnson</div>
+                                    <div class="t-role">Founder, WP Agency</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="t-stars">★★★★★</div>
+                            <p class="t-text">"The Google Sheets integration Jewel built transformed our workflow.
+                                Flawless real-time sync and outstanding code quality."</p>
+                            <div class="t-author">
+                                <div class="t-avatar">MK</div>
+                                <div>
+                                    <div class="t-name">Michael Kim</div>
+                                    <div class="t-role">CTO, DataFlow Inc</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="t-stars">★★★★★</div>
+                            <p class="t-text">"We hired Jewel for a complex Salesforce + WooCommerce integration. He
+                                exceeded expectations. Truly a top-tier engineer."</p>
+                            <div class="t-author">
+                                <div class="t-avatar">AR</div>
+                                <div>
+                                    <div class="t-name">Alex Rivera</div>
+                                    <div class="t-role">Director, Enterprise SaaS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="t-stars">★★★★★</div>
+                            <p class="t-text">"Jewel built our entire booking system plugin from scratch. Clean
+                                architecture, excellent UX, and delivered ahead of schedule."</p>
+                            <div class="t-author">
+                                <div class="t-avatar">LP</div>
+                                <div>
+                                    <div class="t-name">Lisa Park</div>
+                                    <div class="t-role">Product Manager, BookEasy</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="t-stars">★★★★★</div>
+                            <p class="t-text">"The automation dashboard Jewel created saved us 20+ hours per week. His
+                                understanding of APIs and workflows is unmatched."</p>
+                            <div class="t-author">
+                                <div class="t-avatar">DM</div>
+                                <div>
+                                    <div class="t-name">David Martinez</div>
+                                    <div class="t-role">CEO, AutomateHQ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn" id="slider-prev">←</button>
+                        <button class="slider-btn" id="slider-next">→</button>
+                    </div>
+                    <div class="slider-dots" id="slider-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Blog -->
+        <section>
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">My Blog</div>
+                    <h2 class="section-title">Insights, Tutorials &<br>Developer Stories</h2>
+                    <p class="section-desc">Sharing knowledge to contribute to the WordPress & developer community.
+                        Insights from years of building software.</p>
+                </div>
+                <div class="blog-grid">
+                    <a class="blog-card" data-animate="fade-up" href="pages/blog/scalable-plugin-architecture.html">
+                        <div class="blog-thumb">🏗️</div>
+                        <div class="blog-body">
+                            <div class="blog-meta"><span>May 12, 2024</span><span>8 min
+                                    read</span><span>WordPress</span></div>
+                            <div class="blog-title">How I Built a Scalable WordPress Plugin Architecture</div>
+                            <div class="blog-excerpt">Building a WordPress plugin that is scalable, maintainable, and
+                                future-proof requires careful planning and architecture.</div>
+                        </div>
+                    </a>
+                    <a class="blog-card" data-animate="fade-up" data-animate-delay="1"
+                        href="pages/blog/google-sheets-wordpress.html">
+                        <div class="blog-thumb">📊</div>
+                        <div class="blog-body">
+                            <div class="blog-meta"><span>May 11, 2024</span><span>6 min
+                                    read</span><span>Integration</span></div>
+                            <div class="blog-title">Integrating Google Sheets with WordPress: Complete Guide</div>
+                            <div class="blog-excerpt">A comprehensive guide to building Google Sheets integrations for
+                                WordPress plugins using the Sheets API v4.</div>
+                        </div>
+                    </a>
+                    <a class="blog-card" data-animate="fade-up" data-animate-delay="2"
+                        href="pages/blog/automation-systems.html">
+                        <div class="blog-thumb">🤖</div>
+                        <div class="blog-body">
+                            <div class="blog-meta"><span>Apr 25, 2024</span><span>7 min
+                                    read</span><span>Automation</span></div>
+                            <div class="blog-title">Building Automation Systems That Save Time</div>
+                            <div class="blog-excerpt">How to design and build automation systems that eliminate
+                                repetitive tasks and streamline business workflows.</div>
+                        </div>
+                    </a>
+                </div>
+                <div style="text-align:center;margin-top:var(--space-10)" data-animate="fade-up"><a
+                        class="btn btn-secondary magnetic" href="pages/blog/blog.html">View All Articles →</a></div>
+            </div>
+        </section>
+
+        <!-- Workflow -->
+        <section>
+            <div class="container">
+                <div class="section-header center" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">My Workflow</div>
+                    <h2 class="section-title">How I Deliver Results</h2>
+                </div>
+                <div class="workflow-grid" data-animate="fade-up">
+                    <div class="workflow-step tilt-card">
+                        <div class="workflow-num">1</div>
+                        <h4>Plan</h4>
+                        <p>Understand requirements and define goals</p>
+                    </div>
+                    <div class="workflow-step tilt-card">
+                        <div class="workflow-num">2</div>
+                        <h4>Build</h4>
+                        <p>Write clean, scalable and secure code</p>
+                    </div>
+                    <div class="workflow-step tilt-card">
+                        <div class="workflow-num">3</div>
+                        <h4>Test</h4>
+                        <p>Ensure performance and fix issues</p>
+                    </div>
+                    <div class="workflow-step tilt-card">
+                        <div class="workflow-num">4</div>
+                        <h4>Deliver</h4>
+                        <p>Deploy, optimize and provide support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub -->
+        <section class="gh-section">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">GitHub Activity</div>
+                    <h2 class="section-title" style="font-size:var(--text-2xl)">1,247 contributions in the last year
+                    </h2>
+                </div>
+                <div class="gh-graph" id="github-graph" data-animate="fade-up"></div>
+                <div class="gh-legend" data-animate="fade-up"><span>Less</span>
+                    <div class="gh-legend-cells">
+                        <div class="gh-cell"></div>
+                        <div class="gh-cell l1"></div>
+                        <div class="gh-cell l2"></div>
+                        <div class="gh-cell l3"></div>
+                        <div class="gh-cell l4"></div>
+                    </div><span>More</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">Get In Touch</div>
+                    <h2 class="section-title">Let's Build Something<br>Amazing Together</h2>
+                    <p class="section-desc">Have a project in mind or want to collaborate? I'm always open to discussing
+                        new opportunities.</p>
+                </div>
+                <div class="contact-grid">
+                    <div data-animate="fade-right">
+                        <div class="contact-detail">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                        data-cfemail="f49c9198989bb49e918391989c9b8787959d9ada979b99">[email&#160;protected]</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <div class="contact-label">Phone</div>
+                                <div class="contact-value">+880 123 456 7890</div>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <div class="contact-label">Location</div>
+                                <div class="contact-value">Dhaka, Bangladesh</div>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">🟢</div>
+                            <div>
+                                <div class="contact-label">Availability</div>
+                                <div class="contact-value">Available for Freelance</div>
+                            </div>
+                        </div>
+                        <div class="social-links" style="margin-top:var(--space-6)">
+                            <a class="social-link" href="#" aria-label="Twitter">𝕏</a>
+                            <a class="social-link" href="#" aria-label="LinkedIn">🔵</a>
+                            <a class="social-link" href="#" aria-label="Instagram">📷</a>
+                            <a class="social-link" href="#" aria-label="YouTube">▶️</a>
+                            <a class="social-link" href="#" aria-label="GitHub">💻</a>
+                        </div>
+                        <div class="booking-card">
+                            <h4>📅 Book a Call</h4>
+                            <p>Schedule a meeting to discuss your project.</p>
+                            <div class="booking-slots">
+                                <span class="booking-slot">Mon</span>
+                                <span class="booking-slot">Tue</span>
+                                <span class="booking-slot">Wed</span>
+                                <span class="booking-slot">Thu</span>
+                                <span class="booking-slot">Fri</span>
+                            </div>
+                            <div class="booking-slots">
+                                <span class="booking-slot">10:00 AM</span>
+                                <span class="booking-slot">2:00 PM</span>
+                                <span class="booking-slot">4:00 PM</span>
+                            </div>
+                            <button class="btn btn-primary btn-block magnetic" style="margin-top:var(--space-3)">Book
+                                Now</button>
+                        </div>
+                    </div>
+                    <div class="contact-form-card" data-animate="fade-left">
+                        <form class="contact-form">
+                            <input type="hidden" name="subject" value="New message from Portfolio — Homepage">
+                            <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                            <input type="hidden" name="access_key" value="052c439d-9068-4302-a3c1-c217f39b20f5">
+                            <input type="checkbox" name="botcheck" style="display:none">
+                            <div class="form-group"><label class="form-label">Your Name *</label><input
+                                    class="form-input" name="name" placeholder="John Doe" required></div>
+                            <div class="form-group"><label class="form-label">Your Email *</label><input
+                                    class="form-input" name="email" placeholder="john@example.com" type="email"
+                                    required></div>
+                            <div class="form-group"><label class="form-label">Subject</label><input class="form-input"
+                                    name="topic" placeholder="Project Discussion"></div>
+                            <div class="form-group"><label class="form-label">Message *</label><textarea
+                                    class="form-input" name="message" placeholder="Tell me about your project..."
+                                    required></textarea></div>
+                            <button type="submit" class="form-submit magnetic">Send Message →</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Availability -->
+        <section class="availability-section">
+            <div class="container">
+                <div class="availability-card" data-animate="scale">
+                    <div class="badge"><span class="badge-dot"></span> Available Now</div>
+                    <h3>Available for Freelance</h3>
+                    <p>I'm currently available for freelance projects and exciting opportunities.</p><a
+                        class="btn btn-primary magnetic" href="pages/contact.html">Let's Talk →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="nav-logo-icon">JH</div>Jewel Hossain
+                </div>
+                <div class="footer-links">
+                    <a href="pages/about.html">About</a>
+                    <a href="pages/projects/projects.html">Projects</a>
+                    <a href="pages/contact.html">Contact</a>
+                    <a href="#" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">↑ Top</a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2024 Jewel Hossain. All rights reserved.</div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="back-to-top">↑</button>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a0653036d80bb258',t:'MTc4MDU1Nzc2Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+</body>
+
+</html>
