@@ -937,7 +937,7 @@
 }
 
 .timeline-desc {
-  max-width: 68ch;
+  max-width: 58ch;
   font-size: var(--text-xs);
   color: var(--text-muted);
   line-height: 1.65;
