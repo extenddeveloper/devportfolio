@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>How I Built a Scalable WordPress Plugin Architecture — Jewel Hossain</title>
-<meta name="description" content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
+<meta name="description" content="Building decoupled, dependency-injected plugins that safely scale across 50,000+ active installations without regressions or monolithic dependencies.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Scroll Progress -->
+    <!-- Scroll Progress -->
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- Command Palette -->
@@ -42,6 +42,7 @@
             <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
         </div>
     </div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <a class="nav-logo" href="../../index.html">
@@ -50,13 +51,24 @@
         </a>
         <div class="nav-links">
             <a class="nav-link" href="../../index.html">Overview</a>
-            <a class="nav-link " href="../../pages/projects/projects.html">Projects</a>
-            <a class="nav-link " href="../../pages/services/services.html">Services</a>
-            <a class="nav-link " href="../../pages/about.html">About</a>
+            <a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
+            <a class="nav-link" href="../../pages/services/services.html">Services</a>
+            <a class="nav-link" href="../../pages/about.html">About</a>
+            <a class="nav-link" href="../../pages/resume.html">Resume</a>
             <a class="nav-link active" href="../../pages/blog/blog.html">Blog</a>
-            <a class="nav-link " href="../../pages/contact.html">Contact</a>
+            <a class="nav-link" href="../../pages/tech-stack.html">Tech Stack</a>
+            <a class="nav-link" href="../../pages/contact.html">Contact</a>
         </div>
-        <a class="nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        <div class="nav-actions">
+            <button class="nav-search-btn" id="search-trigger" aria-label="Open command palette">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <span class="nav-search-key">⌘K</span>
+            </button>
+            <a class="btn btn-primary btn-sm nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        </div>
         <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="3" y1="6" x2="21" y2="6" />
@@ -79,38 +91,58 @@
         <a href="../../pages/contact.html">Contact</a>
     </div>
 
+    <!-- PAGE CONTENT -->
+    <main class="page-wrap">
+        <article class="article-section">
+            <div class="article-container">
+                <a href="blog.html" class="article-back-nav" data-animate="fade-up">
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13L5 8l5-5"/></svg>
+                    Back to Engineering Blog
+                </a>
 
-<!-- PAGE CONTENT -->
-<main class="page-wrap">
+                <header class="article-hero" data-animate="fade-up">
+                    <div class="badge badge-accent">WordPress Architecture</div>
+                    <h1 class="article-title-hero">How I Built a Scalable WordPress Plugin Architecture</h1>
+                    <p style="font-size:1.15rem;line-height:1.7;color:var(--text-secondary);margin-bottom:var(--space-6)">Building decoupled, dependency-injected plugins that safely scale across 50,000+ active installations without regressions or monolithic dependencies.</p>
 
-<section><div class="article-wrap" style="max-width:780px;margin:0 auto;padding:var(--space-12) var(--space-4)">
-<a href="blog.html" class="back-link" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted);margin-bottom:var(--space-6)">
-    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13L5 8l5-5"/></svg>
-    Back to Engineering Blog
-</a>
-<div class="badge badge-accent" data-animate="fade-up">WordPress Architecture · Deep Dive</div>
-<h1 class="article-title" style="margin-top:var(--space-4);font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.25" data-animate="fade-up" data-animate-delay="1">How I Built a Scalable WordPress Plugin Architecture</h1>
-<div class="article-meta" style="display:flex;align-items:center;gap:12px;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted);margin-top:var(--space-4);margin-bottom:var(--space-8);padding-bottom:var(--space-6);border-bottom:1px solid rgba(255,255,255,0.06)" data-animate="fade-up" data-animate-delay="2">
-    <span>May 12, 2024</span>
-    <span>·</span>
-    <span>8 min read</span>
-    <span>·</span>
-    <span style="color:var(--accent-light)">Jewel Hossain</span>
-</div>
+                    <div class="article-meta-row">
+                        <div class="article-author-info">
+                            <div class="article-avatar">JH</div>
+                            <div>
+                                <span class="article-author-name">Jewel Hossain</span>
+                                <span class="article-author-role">WordPress & Systems Engineer</span>
+                            </div>
+                        </div>
+                        <div class="article-meta-specs">
+                            <span>May 12, 2024</span>
+                            <span class="article-meta-dot">·</span>
+                            <span>8 min read</span>
+                            <span class="article-meta-dot">·</span>
+                            <span style="color:var(--accent-light)">Verified Technical Guide</span>
+                        </div>
+                    </div>
+                </header>
 
-<div class="article-content" style="font-size:1.02rem;line-height:1.8;color:var(--text-secondary)" data-animate="fade-up">
+                <div class="article-prose" data-animate="fade-up">
+                    
     <p>
-        Building a WordPress plugin for your own site is simple. Building one intended to run seamlessly across 50,000+ customer environments with varying PHP versions, active plugin collisions, aggressive caching layers, and diverse hosting limitations requires strict engineering discipline.
+        Building a WordPress plugin for your own personal site is simple. Building one intended to run safely across 50,000+ customer environments with varying PHP versions, competing plugin hooks, aggressive opcode caches, and diverse hosting limitations requires strict engineering discipline.
     </p>
 
-    <h2 style="font-family:var(--font-display);color:var(--text-primary);margin-top:var(--space-8);margin-bottom:var(--space-3)">1. Separation of Concerns: PSR-4 Autoloading</h2>
+    <h2>1. Separation of Concerns & PSR-4 Autoloading</h2>
     <p>
-        Legacy WordPress plugins pile procedural hook functions into a single 3,000-line <code>plugin.php</code> file. In production systems, we enforce PSR-4 autoloading with clear boundary isolation between core domain logic and WordPress runtime hooks.
+        Legacy WordPress plugins pile procedural hook functions into a single 3,000-line monolithic <code>plugin.php</code> file. In production architectures, we enforce PSR-4 autoloading with clear boundary isolation between core domain logic and WordPress runtime hooks.
     </p>
 
-    <div style="background:#090b0e;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);margin:var(--space-6) 0;overflow:hidden">
-        <div style="padding:10px 16px;background:rgba(255,255,255,0.02);border-bottom:1px solid rgba(255,255,255,0.06);font-family:var(--font-mono);font-size:0.72rem;color:var(--text-muted)">Project Directory Structure</div>
-        <pre style="margin:0;padding:16px;font-family:var(--font-mono);font-size:0.78rem;line-height:1.5;color:#e2e8f0"><code>my-enterprise-plugin/
+    <div class="article-code-window">
+        <div class="code-header">
+            <div class="mac-dots">
+                <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+            </div>
+            <span class="code-title">Directory Structure</span>
+            <span class="code-lang">TREE</span>
+        </div>
+        <pre><code>my-enterprise-plugin/
 ├── src/
 │   ├── Core/
 │   │   ├── PluginKernel.php        # Bootstraps DI container & registers services
@@ -128,48 +160,96 @@
 └── my-enterprise-plugin.php        # Thin entrypoint wrapper</code></pre>
     </div>
 
-    <h2 style="font-family:var(--font-display);color:var(--text-primary);margin-top:var(--space-8);margin-bottom:var(--space-3)">2. Dependency Injection & Service Providers</h2>
+    <h2>2. Dependency Injection & Service Providers</h2>
     <p>
         By leveraging lightweight PSR-11 service containers, components declare their dependencies explicitly rather than reaching into global state like <code>global $wpdb</code>. This enables comprehensive unit testing with PHPUnit and Mockery without requiring a live database connection.
     </p>
 
-    <h2 style="font-family:var(--font-display);color:var(--text-primary);margin-top:var(--space-8);margin-bottom:var(--space-3)">3. Security: Context-Aware Escaping & Nonce Guards</h2>
+    <div class="article-code-window">
+        <div class="code-header">
+            <div class="mac-dots">
+                <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+            </div>
+            <span class="code-title">src/Core/PluginKernel.php</span>
+            <span class="code-lang">PHP 8.3</span>
+        </div>
+        <pre><code>declare(strict_types=1);
+
+namespace Jewel\EnterprisePlugin\Core;
+
+use Psr\Container\ContainerInterface;
+
+final class PluginKernel
+{
+    private array $providers = [];
+
+    public function registerProvider(ServiceProviderInterface $provider): void
+    {
+        $this->providers[] = $provider;
+    }
+
+    public function boot(ContainerInterface $container): void
+    {
+        foreach ($this->providers as $provider) {
+            $provider->register($container);
+            $provider->boot($container);
+        }
+    }
+}</code></pre>
+    </div>
+
+    <div class="article-callout">
+        <strong>Architectural Rule:</strong>
+        Never execute business logic inside action hook callbacks. Hook callbacks should only delegate to domain service methods.
+    </div>
+
+    <h2>3. Security: Context-Aware Escaping & Nonce Guards</h2>
     <p>
-        Every AJAX, REST endpoint, and admin action must enforce 3 essential checks:
+        Every AJAX, REST endpoint, and admin action must enforce 3 essential barriers:
     </p>
-    <ul style="padding-left:24px;margin-bottom:var(--space-6)">
-        <li><strong>Capability Verification:</strong> <code>current_user_can('manage_options')</code></li>
-        <li><strong>Cryptographic Nonces:</strong> <code>check_ajax_referer('security_key')</code></li>
-        <li><strong>Context-Specific Escaping:</strong> <code>esc_html()</code> for markup, <code>esc_url()</code> for links, <code>esc_attr()</code> for element attributes.</li>
+    <ul>
+        <li><strong>Capability Verification:</strong> Validate permissions explicitly with <code>current_user_can('manage_options')</code> before modifying options.</li>
+        <li><strong>Cryptographic Nonces:</strong> Guard form POST submissions with <code>check_admin_referer('action_nonce')</code> to eliminate CSRF attack vectors.</li>
+        <li><strong>Context-Specific Escaping:</strong> Never use generic <code>esc_html()</code> for attributes or URLs. Use <code>esc_attr()</code> for HTML attributes and <code>esc_url()</code> for hyperlinks.</li>
     </ul>
 
-    <h2 style="font-family:var(--font-display);color:var(--text-primary);margin-top:var(--space-8);margin-bottom:var(--space-3)">4. Database Scalability: Bypassing wp_postmeta</h2>
+    <h2>4. Database Scalability: Bypassing wp_postmeta</h2>
     <p>
         For plugins storing time-series records (e.g. form entries, logs, sync transactions), querying <code>wp_postmeta</code> creates catastrophic table locking under high write volume. We provision dedicated, indexed custom MySQL tables with B-Tree composite keys on <code>(form_id, created_at)</code> to achieve sub-millisecond query execution.
     </p>
-</div>
 
-<div class="share-block" style="margin-top:var(--space-12);padding:24px;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-md);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px" data-animate="fade-up">
-    <div>
-        <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:600">Share This Technical Guide</h4>
-        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:2px">Help other engineers write cleaner, more resilient WordPress code.</p>
-    </div>
-    <div class="social-links">
-        <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener" class="social-link" title="Share on X" aria-label="Share on X">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener" class="social-link" title="Share on LinkedIn" aria-label="Share on LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-    </div>
-</div>
+                </div>
 
-<div style="text-align:center;margin-top:var(--space-12);margin-bottom:var(--space-16)">
-    <a class="btn btn-secondary" href="blog.html">← Back to Engineering Blog</a>
-</div>
-</div></section>
-</main>
-<!-- Footer -->
+                <!-- Article Bottom Share & Author Card -->
+                <div class="article-footer-card" data-animate="fade-up">
+                    <div>
+                        <h4 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text-primary)">Share This Technical Guide</h4>
+                        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:2px">Help other engineers write cleaner, more resilient WordPress code.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener" class="social-link" title="Share on Twitter / X" aria-label="Share on X">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener" class="social-link" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="mailto:?subject=How%20I%20Built%20a%20Scalable%20WordPress%20Plugin%20Architecture" class="social-link" title="Share via Email" aria-label="Share via Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="article-bottom-nav" data-animate="fade-up">
+                    <a class="btn btn-secondary" href="blog.html">
+                        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13L5 8l5-5"/></svg>
+                        Return to All Engineering Articles
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-inner">
@@ -191,11 +271,11 @@
             </div>
         </div>
     </footer>
-<button class="back-to-top" id="back-to-top">↑</button>
-<script src="../../js/app.js"></script>
-<script src="../../js/animations.js"></script>
 
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">↑</button>
+    <script src="../../js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../../js/animations.js"></script>
 </body>
 </html>

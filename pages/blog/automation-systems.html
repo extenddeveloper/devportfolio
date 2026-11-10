@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Building Automation Systems That Save Time — Jewel Hossain</title>
-<meta name="description" content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
+<meta name="description" content="Designing backend automation systems that eliminate repetitive operational tasks without introducing single points of failure or race conditions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Scroll Progress -->
+    <!-- Scroll Progress -->
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- Command Palette -->
@@ -42,6 +42,7 @@
             <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
         </div>
     </div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <a class="nav-logo" href="../../index.html">
@@ -50,13 +51,24 @@
         </a>
         <div class="nav-links">
             <a class="nav-link" href="../../index.html">Overview</a>
-            <a class="nav-link " href="../../pages/projects/projects.html">Projects</a>
-            <a class="nav-link " href="../../pages/services/services.html">Services</a>
-            <a class="nav-link " href="../../pages/about.html">About</a>
+            <a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
+            <a class="nav-link" href="../../pages/services/services.html">Services</a>
+            <a class="nav-link" href="../../pages/about.html">About</a>
+            <a class="nav-link" href="../../pages/resume.html">Resume</a>
             <a class="nav-link active" href="../../pages/blog/blog.html">Blog</a>
-            <a class="nav-link " href="../../pages/contact.html">Contact</a>
+            <a class="nav-link" href="../../pages/tech-stack.html">Tech Stack</a>
+            <a class="nav-link" href="../../pages/contact.html">Contact</a>
         </div>
-        <a class="nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        <div class="nav-actions">
+            <button class="nav-search-btn" id="search-trigger" aria-label="Open command palette">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+                <span class="nav-search-key">⌘K</span>
+            </button>
+            <a class="btn btn-primary btn-sm nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        </div>
         <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="3" y1="6" x2="21" y2="6" />
@@ -79,32 +91,141 @@
         <a href="../../pages/contact.html">Contact</a>
     </div>
 
-<!-- PAGE CONTENT -->
-<main class="page-wrap">
+    <!-- PAGE CONTENT -->
+    <main class="page-wrap">
+        <article class="article-section">
+            <div class="article-container">
+                <a href="blog.html" class="article-back-nav" data-animate="fade-up">
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13L5 8l5-5"/></svg>
+                    Back to Engineering Blog
+                </a>
 
-<section><div class="article-wrap">
-<div class="badge badge-accent" data-animate="blur">Automation</div>
-<h1 class="article-title" data-animate="blur" data-animate-delay="1">Building Automation Systems That Save Time</h1>
-<div class="article-meta" data-animate="blur" data-animate-delay="2"><span>Apr 25, 2024</span><span>7 min read</span><span>• Automation</span></div>
-<div class="article-content" data-animate="fade-up" data-animate-delay="3"><p>How to design automation systems that eliminate repetitive tasks and streamline workflows.</p><h2>Identify Bottlenecks</h2><p>Map existing processes to find repetitive, time-consuming manual steps.</p><h2>Design the Pipeline</h2><p>Create event-driven workflows with clear triggers, actions, and error handling.</p><h2>Monitor & Iterate</h2><p>Track automation performance and continuously optimize for reliability.</p></div>
-<div class="share-block" style="margin-top:var(--space-10)" data-animate="fade-up">
-    <h4>Share Article</h4>
-    <div class="social-links">
-        <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener" class="social-link" title="Share on Twitter / X" aria-label="Share on X">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener" class="social-link" title="Share on LinkedIn" aria-label="Share on LinkedIn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="mailto:?subject=Article" class="social-link" title="Share via Email" aria-label="Share via Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        </a>
+                <header class="article-hero" data-animate="fade-up">
+                    <div class="badge badge-accent">Automation & Systems</div>
+                    <h1 class="article-title-hero">Building Automation Systems That Save Time</h1>
+                    <p style="font-size:1.15rem;line-height:1.7;color:var(--text-secondary);margin-bottom:var(--space-6)">Designing backend automation systems that eliminate repetitive operational tasks without introducing single points of failure or race conditions.</p>
+
+                    <div class="article-meta-row">
+                        <div class="article-author-info">
+                            <div class="article-avatar">JH</div>
+                            <div>
+                                <span class="article-author-name">Jewel Hossain</span>
+                                <span class="article-author-role">WordPress & Systems Engineer</span>
+                            </div>
+                        </div>
+                        <div class="article-meta-specs">
+                            <span>Apr 25, 2024</span>
+                            <span class="article-meta-dot">·</span>
+                            <span>7 min read</span>
+                            <span class="article-meta-dot">·</span>
+                            <span style="color:var(--accent-light)">Verified Technical Guide</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="article-prose" data-animate="fade-up">
+                    
+    <p>
+        Automation in WordPress is often implemented naively with <code>wp_schedule_event()</code>. But WP-Cron is only triggered when visitors navigate to the site. On low-traffic sites, scheduled jobs are delayed for hours; on high-traffic sites, concurrent visits trigger overlapping worker jobs, causing duplicate emails, race conditions, and locked database tables.
+    </p>
+
+    <h2>1. Disabling Default WP-Cron for Real Server Daemons</h2>
+    <p>
+        The first mandatory step in any professional WordPress automation system is disabling default pseudo-cron and delegating execution to the server's systemd daemon or crontab:
+    </p>
+
+    <div class="article-code-window">
+        <div class="code-header">
+            <div class="mac-dots">
+                <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+            </div>
+            <span class="code-title">wp-config.php & crontab</span>
+            <span class="code-lang">BASH</span>
+        </div>
+        <pre><code># 1. In wp-config.php:
+define('DISABLE_WP_CRON', true);
+
+# 2. In server crontab (runs precisely every 60 seconds):
+* * * * * cd /var/www/html && wp cron event run --due-now > /dev/null 2>&1</code></pre>
     </div>
-</div></div>
-<div class="subscribe-block" style="margin-top:var(--space-5);margin-bottom:var(--space-20)" data-animate="fade-up"><h4>Subscribe</h4><p>Stay updated with new articles.</p><div class="subscribe-row"><input class="form-input" placeholder="Your email"><button class="btn btn-primary">Subscribe</button></div></div>
-<div style="text-align:center;margin-bottom:var(--space-20)"><a class="btn btn-secondary " href="blog.html">← Back to Blog</a></div>
-</div></section>
-</main>
+
+    <h2>2. Idempotency & Mutex Locks</h2>
+    <p>
+        When an automated job processes payment webhooks or synchronizes orders, it must be <strong>idempotent</strong>: running the task twice must never produce double charges or duplicate records.
+    </p>
+    <p>
+        We implement non-blocking mutex locks using Redis or MySQL advisory locks (<code>GET_LOCK()</code>). If Worker B attempts to process a queue while Worker A is active, Worker B yields immediately.
+    </p>
+
+    <div class="article-code-window">
+        <div class="code-header">
+            <div class="mac-dots">
+                <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+            </div>
+            <span class="code-title">src/Automation/MutexLock.php</span>
+            <span class="code-lang">PHP 8.3</span>
+        </div>
+        <pre><code>declare(strict_types=1);
+
+namespace Jewel\Automation;
+
+final class MutexLock
+{
+    public function acquire(string $lockKey, int $timeoutSeconds = 60): bool
+    {
+        global $wpdb;
+        $sql = $wpdb->prepare("SELECT GET_LOCK(%s, 0)", $lockKey);
+        return (bool) $wpdb->get_var($sql);
+    }
+
+    public function release(string $lockKey): void
+    {
+        global $wpdb;
+        $wpdb->query($wpdb->prepare("SELECT RELEASE_LOCK(%s)", $lockKey));
+    }
+}</code></pre>
+    </div>
+
+    <div class="article-callout">
+        <strong>Key Benefit:</strong>
+        Advisory locks are automatically released by MySQL even if the PHP process crashes unexpectedly, completely preventing permanent deadlock states.
+    </div>
+
+    <h2>3. Dead Letter Queues (DLQ) & Alerting</h2>
+    <p>
+        When an external webhook endpoint fails, failed jobs are placed in a Dead Letter Queue with an exponential retry backoff. After 5 unsuccessful attempts, an alert is dispatched to the team's Slack or Sentry channel with full stack traces.
+    </p>
+
+                </div>
+
+                <!-- Article Bottom Share & Author Card -->
+                <div class="article-footer-card" data-animate="fade-up">
+                    <div>
+                        <h4 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text-primary)">Share This Technical Guide</h4>
+                        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:2px">Help other engineers write cleaner, more resilient WordPress code.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener" class="social-link" title="Share on Twitter / X" aria-label="Share on X">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener" class="social-link" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="mailto:?subject=Building%20Automation%20Systems%20That%20Save%20Time" class="social-link" title="Share via Email" aria-label="Share via Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="article-bottom-nav" data-animate="fade-up">
+                    <a class="btn btn-secondary" href="blog.html">
+                        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13L5 8l5-5"/></svg>
+                        Return to All Engineering Articles
+                    </a>
+                </div>
+            </div>
+        </article>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -128,11 +249,11 @@
             </div>
         </div>
     </footer>
-<button class="back-to-top" id="back-to-top">↑</button>
-<script src="../../js/app.js"></script>
-<script src="../../js/animations.js"></script>
 
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">↑</button>
+    <script src="../../js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../../js/animations.js"></script>
 </body>
 </html>
