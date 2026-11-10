@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Automation Solutions — Jewel Hossain</title>
-<meta name="description" content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../css/variables.css">
-<link rel="stylesheet" href="../../css/base.css">
-<link rel="stylesheet" href="../../css/components.css">
-<link rel="stylesheet" href="../../css/layout.css">
-<link rel="stylesheet" href="../../css/animations.css">
-<link rel="stylesheet" href="../../css/pages.css">
-<link rel="stylesheet" href="../../css/responsive.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Automation Solutions — Jewel Hossain</title>
+    <meta name="description" content="Decoupled background automation, Action Scheduler queues, Redis task runners, and webhook distribution engines.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/variables.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Scroll Progress -->
     <div class="scroll-progress" id="scroll-progress"></div>
 
-    <!-- Command Palette -->
     <div class="cmd-palette" id="cmd-palette">
         <div class="cmd-box">
             <div class="cmd-input-wrap">
@@ -42,7 +40,7 @@
             <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
         </div>
     </div>
-    <!-- Navbar -->
+
     <nav class="navbar" id="navbar">
         <a class="nav-logo" href="../../index.html">
             <div class="nav-logo-icon">JH</div>
@@ -50,23 +48,20 @@
         </a>
         <div class="nav-links">
             <a class="nav-link" href="../../index.html">Overview</a>
-            <a class="nav-link " href="../../pages/projects/projects.html">Projects</a>
+            <a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
             <a class="nav-link active" href="../../pages/services/services.html">Services</a>
-            <a class="nav-link " href="../../pages/about.html">About</a>
-            <a class="nav-link " href="../../pages/blog/blog.html">Blog</a>
-            <a class="nav-link " href="../../pages/contact.html">Contact</a>
+            <a class="nav-link" href="../../pages/about.html">About</a>
+            <a class="nav-link" href="../../pages/blog/blog.html">Blog</a>
+            <a class="nav-link" href="../../pages/contact.html">Contact</a>
         </div>
         <a class="nav-cta" href="../../pages/contact.html">Let's Talk</a>
         <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="21" y2="12" />
-                <line x1="3" y1="18" x2="21" y2="18" />
+                <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
             </svg>
         </button>
     </nav>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">✕</button>
         <a href="../../index.html">Overview</a>
@@ -79,18 +74,129 @@
         <a href="../../pages/contact.html">Contact</a>
     </div>
 
-<!-- PAGE CONTENT -->
-<main class="page-wrap">
+    <main class="page-wrap">
+        <section class="sp-header" style="padding-top:140px;padding-bottom:var(--space-12)">
+            <div class="container">
+                <a href="services.html" class="back-link" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted);margin-bottom:var(--space-4)">
+                    <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13L5 8l5-5"/></svg>
+                    Back to All Services
+                </a>
+                <div class="badge badge-accent">Service Specification · Background Queues</div>
+                <h1 class="section-title" style="margin-top:var(--space-3);font-size:clamp(2rem,4vw,3rem)">Background Automation Solutions</h1>
+                <p class="section-desc" style="max-width:760px;margin-top:var(--space-2)">
+                    Offload compute-heavy business logic, scheduled batch synchronizations, and webhook dispatching to high-reliability async worker pools.
+                </p>
 
-<section style="padding-top:150px"><div class="container">
-<div class="section-header" data-animate="fade-up"><div class="badge badge-accent section-badge">Service Specification</div><h2 class="section-title">Automation Solutions</h2><p class="section-desc">Workflow automation and intelligent business process systems.</p></div>
-<div class="about-highlights" style="margin-bottom:var(--space-16)"><div class="about-highlight" data-animate="fade-up" data-animate-delay="1"><div class="about-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><h4>Workflow Engine</h4><p>Complex multi-step automations</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="2"><div class="about-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h4>Data Sync</h4><p>Cross-platform data synchronization</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="3"><div class="about-highlight-icon">⏰</div><h4>Scheduling</h4><p>Cron-based and event-driven tasks</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="4"><div class="about-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h4>Analytics</h4><p>Track automation performance</p></div></div>
-<div class="case-block" data-animate="fade-up"><h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-4);color:var(--text-primary)">My Process</h2><p style="color:var(--text-secondary);line-height:1.8">I map your business processes, identify automation opportunities, build reliable systems, and optimize over time.</p></div>
-<div style="text-align:center;margin-top:var(--space-12)" data-animate="fade-up"><a class="btn btn-primary btn-lg " href="../contact.html">Get a Quote →</a> <a class="btn btn-secondary" href="services.html">← All Services</a></div>
-</div></section>
-</main>
+                <div class="case-metrics in-view" style="margin-top:var(--space-8)">
+                    <div class="case-metric">
+                        <div class="case-metric-value" data-count="500K+">500K+</div>
+                        <div class="case-metric-label">Jobs Processed / Day</div>
+                    </div>
+                    <div class="case-metric">
+                        <div class="case-metric-value" data-count="99.99%">99.99%</div>
+                        <div class="case-metric-label">Execution Success Rate</div>
+                    </div>
+                    <div class="case-metric">
+                        <div class="case-metric-value" data-count="0ms">Zero</div>
+                        <div class="case-metric-label">Frontend Blocking Time</div>
+                    </div>
+                    <div class="case-metric">
+                        <div class="case-metric-value" data-count="5">5 Retries</div>
+                        <div class="case-metric-label">Auto Exponential Backoff</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
+        <div class="container" style="padding-bottom:var(--space-20)">
+            <div class="project-spec-hero" style="margin-bottom:var(--space-12);background:#090b0e;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);overflow:hidden">
+                <div class="preview-mac-bar" style="padding:12px 18px;background:rgba(255,255,255,0.02)">
+                    <div class="mac-dots">
+                        <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                    </div>
+                    <span class="preview-file-tag" style="font-family:var(--font-mono);font-size:0.75rem">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        QueueWorker.php — Asynchronous Action Scheduler Runner
+                    </span>
+                    <span class="preview-status-pill" style="font-family:var(--font-mono);font-size:0.7rem"><span class="status-dot-pulse"></span> Daemon Active (0 backlog)</span>
+                </div>
+                <div style="padding:24px;background:#0b0d12;font-family:var(--font-mono);font-size:0.82rem;line-height:1.65;color:#94a3b8;overflow-x:auto">
+                    <div><span style="color:#64748b">// Decoupled asynchronous worker scheduling jobs outside the HTTP request lifecycle</span></div>
+                    <div><span style="color:#38bdf8">as_schedule_single_action</span>(</div>
+                    <div style="padding-left:20px"><span style="color:#38bdf8">time</span>() + 10,</div>
+                    <div style="padding-left:20px"><span style="color:#a5f3fc">'tf_dispatch_sync_batch'</span>,</div>
+                    <div style="padding-left:20px">[<span style="color:#a5f3fc">'batch_id'</span> =&gt; <span style="color:#e2e8f0">$batchId</span>, <span style="color:#a5f3fc">'retry_count'</span> =&gt; 0],</div>
+                    <div style="padding-left:20px"><span style="color:#a5f3fc">'high-priority-sync'</span></div>
+                    <div>);</div>
+                </div>
+            </div>
+
+            <div class="section-header in-view" style="text-align:left;margin-bottom:var(--space-8)">
+                <div class="badge badge-accent">Architectural Capabilities</div>
+                <h2 class="section-title" style="font-size:var(--text-2xl)">Asynchronous Reliability Patterns</h2>
+                <p class="section-desc">Keep your front-end fast while ensuring every transaction and webhook reliably finishes.</p>
+            </div>
+
+            <div class="about-highlights" style="margin-bottom:var(--space-12)">
+                <div class="about-highlight">
+                    <div class="about-highlight-header">
+                        <div class="about-highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <h3 style="margin:0">Action Scheduler Queues</h3>
+                    </div>
+                    <p>Robust database-backed queues with batching, recurring cron frequencies, and concurrent worker thread execution.</p>
+                </div>
+
+                <div class="about-highlight">
+                    <div class="about-highlight-header">
+                        <div class="about-highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h3 style="margin:0">Redis Pub/Sub Pipelines</h3>
+                    </div>
+                    <p>In-memory queue brokers handling microsecond message distribution between WordPress and external microservices.</p>
+                </div>
+
+                <div class="about-highlight">
+                    <div class="about-highlight-header">
+                        <div class="about-highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3 style="margin:0">Dead-Letter Queue Isolation</h3>
+                    </div>
+                    <p>Failed payloads are quarantined with full stack traces, giving engineering teams one-click replay capabilities.</p>
+                </div>
+
+                <div class="about-highlight">
+                    <div class="about-highlight-header">
+                        <div class="about-highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <h3 style="margin:0">Webhook Re-try & Backoff</h3>
+                    </div>
+                    <p>Configurable exponential delays preventing third-party endpoints from rate-limiting your transactional notifications.</p>
+                </div>
+            </div>
+
+            <div class="booking-card in-view" style="padding:var(--space-8);background:rgba(56,189,248,0.03);border:1px solid rgba(56,189,248,0.18);border-radius:var(--radius-lg);text-align:center">
+                <div class="badge badge-accent" style="margin-bottom:var(--space-3)">Queue Architecture</div>
+                <h3 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;margin-bottom:8px">Stop Slowing Down Your Users</h3>
+                <p style="color:var(--text-secondary);max-width:560px;margin:0 auto var(--space-6);font-size:0.9rem">
+                    Offload slow synchronous API calls to bulletproof background queues that scale gracefully.
+                </p>
+                <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+                    <a class="btn btn-primary" href="../contact.html">
+                        Schedule Architecture Review →
+                    </a>
+                    <a class="btn btn-secondary" href="services.html">
+                        View All Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-inner">
@@ -112,8 +218,11 @@
             </div>
         </div>
     </footer>
-<button class="back-to-top" id="back-to-top">↑</button>
-<script src="../../js/app.js"></script>
-<script src="../../js/animations.js"></script>
+
+    <button class="back-to-top" id="back-to-top">↑</button>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/animations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </body>
 </html>

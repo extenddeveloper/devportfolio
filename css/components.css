@@ -478,7 +478,7 @@ textarea.form-input {
 .testimonials-section {
   position: relative;
   overflow: hidden;
-  padding: var(--space-16) 0;
+  padding: var(--space-12) 0;
 }
 
 .testimonials-track-container {

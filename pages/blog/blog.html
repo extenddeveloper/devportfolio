@@ -99,48 +99,56 @@
                     <button class="filter-btn">Automation</button>
                 </div>
 
-                <!-- Rich Blog Grid -->
-                
-                <!-- Rich Blog Grid with Code & Architecture Viewports -->
-                <div class="blog-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
-
-                    <!-- Post 1: Scalable Plugin Architecture -->
-                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" data-category="wordpress architecture" href="scalable-plugin-architecture.html">
-                        <div class="project-ui-preview" style="height:140px">
-                            <div class="preview-mac-bar">
-                                <div class="mac-dots">
-                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
-                                </div>
-                                <span class="preview-file-tag">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                                    PluginKernel.php
-                                </span>
-                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> PSR-11 Container</span>
-                            </div>
-                            <div style="font-family:var(--font-mono);font-size:0.72rem;color:#94a3b8;line-height:1.5;background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:4px;border:1px solid rgba(255,255,255,0.04)">
-                                <div><span style="color:#f43f5e">final class</span> <span style="color:#38bdf8">PluginKernel</span> {</div>
-                                <div style="padding-left:12px"><span style="color:#10b981">public function</span> <span style="color:#e2e8f0">boot</span>(): <span style="color:#38bdf8">void</span> {</div>
-                                <div style="padding-left:24px;color:#64748b">// register decoupled service providers</div>
-                                <div style="padding-left:12px">}</div>
-                                <div>}</div>
-                            </div>
-                        </div>
-                        <div class="blog-body-v2">
-                            <div class="blog-meta-v2">
+                <!-- Featured Deep Dive Article (Full Width Hero Card) -->
+                <div style="margin-bottom:var(--space-10)">
+                    <a class="blog-card-v2 spotlight-card in-view" data-category="wordpress architecture" href="scalable-plugin-architecture.html" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;padding:32px;align-items:center">
+                        <div class="blog-body-v2" style="padding:0">
+                            <div class="blog-meta-v2" style="margin-bottom:12px">
+                                <span class="badge badge-accent" style="font-size:0.7rem;padding:2px 8px">FEATURED DEEP DIVE</span>
+                                <span class="meta-dot">·</span>
                                 <span>May 12, 2024</span>
                                 <span class="meta-dot">·</span>
                                 <span>8 min read</span>
                                 <span class="meta-dot">·</span>
                                 <span class="blog-cat-badge">Architecture</span>
                             </div>
-                            <h2 class="blog-title-v2">How I Built a Scalable WordPress Plugin Architecture</h2>
-                            <p class="blog-excerpt-v2">Building decoupled, dependency-injected plugins that safely scale across 50,000+ active installations with zero regressions.</p>
-                            <div class="blog-link-row">
-                                <span>Read Technical Deep Dive</span>
-                                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            <h2 class="blog-title-v2" style="font-size:clamp(1.4rem, 2.5vw, 1.9rem);line-height:1.25;margin-bottom:14px">
+                                How I Built a Scalable WordPress Plugin Architecture
+                            </h2>
+                            <p class="blog-excerpt-v2" style="font-size:0.92rem;line-height:1.7;margin-bottom:18px">
+                                Building decoupled, dependency-injected plugins that safely scale across 50,000+ active installations with zero regressions. A comprehensive look into PSR-4 autoloading, Service Providers, and automated CI/CD verification.
+                            </p>
+                            <div class="blog-link-row" style="color:var(--accent-light);font-weight:600">
+                                <span>Read Architectural Case Study</span>
+                                <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </div>
+                        </div>
+
+                        <div class="project-ui-preview" style="height:220px;margin:0">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                    PluginKernel.php — PSR-11 Container
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> PHPStan Level 8</span>
+                            </div>
+                            <div style="font-family:var(--font-mono);font-size:0.75rem;color:#94a3b8;line-height:1.6;background:rgba(255,255,255,0.02);padding:14px 16px;border-radius:4px;border:1px solid rgba(255,255,255,0.04)">
+                                <div><span style="color:#f43f5e">final class</span> <span style="color:#38bdf8">PluginKernel</span> <span style="color:#f43f5e">implements</span> <span style="color:#38bdf8">KernelInterface</span> {</div>
+                                <div style="padding-left:14px"><span style="color:#10b981">public function</span> <span style="color:#e2e8f0">boot</span>(): <span style="color:#38bdf8">void</span> {</div>
+                                <div style="padding-left:28px;color:#64748b">// Zero-collision hook registry & IOC container</div>
+                                <div style="padding-left:28px"><span style="color:#e2e8f0">$this</span>-&gt;<span style="color:#38bdf8">container</span>-&gt;<span style="color:#e2e8f0">register</span>(<span style="color:#38bdf8">QueueProvider</span>::<span style="color:#f43f5e">class</span>);</div>
+                                <div style="padding-left:14px">}</div>
+                                <div>}</div>
                             </div>
                         </div>
                     </a>
+                </div>
+
+                <!-- Balanced 3-Column Engineering Articles Grid -->
+                <div class="blog-grid" style="grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:24px">
 
                     <!-- Post 2: Google Sheets API v4 -->
                     <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" data-category="integration tutorials" href="google-sheets-wordpress.html">

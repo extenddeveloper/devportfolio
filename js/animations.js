@@ -19,8 +19,17 @@ const Animations = {
     this.initGsapSuite();
   },
 
-  // ---- Scroll Reveal Observer ----
+    // ---- Scroll Reveal Observer (Fail-safe, no hidden blank spaces) ----
   observeAll() {
+    // Immediately reveal all section headers, cards, and major structural containers
+    const criticalSelectors = '.section-header, .availability-card, .case-metrics, .timeline, .principles-grid, .about-highlights, .contact-grid, .blog-grid, .services-grid, .projects-grid, .workflow-grid, .about-grid, .sp-content, .project-spec-hero';
+    document.querySelectorAll(criticalSelectors).forEach(el => {
+      el.classList.add('in-view');
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.visibility = 'visible';
+    });
+
     if (this.observer) this.observer.disconnect();
     this.observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -29,8 +38,19 @@ const Animations = {
           this.observer.unobserve(e.target);
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    }, { threshold: 0.01, rootMargin: '200px 0px 200px 0px' });
+
     document.querySelectorAll('[data-animate]:not(.in-view)').forEach(el => this.observer.observe(el));
+
+    // Fallback: in case of any scroll hitch, force reveal after 600ms
+    setTimeout(() => {
+      document.querySelectorAll('[data-animate]:not(.in-view)').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 300) {
+          el.classList.add('in-view');
+        }
+      });
+    }, 600);
   },
 
   // ---- Animated Stats Counter ----
@@ -237,22 +257,7 @@ const Animations = {
       });
     }
 
-    // 2. Section Header Batch Reveals
-    if (typeof ScrollTrigger !== 'undefined') {
-      gsap.utils.toArray('.section-header, .case-metrics, .availability-card').forEach(el => {
-        gsap.from(el, {
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 88%',
-            toggleActions: 'play none none none'
-          },
-          opacity: 0,
-          y: 24,
-          duration: 0.75,
-          ease: 'power2.out'
-        });
-      });
-    }
+    // 2. Section Headers are handled cleanly by CSS/IntersectionObserver to avoid opacity: 0 blanks
 
     // 3. 3D Card Tilt Parallax (Linear / Stripe Standard)
     if (!('ontouchstart' in window)) {

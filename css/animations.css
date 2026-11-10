@@ -223,3 +223,23 @@
 .spotlight-card:hover::before {
   opacity: 1;
 }
+
+/* Safety overrides: section headers and critical containers must never be stuck invisible */
+.section-header, 
+.availability-card, 
+.case-metrics,
+.timeline,
+.principles-grid,
+.about-highlights,
+.contact-grid,
+.blog-grid,
+.services-grid,
+.projects-grid,
+.workflow-grid,
+.about-grid,
+.sp-content,
+.project-spec-hero {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
