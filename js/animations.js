@@ -297,33 +297,6 @@ const Animations = {
       });
     }
 
-    // 4. Magnetic Buttons (Subtle Cursor Attraction)
-    if (!('ontouchstart' in window)) {
-      const magneticBtns = document.querySelectorAll('.btn-primary, .nav-cta');
-      magneticBtns.forEach(btn => {
-        btn.addEventListener('mousemove', e => {
-          const rect = btn.getBoundingClientRect();
-          const x = (e.clientX - rect.left) - (rect.width / 2);
-          const y = (e.clientY - rect.top) - (rect.height / 2);
-
-          gsap.to(btn, {
-            x: x * 0.28,
-            y: y * 0.28,
-            duration: 0.3,
-            ease: 'power2.out'
-          });
-        });
-
-        btn.addEventListener('mouseleave', () => {
-          gsap.to(btn, {
-            x: 0,
-            y: 0,
-            duration: 0.5,
-            ease: 'elastic.out(1, 0.4)'
-          });
-        });
-      });
-    }
   },
 
   // ---- GitHub Contribution Heatmap ----

@@ -193,8 +193,7 @@
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.project-card:hover .project-link,
-.btn:hover svg {
+.project-card:hover .project-link {
   transform: translateX(4px);
   color: var(--accent-light);
 }
