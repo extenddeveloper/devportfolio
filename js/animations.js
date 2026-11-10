@@ -16,7 +16,20 @@ const Animations = {
     this.initFormAnimations();
     this.initTestimonialsSlider();
     this.initGitHubGraph();
+    this.initBookingSlots();
     this.initGsapSuite();
+  },
+
+  // ---- Booking Slot Selection ----
+  initBookingSlots() {
+    document.querySelectorAll('.booking-slots').forEach(group => {
+      group.querySelectorAll('.booking-slot').forEach(slot => {
+        slot.addEventListener('click', () => {
+          group.querySelectorAll('.booking-slot').forEach(s => s.classList.remove('active'));
+          slot.classList.add('active');
+        });
+      });
+    });
   },
 
     // ---- Scroll Reveal Observer (Fail-safe, no hidden blank spaces) ----

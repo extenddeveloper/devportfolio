@@ -592,6 +592,13 @@
   color: var(--text-primary);
 }
 
+.booking-slot.active {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
 /* ---- Blog Grid ---- */
 .blog-grid {
   display: grid;
