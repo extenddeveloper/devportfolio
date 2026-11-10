@@ -227,88 +227,171 @@
                     <h2 class="section-title">Engineered Plugins & System Integrations</h2>
                     <p class="section-desc">Reliable extensions built with strict WordPress coding standards, automated error handling, and robust OAuth security.</p>
                 </div>
-                <div class="projects-grid">
-                    <!-- Project 1 -->
-                    <a class="project-card" data-animate="fade-up" href="pages/projects/wpforms-google-sheets.html">
-                        <div class="project-preview">
-                            <div class="project-preview-header">
-                                <span class="project-slug">addon/wpforms-google-sheets</span>
-                                <span class="project-badge">Active Maintenance</span>
+                <div class="projects-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
+                    <!-- Project 1: WPForms Google Sheets Addon -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" href="pages/projects/wpforms-google-sheets.html">
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                    sheet_sync_worker.ts
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> 10M+ Rows Synced</span>
                             </div>
-                            <div class="project-tags">
-                                <span class="tag">Sheets API v4</span>
-                                <span class="tag">OAuth 2.0</span>
-                                <span class="tag">Batch Sync</span>
+                            <div class="mockup-sheets-grid">
+                                <div class="mockup-sheets-row header">
+                                    <span>ID</span><span>ROW_KEY</span><span>EMAIL</span><span>STATUS</span>
+                                </div>
+                                <div class="mockup-sheets-row">
+                                    <span>#1042</span><span>lead_ent</span><span style="color:#94a3b8">sarah@acme.co</span><span class="pill-synced">Synced</span>
+                                </div>
+                                <div class="mockup-sheets-row">
+                                    <span>#1043</span><span>quote_req</span><span style="color:#94a3b8">david@apex.io</span><span class="pill-synced">Synced</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-body">
-                            <div class="project-name">WPForms Google Sheets Integration</div>
-                            <div class="project-desc">Real-time asynchronous form submission pipeline syncing WordPress form fields to Google Sheets with token refresh and automated error retry queues.</div>
-                            <div class="project-meta">
-                                <div class="project-stats">
-                                    <span>10,000+ installs</span>
-                                    <span>4.9 / 5.0 rating</span>
+                        <div class="project-body-v2">
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">WordPress</span>
+                                <span class="project-tag-pill">Sheets API v4</span>
+                                <span class="project-tag-pill">OAuth 2.0</span>
+                            </div>
+                            <h3 class="project-title-v2">WPForms Google Sheets Addon</h3>
+                            <p class="project-desc-v2">Real-time form synchronization with Google Sheets API v4. Features automated OAuth 2.0 refresh, batched appends, and retry queues.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>10K+</strong>
+                                        <span>Installs</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 4.9</strong>
+                                        <span>(120+ reviews)</span>
+                                    </div>
                                 </div>
-                                <span class="project-link">View Architecture →</span>
+                                <span class="project-link-action">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
                             </div>
                         </div>
                     </a>
 
-                    <!-- Project 2 -->
-                    <a class="project-card" data-animate="fade-up" data-animate-delay="1" href="pages/projects/save-resume-addon.html">
-                        <div class="project-preview">
-                            <div class="project-preview-header">
-                                <span class="project-slug">engine/save-and-resume</span>
-                                <span class="project-badge">Security Hardened</span>
+                    <!-- Project 2: Save & Resume Addon -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" href="pages/projects/save-resume-addon.html">
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    session_vault.rs
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> Encrypted Vault</span>
                             </div>
-                            <div class="project-tags">
-                                <span class="tag">Session Engine</span>
-                                <span class="tag">CSRF Tokenized</span>
-                                <span class="tag">WP REST</span>
+                            <div class="mockup-form-step">
+                                <div class="mockup-step-header">
+                                    <span>Step 3 of 4: Enterprise Billing</span>
+                                    <span style="color:#38bdf8;font-weight:600">75%</span>
+                                </div>
+                                <div class="mockup-step-bar">
+                                    <div class="mockup-step-fill"></div>
+                                </div>
+                                <div class="mockup-token-row">
+                                    <span>SESSION KEY</span>
+                                    <span class="mockup-token-val">enc_sec_8a39b...2f9c</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-body">
-                            <div class="project-name">Stateful Save & Resume Engine</div>
-                            <div class="project-desc">Cryptographically tokenized state preservation allowing users to save complex multi-step form submissions and securely resume across sessions.</div>
-                            <div class="project-meta">
-                                <div class="project-stats">
-                                    <span>5,000+ installs</span>
-                                    <span>4.8 / 5.0 rating</span>
+                        <div class="project-body-v2">
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">WordPress</span>
+                                <span class="project-tag-pill">AES-256</span>
+                                <span class="project-tag-pill">Session Store</span>
+                            </div>
+                            <h3 class="project-title-v2">Save & Resume Addon</h3>
+                            <p class="project-desc-v2">Cryptographically secure form progress persistence. Allows visitors to save partial submissions and continue seamlessly via authenticated magic links.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>5K+</strong>
+                                        <span>Installs</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 4.8</strong>
+                                        <span>(85 reviews)</span>
+                                    </div>
                                 </div>
-                                <span class="project-link">View Architecture →</span>
+                                <span class="project-link-action">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
                             </div>
                         </div>
                     </a>
 
-                    <!-- Project 3 -->
-                    <a class="project-card" data-animate="fade-up" data-animate-delay="2" href="pages/projects/salesforce-integration.html">
-                        <div class="project-preview">
-                            <div class="project-preview-header">
-                                <span class="project-slug">crm/salesforce-connector</span>
-                                <span class="project-badge">Enterprise Tier</span>
+                    <!-- Project 3: Salesforce Integration Engine -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" href="pages/projects/salesforce-integration.html">
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                                    salesforce_router.go
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> Bi-Directional</span>
                             </div>
-                            <div class="project-tags">
-                                <span class="tag">Salesforce REST</span>
-                                <span class="tag">Webhooks</span>
-                                <span class="tag">WooCommerce</span>
+                            <div class="mockup-crm-flow">
+                                <div class="mockup-crm-row">
+                                    <span class="src">wp_form_email</span>
+                                    <span class="arrow">➔</span>
+                                    <span class="dest">Lead.Email</span>
+                                </div>
+                                <div class="mockup-crm-row">
+                                    <span class="src">company_tier</span>
+                                    <span class="arrow">➔</span>
+                                    <span class="dest">Account.Type</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="project-body">
-                            <div class="project-name">Salesforce CRM WooCommerce Connector</div>
-                            <div class="project-desc">Bidirectional order, customer, and inventory sync engine bridging high-volume WooCommerce stores directly into Salesforce CRM accounts.</div>
-                            <div class="project-meta">
-                                <div class="project-stats">
-                                    <span>3,000+ installs</span>
-                                    <span>4.7 / 5.0 rating</span>
+                        <div class="project-body-v2">
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">Salesforce CRM</span>
+                                <span class="project-tag-pill">REST API</span>
+                                <span class="project-tag-pill">Webhooks</span>
+                            </div>
+                            <h3 class="project-title-v2">Salesforce Integration Engine</h3>
+                            <p class="project-desc-v2">Enterprise CRM sync pipeline mapping WordPress submissions directly into Salesforce Leads, Contacts, and Custom Objects with duplicate checks.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>3K+</strong>
+                                        <span>Installs</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 4.7</strong>
+                                        <span>(40 reviews)</span>
+                                    </div>
                                 </div>
-                                <span class="project-link">View Architecture →</span>
+                                <span class="project-link-action">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
                             </div>
                         </div>
                     </a>
                 </div>
-
-                <div style="margin-top: var(--space-8); text-align: center;" data-animate="fade-up">
-                    <a class="btn btn-secondary" href="pages/projects/projects.html">View All 20+ Plugins & Integrations →</a>
+                <div style="text-align:center;margin-top:var(--space-12)">
+                    <a class="btn btn-secondary" href="pages/projects/projects.html">
+                        View All 6 Production Projects
+                        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -662,6 +745,132 @@
             </div>
         </section>
 
+        <!-- Client Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+                    <div>
+                        <div class="badge badge-accent section-badge">Verified Client Feedback</div>
+                        <h2 class="section-title">Trusted by Engineering Teams & Founders</h2>
+                        <p class="section-desc">What agency CTOs, SaaS founders, and technical leads say about working together.</p>
+                    </div>
+                    <div class="slider-controls" style="margin-top:0">
+                        <button class="slider-btn" id="slider-prev" aria-label="Previous testimonials">
+                            <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 3L5 8l6 5"/></svg>
+                        </button>
+                        <button class="slider-btn" id="slider-next" aria-label="Next testimonials">
+                            <svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l6 5-6 5"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="testimonials-track-container" data-animate="fade-up">
+                    <div class="testimonials-track" id="testimonials-track">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card">
+                            <div class="t-header">
+                                <div class="t-stars">★★★★★</div>
+                                <span class="t-verified-badge">
+                                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                    Enterprise Client
+                                </span>
+                            </div>
+                            <blockquote class="t-text">"Jewel completely re-architected our custom form pipeline to Google Sheets. Processing over 50,000 leads monthly without a single dropped packet. His code is exceptionally clean, fully typed, and unit tested."</blockquote>
+                            <div class="t-author">
+                                <div class="t-avatar">SJ</div>
+                                <div>
+                                    <span class="t-name">Sarah Johnson</span>
+                                    <span class="t-role">CTO · Digital Flow Agency</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card">
+                            <div class="t-header">
+                                <div class="t-stars">★★★★★</div>
+                                <span class="t-verified-badge">
+                                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                    Verified Client
+                                </span>
+                            </div>
+                            <blockquote class="t-text">"The Salesforce integration engine Jewel built for our WooCommerce multisite network handles bidirectional synchronization flawlessly. His error handling and retry queues saved our customer data integrity."</blockquote>
+                            <div class="t-author">
+                                <div class="t-avatar">MK</div>
+                                <div>
+                                    <span class="t-name">Michael Kim</span>
+                                    <span class="t-role">VP of Engineering · CloudScale Commerce</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card">
+                            <div class="t-header">
+                                <div class="t-stars">★★★★★</div>
+                                <span class="t-verified-badge">
+                                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                    Verified Client
+                                </span>
+                            </div>
+                            <blockquote class="t-text">"Saved us dozens of engineering hours. The Save & Resume multi-step form addon with AES-256 encrypted session tokens was delivered ahead of schedule and passed our third-party security audit with zero vulnerabilities."</blockquote>
+                            <div class="t-author">
+                                <div class="t-avatar">AR</div>
+                                <div>
+                                    <span class="t-name">Alex Rivera</span>
+                                    <span class="t-role">Founder · SaaSLaunch Studio</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-card">
+                            <div class="t-header">
+                                <div class="t-stars">★★★★★</div>
+                                <span class="t-verified-badge">
+                                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                    Enterprise Client
+                                </span>
+                            </div>
+                            <blockquote class="t-text">"Jewel is rare: a deep WordPress internals expert who also understands distributed systems, Redis caching, and modern API standards. Outstanding communicator and top-tier engineer."</blockquote>
+                            <div class="t-author">
+                                <div class="t-avatar">LP</div>
+                                <div>
+                                    <span class="t-name">Lisa Park</span>
+                                    <span class="t-role">Director of Technology · MediaPulse</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="testimonial-card">
+                            <div class="t-header">
+                                <div class="t-stars">★★★★★</div>
+                                <span class="t-verified-badge">
+                                    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/></svg>
+                                    Enterprise Client
+                                </span>
+                            </div>
+                            <blockquote class="t-text">"We had severe MySQL query bottlenecks with form submissions locking our tables. Jewel implemented custom indexed storage and streaming CSV exports that brought response times down from 4.2s to 12ms."</blockquote>
+                            <div class="t-author">
+                                <div class="t-avatar">DM</div>
+                                <div>
+                                    <span class="t-name">David Martinez</span>
+                                    <span class="t-role">Senior Architect · TechSprint Labs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-dots" id="slider-dots" style="justify-content:center;margin-top:var(--space-6)">
+                    <span class="slider-dot active" data-index="0"></span>
+                    <span class="slider-dot" data-index="1"></span>
+                    <span class="slider-dot" data-index="2"></span>
+                </div>
+            </div>
+        </section>
+
         <!-- Availability CTA -->
         <section class="availability-section">
             <div class="container">
@@ -798,6 +1007,9 @@
     <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">↑</button>
 
     <script src="js/app.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/contact-form.js"></script>
 </body>

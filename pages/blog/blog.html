@@ -100,33 +100,29 @@
                 </div>
 
                 <!-- Rich Blog Grid -->
+                
+                <!-- Rich Blog Grid with Code & Architecture Viewports -->
                 <div class="blog-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
 
                     <!-- Post 1: Scalable Plugin Architecture -->
                     <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" data-category="wordpress architecture" href="scalable-plugin-architecture.html">
-                        <div class="blog-thumb-v2">
-                            <div class="blog-thumb-top">
-                                <span class="blog-diagram-tag">SYSTEM BLUEPRINT</span>
-                                <span class="blog-read-badge">8 min read</span>
+                        <div class="project-ui-preview" style="height:140px">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                    PluginKernel.php
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> PSR-11 Container</span>
                             </div>
-                            <!-- Vector Architecture Schematic -->
-                            <div class="blog-schematic">
-                                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="10" y="16" width="68" height="28" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                    <text x="44" y="34" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle" font-weight="600">PluginCore</text>
-                                    
-                                    <path d="M78 30 H112" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3 3"/>
-                                    <polygon points="112,27 118,30 112,33" fill="#38bdf8"/>
-                                    
-                                    <rect x="118" y="16" width="76" height="28" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
-                                    <text x="156" y="34" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">HookManager</text>
-                                    
-                                    <path d="M194 30 H224" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                    <polygon points="224,27 230,30 224,33" fill="rgba(255,255,255,0.4)"/>
-                                    
-                                    <rect x="230" y="16" width="60" height="28" rx="4" fill="#101216" stroke="rgba(16,185,129,0.5)" stroke-width="1.2"/>
-                                    <text x="260" y="34" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">DB & Cache</text>
-                                </svg>
+                            <div style="font-family:var(--font-mono);font-size:0.72rem;color:#94a3b8;line-height:1.5;background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:4px;border:1px solid rgba(255,255,255,0.04)">
+                                <div><span style="color:#f43f5e">final class</span> <span style="color:#38bdf8">PluginKernel</span> {</div>
+                                <div style="padding-left:12px"><span style="color:#10b981">public function</span> <span style="color:#e2e8f0">boot</span>(): <span style="color:#38bdf8">void</span> {</div>
+                                <div style="padding-left:24px;color:#64748b">// register decoupled service providers</div>
+                                <div style="padding-left:12px">}</div>
+                                <div>}</div>
                             </div>
                         </div>
                         <div class="blog-body-v2">
@@ -135,10 +131,10 @@
                                 <span class="meta-dot">·</span>
                                 <span>8 min read</span>
                                 <span class="meta-dot">·</span>
-                                <span class="blog-cat-badge">WordPress Architecture</span>
+                                <span class="blog-cat-badge">Architecture</span>
                             </div>
                             <h2 class="blog-title-v2">How I Built a Scalable WordPress Plugin Architecture</h2>
-                            <p class="blog-excerpt-v2">Building scalable, decoupled plugins that safely power 50k+ active installations without regressions or monolithic dependencies.</p>
+                            <p class="blog-excerpt-v2">Building decoupled, dependency-injected plugins that safely scale across 50,000+ active installations with zero regressions.</p>
                             <div class="blog-link-row">
                                 <span>Read Technical Deep Dive</span>
                                 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -148,29 +144,21 @@
 
                     <!-- Post 2: Google Sheets API v4 -->
                     <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" data-category="integration tutorials" href="google-sheets-wordpress.html">
-                        <div class="blog-thumb-v2">
-                            <div class="blog-thumb-top">
-                                <span class="blog-diagram-tag">API PIPELINE</span>
-                                <span class="blog-read-badge">6 min read</span>
+                        <div class="project-ui-preview" style="height:140px">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                                    oauth_vault.ts
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> 200 OK (38ms)</span>
                             </div>
-                            <!-- Vector Architecture Schematic -->
-                            <div class="blog-schematic">
-                                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="10" y="16" width="68" height="28" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
-                                    <text x="44" y="34" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">FormSubmit</text>
-                                    
-                                    <path d="M78 30 H112" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                    <polygon points="112,27 118,30 112,33" fill="rgba(255,255,255,0.4)"/>
-                                    
-                                    <rect x="118" y="16" width="76" height="28" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                    <text x="156" y="34" fill="#38bdf8" font-size="9" font-family="monospace" text-anchor="middle">OAuth2Vault</text>
-                                    
-                                    <path d="M194 30 H224" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3 3"/>
-                                    <polygon points="224,27 230,30 224,33" fill="#10b981"/>
-                                    
-                                    <rect x="230" y="16" width="60" height="28" rx="4" fill="#101216" stroke="#10b981" stroke-width="1.2"/>
-                                    <text x="260" y="34" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">Sheets v4</text>
-                                </svg>
+                            <div style="font-family:var(--font-mono);font-size:0.72rem;color:#94a3b8;line-height:1.5;background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:4px;border:1px solid rgba(255,255,255,0.04)">
+                                <div><span style="color:#38bdf8">POST</span> <span style="color:#e2e8f0">/v4/spreadsheets/{id}/values:append</span></div>
+                                <div style="color:#10b981;font-size:0.68rem;margin-top:4px">✓ OAuth 2.0 Token Refreshed</div>
+                                <div style="color:#64748b;font-size:0.68rem">Payload: 142 batched lead records</div>
                             </div>
                         </div>
                         <div class="blog-body-v2">
@@ -179,10 +167,10 @@
                                 <span class="meta-dot">·</span>
                                 <span>6 min read</span>
                                 <span class="meta-dot">·</span>
-                                <span class="blog-cat-badge">API Integration</span>
+                                <span class="blog-cat-badge">Google APIs</span>
                             </div>
-                            <h2 class="blog-title-v2">Integrating Google Sheets with WordPress via Sheets API v4</h2>
-                            <p class="blog-excerpt-v2">A production blueprint for syncing form submissions in real time with batched append requests, automatic token refreshes, and backoff retries.</p>
+                            <h2 class="blog-title-v2">Integrating Google Sheets with WordPress</h2>
+                            <p class="blog-excerpt-v2">Complete architectural guide to building reliable Google Sheets integrations using Sheets API v4, OAuth 2.0, and queue batching.</p>
                             <div class="blog-link-row">
                                 <span>Read Technical Deep Dive</span>
                                 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -190,31 +178,23 @@
                         </div>
                     </a>
 
-                    <!-- Post 3: Background Automation Systems -->
-                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" data-category="automation tutorials" href="automation-systems.html">
-                        <div class="blog-thumb-v2">
-                            <div class="blog-thumb-top">
-                                <span class="blog-diagram-tag">ASYNC QUEUES</span>
-                                <span class="blog-read-badge">7 min read</span>
+                    <!-- Post 3: Automation Systems -->
+                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" data-category="automation" href="automation-systems.html">
+                        <div class="project-ui-preview" style="height:140px">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                    queue_worker.sh
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> Redis Cron 100/s</span>
                             </div>
-                            <!-- Vector Architecture Schematic -->
-                            <div class="blog-schematic">
-                                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="10" y="16" width="68" height="28" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
-                                    <text x="44" y="34" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">AsyncEvent</text>
-                                    
-                                    <path d="M78 30 H112" stroke="#38bdf8" stroke-width="1.2"/>
-                                    <polygon points="112,27 118,30 112,33" fill="#38bdf8"/>
-                                    
-                                    <rect x="118" y="16" width="76" height="28" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                    <text x="156" y="34" fill="#38bdf8" font-size="9" font-family="monospace" text-anchor="middle">ActionScheduler</text>
-                                    
-                                    <path d="M194 30 H224" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                    <polygon points="224,27 230,30 224,33" fill="rgba(255,255,255,0.4)"/>
-                                    
-                                    <rect x="230" y="16" width="60" height="28" rx="4" fill="#101216" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
-                                    <text x="260" y="34" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">WebhookQueue</text>
-                                </svg>
+                            <div style="font-family:var(--font-mono);font-size:0.72rem;color:#94a3b8;line-height:1.5;background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:4px;border:1px solid rgba(255,255,255,0.04)">
+                                <div style="color:#38bdf8">wp cron event run --due-now</div>
+                                <div style="color:#10b981;font-size:0.68rem;margin-top:4px">✓ Dispatched 240 webhook notifications</div>
+                                <div style="color:#64748b;font-size:0.68rem">Memory: 4.8MB · Jitter: 0.12ms</div>
                             </div>
                         </div>
                         <div class="blog-body-v2">
@@ -223,10 +203,10 @@
                                 <span class="meta-dot">·</span>
                                 <span>7 min read</span>
                                 <span class="meta-dot">·</span>
-                                <span class="blog-cat-badge">Automation & Queues</span>
+                                <span class="blog-cat-badge">Automation</span>
                             </div>
-                            <h2 class="blog-title-v2">Building Automation Systems That Save 100+ Hours</h2>
-                            <p class="blog-excerpt-v2">How to decouple long-running CRM data transformations and notifications from web requests to guarantee instantaneous page response times.</p>
+                            <h2 class="blog-title-v2">Building Automation Systems That Save Time</h2>
+                            <p class="blog-excerpt-v2">Designing backend automation systems that eliminate repetitive operational tasks without introducing single points of failure.</p>
                             <div class="blog-link-row">
                                 <span>Read Technical Deep Dive</span>
                                 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -234,31 +214,23 @@
                         </div>
                     </a>
 
-                    <!-- Post 4: Best Practices for WP Plugins -->
-                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="3" data-category="wordpress tutorials" href="wp-plugin-best-practices.html">
-                        <div class="blog-thumb-v2">
-                            <div class="blog-thumb-top">
-                                <span class="blog-diagram-tag">QUALITY GATES</span>
-                                <span class="blog-read-badge">8 min read</span>
+                    <!-- Post 4: Best Practices -->
+                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-category="wordpress" href="wp-plugin-best-practices.html">
+                        <div class="project-ui-preview" style="height:140px">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    security_audit.php
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> PHPStan Level 8</span>
                             </div>
-                            <!-- Vector Architecture Schematic -->
-                            <div class="blog-schematic">
-                                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="10" y="16" width="68" height="28" rx="4" fill="#16181e" stroke="rgba(16,185,129,0.5)" stroke-width="1.2"/>
-                                    <text x="44" y="34" fill="#10b981" font-size="9" font-family="monospace" text-anchor="middle">PHPStan L8</text>
-                                    
-                                    <path d="M78 30 H112" stroke="#10b981" stroke-width="1.2"/>
-                                    <polygon points="112,27 118,30 112,33" fill="#10b981"/>
-                                    
-                                    <rect x="118" y="16" width="76" height="28" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
-                                    <text x="156" y="34" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">WPCS Rules</text>
-                                    
-                                    <path d="M194 30 H224" stroke="#38bdf8" stroke-width="1.2"/>
-                                    <polygon points="224,27 230,30 224,33" fill="#38bdf8"/>
-                                    
-                                    <rect x="230" y="16" width="60" height="28" rx="4" fill="#101216" stroke="#38bdf8" stroke-width="1.2"/>
-                                    <text x="260" y="34" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">Pest CI/CD</text>
-                                </svg>
+                            <div style="font-family:var(--font-mono);font-size:0.72rem;color:#94a3b8;line-height:1.5;background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:4px;border:1px solid rgba(255,255,255,0.04)">
+                                <div style="color:#10b981">✓ check_admin_referer('wp_core_action')</div>
+                                <div style="color:#10b981">✓ current_user_can('manage_options')</div>
+                                <div style="color:#38bdf8">✓ sanitize_text_field($input)</div>
                             </div>
                         </div>
                         <div class="blog-body-v2">
@@ -267,18 +239,18 @@
                                 <span class="meta-dot">·</span>
                                 <span>8 min read</span>
                                 <span class="meta-dot">·</span>
-                                <span class="blog-cat-badge">WordPress Standards</span>
+                                <span class="blog-cat-badge">Standards</span>
                             </div>
                             <h2 class="blog-title-v2">Best Practices for Enterprise WP Plugin Development</h2>
-                            <p class="blog-excerpt-v2">Strict coding standards, database query hygiene, capability barriers, and cryptographic verification for professional WordPress engineering.</p>
+                            <p class="blog-excerpt-v2">Essential coding standards, security requirements, and architectural patterns every serious WordPress developer must adopt.</p>
                             <div class="blog-link-row">
                                 <span>Read Technical Deep Dive</span>
                                 <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                             </div>
                         </div>
                     </a>
-
                 </div>
+</div>
 
                 <!-- Call to action -->
                 <div style="text-align:center;margin-top:var(--space-16)" data-animate="fade-up">
@@ -318,5 +290,8 @@
     <button class="back-to-top" id="back-to-top">↑</button>
     <script src="../../js/app.js"></script>
     <script src="../../js/animations.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </body>
 </html>

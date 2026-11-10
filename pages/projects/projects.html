@@ -102,42 +102,51 @@
 
                 <!-- Rich Projects Grid (6 Blueprint Cards) -->
                 <div class="projects-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
-
                     <!-- Project 1: WPForms Google Sheets Addon -->
-                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" data-category="wordpress integration automation" href="wpforms-google-sheets.html">
-                        <div class="project-preview-v2">
-                            <span class="project-preview-badge">● 10M+ Rows Synced</span>
-                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                <text x="50" y="44" fill="#38bdf8" font-size="9" font-family="monospace" text-anchor="middle" font-weight="600">WPForms Hook</text>
-                                
-                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3 3"/>
-                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
-                                
-                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <text x="156" y="44" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">OAuth Vault</text>
-                                
-                                <path d="M186 40 H215" stroke="#10b981" stroke-width="1.2"/>
-                                <polygon points="215,37 221,40 215,43" fill="#10b981"/>
-                                
-                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="#10b981" stroke-width="1.2"/>
-                                <text x="245" y="44" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">Sheets v4</text>
-                            </svg>
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-category="wordpress integration" href="wpforms-google-sheets.html">
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                                    sheet_sync_worker.ts
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> 10M+ Rows Synced</span>
+                            </div>
+                            <div class="mockup-sheets-grid">
+                                <div class="mockup-sheets-row header">
+                                    <span>ID</span><span>ROW_KEY</span><span>EMAIL</span><span>STATUS</span>
+                                </div>
+                                <div class="mockup-sheets-row">
+                                    <span>#1042</span><span>lead_ent</span><span style="color:#94a3b8">sarah@acme.co</span><span class="pill-synced">Synced</span>
+                                </div>
+                                <div class="mockup-sheets-row">
+                                    <span>#1043</span><span>quote_req</span><span style="color:#94a3b8">david@apex.io</span><span class="pill-synced">Synced</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body-v2">
-                            <div class="project-tags-v2">
-                                <span class="project-tag-v2">WordPress</span>
-                                <span class="project-tag-v2">Sheets API</span>
-                                <span class="project-tag-v2">OAuth 2.0</span>
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">WordPress</span>
+                                <span class="project-tag-pill">Sheets API v4</span>
+                                <span class="project-tag-pill">OAuth 2.0</span>
                             </div>
                             <h2 class="project-title-v2">WPForms Google Sheets Addon</h2>
                             <p class="project-desc-v2">Real-time form synchronization with Google Sheets API v4. Features automated OAuth 2.0 refresh, batched appends, and retry queues.</p>
                             <div class="project-footer-v2">
-                                <div class="project-stats-v2">
-                                    <span class="project-stat-accent">10K+ Installs</span>
-                                    <span>4.9 ★ (120+)</span>
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>10K+</strong>
+                                        <span>Installs</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 4.9</strong>
+                                        <span>(120+ reviews)</span>
+                                    </div>
                                 </div>
-                                <span class="project-cta-v2">
+                                <span class="project-link-action">
                                     Architecture Specs
                                     <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                                 </span>
@@ -147,39 +156,51 @@
 
                     <!-- Project 2: Save & Resume Addon -->
                     <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" data-category="wordpress" href="save-resume-addon.html">
-                        <div class="project-preview-v2">
-                            <span class="project-preview-badge">● Encrypted Vault</span>
-                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">Multi-Step Form</text>
-                                
-                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2"/>
-                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
-                                
-                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">AES-256 Vault</text>
-                                
-                                <path d="M186 40 H215" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <polygon points="215,37 221,40 215,43" fill="rgba(255,255,255,0.4)"/>
-                                
-                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
-                                <text x="245" y="44" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">Magic Link</text>
-                            </svg>
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                    session_vault.rs
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> Encrypted Vault</span>
+                            </div>
+                            <div class="mockup-form-step">
+                                <div class="mockup-step-header">
+                                    <span>Step 3 of 4: Enterprise Billing</span>
+                                    <span style="color:#38bdf8;font-weight:600">75%</span>
+                                </div>
+                                <div class="mockup-step-bar">
+                                    <div class="mockup-step-fill"></div>
+                                </div>
+                                <div class="mockup-token-row">
+                                    <span>SESSION KEY</span>
+                                    <span class="mockup-token-val">enc_sec_8a39b...2f9c</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body-v2">
-                            <div class="project-tags-v2">
-                                <span class="project-tag-v2">WordPress</span>
-                                <span class="project-tag-v2">AES-256</span>
-                                <span class="project-tag-v2">Session Store</span>
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">WordPress</span>
+                                <span class="project-tag-pill">AES-256</span>
+                                <span class="project-tag-pill">Session Store</span>
                             </div>
                             <h2 class="project-title-v2">Save & Resume Addon</h2>
                             <p class="project-desc-v2">Cryptographically secure form progress persistence. Allows visitors to save partial submissions and continue seamlessly via authenticated magic links.</p>
                             <div class="project-footer-v2">
-                                <div class="project-stats-v2">
-                                    <span class="project-stat-accent">5K+ Installs</span>
-                                    <span>4.8 ★ (85)</span>
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>5K+</strong>
+                                        <span>Installs</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 4.8</strong>
+                                        <span>(85 reviews)</span>
+                                    </div>
                                 </div>
-                                <span class="project-cta-v2">
+                                <span class="project-link-action">
                                     Architecture Specs
                                     <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                                 </span>
@@ -187,43 +208,52 @@
                         </div>
                     </a>
 
-                    <!-- Project 3: Salesforce Integration -->
+                    <!-- Project 3: Salesforce Integration Engine -->
                     <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" data-category="integration automation" href="salesforce-integration.html">
-                        <div class="project-preview-v2">
-                            <span class="project-preview-badge">● Bi-Directional</span>
-                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">Lead Submits</text>
-                                
-                                <path d="M85 36 H120" stroke="#38bdf8" stroke-width="1.2"/>
-                                <polygon points="120,33 126,36 120,39" fill="#38bdf8"/>
-                                <path d="M120 44 H85" stroke="#10b981" stroke-width="1.2"/>
-                                <polygon points="85,41 79,44 85,47" fill="#10b981"/>
-                                
-                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">FieldMapper</text>
-                                
-                                <path d="M186 40 H215" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <polygon points="215,37 221,40 215,43" fill="rgba(255,255,255,0.4)"/>
-                                
-                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
-                                <text x="245" y="44" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">Salesforce</text>
-                            </svg>
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                                    salesforce_router.go
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> Bi-Directional</span>
+                            </div>
+                            <div class="mockup-crm-flow">
+                                <div class="mockup-crm-row">
+                                    <span class="src">wp_form_email</span>
+                                    <span class="arrow">➔</span>
+                                    <span class="dest">Lead.Email</span>
+                                </div>
+                                <div class="mockup-crm-row">
+                                    <span class="src">company_tier</span>
+                                    <span class="arrow">➔</span>
+                                    <span class="dest">Account.Type</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body-v2">
-                            <div class="project-tags-v2">
-                                <span class="project-tag-v2">Salesforce CRM</span>
-                                <span class="project-tag-v2">REST API</span>
-                                <span class="project-tag-v2">Webhooks</span>
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">Salesforce CRM</span>
+                                <span class="project-tag-pill">REST API</span>
+                                <span class="project-tag-pill">Webhooks</span>
                             </div>
                             <h2 class="project-title-v2">Salesforce Integration Engine</h2>
                             <p class="project-desc-v2">Enterprise CRM sync pipeline mapping WordPress submissions directly into Salesforce Leads, Contacts, and Custom Objects with duplicate checks.</p>
                             <div class="project-footer-v2">
-                                <div class="project-stats-v2">
-                                    <span class="project-stat-accent">3K+ Installs</span>
-                                    <span>4.7 ★ (40)</span>
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>3K+</strong>
+                                        <span>Installs</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 4.7</strong>
+                                        <span>(40 reviews)</span>
+                                    </div>
                                 </div>
-                                <span class="project-cta-v2">
+                                <span class="project-link-action">
                                     Architecture Specs
                                     <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                                 </span>
@@ -231,41 +261,50 @@
                         </div>
                     </a>
 
-                    <!-- Project 4: CF7 Database Engine -->
-                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" data-category="wordpress" href="wpforms-google-sheets.html">
-                        <div class="project-preview-v2">
-                            <span class="project-preview-badge">● Indexed Tables</span>
-                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">CF7 Payload</text>
-                                
-                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2"/>
-                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
-                                
-                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">SQL Indexer</text>
-                                
-                                <path d="M186 40 H215" stroke="#10b981" stroke-width="1.2"/>
-                                <polygon points="215,37 221,40 215,43" fill="#10b981"/>
-                                
-                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="#10b981" stroke-width="1.2"/>
-                                <text x="245" y="44" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">CSV Stream</text>
-                            </svg>
+                    <!-- Project 4: Contact Form 7 Database Plugin -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-category="wordpress" href="../case-studies/wpforms-google-sheets.html">
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                                    mysql_query_optimizer.sql
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> Indexed Tables</span>
+                            </div>
+                            <div class="mockup-sql-box">
+                                <div class="mockup-sql-line">
+                                    <span class="query">SELECT * FROM wp_cf7_sub WHERE id=4</span>
+                                    <span class="badge-stat">0.38ms</span>
+                                </div>
+                                <div class="mockup-sql-line">
+                                    <span style="color:#94a3b8">EXPORT CSV STREAM (142k rows)</span>
+                                    <span class="badge-stat">60 fps</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body-v2">
-                            <div class="project-tags-v2">
-                                <span class="project-tag-v2">Contact Form 7</span>
-                                <span class="project-tag-v2">MySQL Optimization</span>
-                                <span class="project-tag-v2">Memory Safe</span>
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">MySQL Engine</span>
+                                <span class="project-tag-pill">CSV Stream</span>
+                                <span class="project-tag-pill">CF7 Core</span>
                             </div>
                             <h2 class="project-title-v2">CF7 Database & Export Engine</h2>
-                            <p class="project-desc-v2">Dedicated indexed database store for Contact Form 7 submissions. Bypasses postmeta overhead and enables streaming exports of 100k+ rows.</p>
+                            <p class="project-desc-v2">High-performance custom table storage for Contact Form 7 submissions with sub-millisecond query execution and memory-safe CSV streaming.</p>
                             <div class="project-footer-v2">
-                                <div class="project-stats-v2">
-                                    <span class="project-stat-accent">8K+ Installs</span>
-                                    <span>4.8 ★ (90)</span>
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>15K+</strong>
+                                        <span>Installs</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 4.9</strong>
+                                        <span>(210 reviews)</span>
+                                    </div>
                                 </div>
-                                <span class="project-cta-v2">
+                                <span class="project-link-action">
                                     Architecture Specs
                                     <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                                 </span>
@@ -275,39 +314,52 @@
 
                     <!-- Project 5: WooCommerce Partial Payments -->
                     <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" data-category="woocommerce" href="wpforms-google-sheets.html">
-                        <div class="project-preview-v2">
-                            <span class="project-preview-badge">● Stripe Core</span>
-                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">Order Checkout</text>
-                                
-                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2"/>
-                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
-                                
-                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">Deposit Split</text>
-                                
-                                <path d="M186 40 H215" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <polygon points="215,37 221,40 215,43" fill="rgba(255,255,255,0.4)"/>
-                                
-                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
-                                <text x="245" y="44" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">Auto Settle</text>
-                            </svg>
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                                    checkout_split_ledger.php
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> Stripe Core</span>
+                            </div>
+                            <div class="mockup-split-box">
+                                <div class="mockup-split-row">
+                                    <span>Deposit Paid: <strong style="color:#10b981">$450.00</strong></span>
+                                    <span style="color:#f59e0b">Due: $450.00</span>
+                                </div>
+                                <div class="mockup-split-bar">
+                                    <div class="split-part-1"></div>
+                                    <div class="split-part-2"></div>
+                                </div>
+                                <div style="font-size:0.66rem;color:#94a3b8;display:flex;justify-content:space-between">
+                                    <span>Intent: pi_3N92...</span>
+                                    <span style="color:#10b981">Scheduled: Day 30</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body-v2">
-                            <div class="project-tags-v2">
-                                <span class="project-tag-v2">WooCommerce</span>
-                                <span class="project-tag-v2">Payment Gateways</span>
-                                <span class="project-tag-v2">Schedules</span>
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">WooCommerce</span>
+                                <span class="project-tag-pill">Stripe API</span>
+                                <span class="project-tag-pill">Payment Gateways</span>
                             </div>
-                            <h2 class="project-title-v2">WooCommerce Partial Payment Engine</h2>
-                            <p class="project-desc-v2">Flexible installment and layaway system for WooCommerce. Supports percentage deposits, milestone billing, and automated customer reminders.</p>
+                            <h2 class="project-title-v2">WooCommerce Partial Payments</h2>
+                            <p class="project-desc-v2">Split payment solution enabling deposits, layaway plans, and installment billing with automated Stripe reconciliation and ledger accounting.</p>
                             <div class="project-footer-v2">
-                                <div class="project-stats-v2">
-                                    <span class="project-stat-accent">2K+ Installs</span>
-                                    <span>4.6 ★ (35)</span>
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>2K+</strong>
+                                        <span>Installs</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 4.8</strong>
+                                        <span>(32 reviews)</span>
+                                    </div>
                                 </div>
-                                <span class="project-cta-v2">
+                                <span class="project-link-action">
                                     Architecture Specs
                                     <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                                 </span>
@@ -315,49 +367,57 @@
                         </div>
                     </a>
 
-                    <!-- Project 6: URL Shortener & Analytics Core -->
-                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" data-category="automation" href="wpforms-google-sheets.html">
-                        <div class="project-preview-v2">
-                            <span class="project-preview-badge">● Sub-5ms TTFB</span>
-                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">Short Link</text>
-                                
-                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2"/>
-                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
-                                
-                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
-                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">Redis Router</text>
-                                
-                                <path d="M186 40 H215" stroke="#10b981" stroke-width="1.2"/>
-                                <polygon points="215,37 221,40 215,43" fill="#10b981"/>
-                                
-                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="#10b981" stroke-width="1.2"/>
-                                <text x="245" y="44" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">301 Redirect</text>
-                            </svg>
+                    <!-- Project 6: URL Shortener Engine -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" data-category="automation integration" href="wpforms-google-sheets.html">
+                        <div class="project-ui-preview">
+                            <div class="preview-mac-bar">
+                                <div class="mac-dots">
+                                    <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+                                </div>
+                                <span class="preview-file-tag">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                    redis_edge_router.go
+                                </span>
+                                <span class="preview-status-pill"><span class="status-dot-pulse"></span> Sub-5ms TTFB</span>
+                            </div>
+                            <div class="mockup-redis-box">
+                                <div class="mockup-redis-row">
+                                    <span style="color:#94a3b8">GET /go/spring-sale</span>
+                                    <span style="color:#10b981;font-weight:600">CACHE HIT</span>
+                                </div>
+                                <div class="mockup-redis-row">
+                                    <span style="color:#94a3b8">Redirect P99: 2.1ms</span>
+                                    <span style="color:#38bdf8">1.2M hits/mo</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body-v2">
-                            <div class="project-tags-v2">
-                                <span class="project-tag-v2">High Scale</span>
-                                <span class="project-tag-v2">Redis</span>
-                                <span class="project-tag-v2">Click Telemetry</span>
+                            <div class="project-tags-row">
+                                <span class="project-tag-pill">Redis Cache</span>
+                                <span class="project-tag-pill">Edge Network</span>
+                                <span class="project-tag-pill">Analytics</span>
                             </div>
-                            <h2 class="project-title-v2">High-Speed URL Shortener Core</h2>
-                            <p class="project-desc-v2">Microsecond-latency link routing plugin utilizing Redis in-memory lookup. Captures geo-location, browser agents, and conversion attribution.</p>
+                            <h2 class="project-title-v2">High-Throughput URL Shortener</h2>
+                            <p class="project-desc-v2">Sub-5ms redirect engine backed by Redis caching and geo-distributed edge nodes with real-time analytics aggregation and click fraud filtering.</p>
                             <div class="project-footer-v2">
-                                <div class="project-stats-v2">
-                                    <span class="project-stat-accent">6K+ Installs</span>
-                                    <span>4.7 ★ (55)</span>
+                                <div class="project-stats-row">
+                                    <div class="project-stat-item">
+                                        <strong>1.2M</strong>
+                                        <span>Redirects/mo</span>
+                                    </div>
+                                    <div class="project-stat-item">
+                                        <strong>★ 5.0</strong>
+                                        <span>Enterprise SLA</span>
+                                    </div>
                                 </div>
-                                <span class="project-cta-v2">
+                                <span class="project-link-action">
                                     Architecture Specs
                                     <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                                 </span>
                             </div>
                         </div>
                     </a>
-
-                </div>
+</div>
 
                 <!-- Call to action -->
                 <div style="text-align:center;margin-top:var(--space-16)" data-animate="fade-up">
@@ -397,5 +457,8 @@
     <button class="back-to-top" id="back-to-top">↑</button>
     <script src="../../js/app.js"></script>
     <script src="../../js/animations.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </body>
 </html>

@@ -79,69 +79,142 @@
         <a href="../../pages/contact.html">Contact</a>
     </div>
 
+
 <!-- PAGE CONTENT -->
 <main class="page-wrap">
 
-<section class="sp-header"><div class="container">
-<div class="badge badge-accent" data-animate="fade-up"> Project Detail</div>
-<h1 class="section-title" style="margin-top:var(--space-4);font-size:clamp(1.8rem,4vw,3rem)" data-animate="fade-up" data-animate-delay="1">Save & Resume Addon</h1>
-<div class="tabs-group" style="justify-content:center;margin-top:var(--space-6)" data-animate="fade-up" data-animate-delay="2"><span class="tab-btn active">Overview</span><span class="tab-btn">Features</span><span class="tab-btn">Architecture</span><span class="tab-btn">Results</span></div>
-</div></section>
-<div class="container">
-<div class="case-metrics" data-animate="fade-up"><div class="case-metric"><div class="case-metric-value" data-count="5K+">5K+</div><div class="case-metric-label">Active Installs</div></div><div class="case-metric"><div class="case-metric-value" data-count="50K+">50K+</div><div class="case-metric-label">Forms Saved</div></div><div class="case-metric"><div class="case-metric-value" data-count="4.8">4.8 ★</div><div class="case-metric-label">User Rating</div></div><div class="case-metric"><div class="case-metric-value" data-count="96%">96%</div><div class="case-metric-label">Satisfaction</div></div></div>
-<div class="sp-content">
-<div class="case-block" data-animate="fade-up"><h2>The Challenge</h2><p>Long forms caused high abandonment rates. Users needed to save progress and return later without losing data.</p></div>
-<div class="case-block" data-animate="fade-up"><h2>The Solution</h2><p>Built a save & resume system with encrypted tokens, email resume links, auto-save drafts, and admin management.</p></div>
-<div class="case-block" data-animate="fade-up"><h2>Key Features</h2><p>• Save partial entries with one click<br>• Secure token-based resume links<br>• Email notifications with resume URLs<br>• Auto-save on field blur<br>• Admin dashboard for saved entries<br>• Expiration settings and cleanup</p></div>
-<div class="sp-gallery" data-animate="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:var(--space-8) 0">
-        <div class="sp-gallery-item" style="padding:22px;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-md);display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-                <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-light);letter-spacing:0.6px;text-transform:uppercase">System Architecture</span>
-                <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--status-active);background:var(--status-active-bg);border:1px solid rgba(16,185,129,0.2);padding:2px 6px;border-radius:var(--radius-full)">● Verified</span>
+<section class="sp-header">
+    <div class="container">
+        <a href="projects.html" class="back-link" style="display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted);margin-bottom:var(--space-4)">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13L5 8l5-5"/></svg>
+            Back to Projects Overview
+        </a>
+        <div class="badge badge-accent" data-animate="fade-up">Security Hardened · v2.4</div>
+        <h1 class="section-title" style="margin-top:var(--space-3);font-size:clamp(1.8rem,4vw,2.8rem)" data-animate="fade-up" data-animate-delay="1">Save & Resume Form State Engine</h1>
+        <p class="section-desc" style="max-width:720px;margin-top:var(--space-2)" data-animate="fade-up" data-animate-delay="1">
+            Zero-knowledge cryptographic session persistence allowing visitors to save complex multi-step form applications and resume securely via authenticated one-time magic links.
+        </p>
+
+        <div class="case-metrics" data-animate="fade-up" style="margin-top:var(--space-8)">
+            <div class="case-metric">
+                <div class="case-metric-value" data-count="5K+">5K+</div>
+                <div class="case-metric-label">Active Deployments</div>
             </div>
-            <div style="height:65px;display:flex;align-items:center;justify-content:center;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:var(--radius-xs);padding:8px">
-                <svg viewBox="0 0 240 40" fill="none" style="max-width:100%"><rect x="5" y="8" width="60" height="24" rx="3" fill="#12141a" stroke="#38bdf8"/><text x="35" y="23" fill="#38bdf8" font-size="8" font-family="monospace" text-anchor="middle">CoreEngine</text><path d="M65 20 H95" stroke="#38bdf8" stroke-dasharray="2 2"/><rect x="95" y="8" width="65" height="24" rx="3" fill="#12141a" stroke="rgba(255,255,255,0.2)"/><text x="127" y="23" fill="#f8fafc" font-size="8" font-family="monospace" text-anchor="middle">ActionQueue</text><path d="M160 20 H185" stroke="#10b981"/><rect x="185" y="8" width="50" height="24" rx="3" fill="#12141a" stroke="#10b981"/><text x="210" y="23" fill="#10b981" font-size="8" font-family="monospace" text-anchor="middle">SheetsAPI</text></svg>
+            <div class="case-metric">
+                <div class="case-metric-value" data-count="AES-256">AES-256</div>
+                <div class="case-metric-label">Encryption Standard</div>
             </div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);font-family:var(--font-mono)">Decoupled Queue & Event Dispatching Architecture</div>
-        </div>
-        <div class="sp-gallery-item" style="padding:22px;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-md);display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-                <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-light);letter-spacing:0.6px;text-transform:uppercase">OAuth 2.0 Handshake</span>
-                <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--status-active);background:var(--status-active-bg);border:1px solid rgba(16,185,129,0.2);padding:2px 6px;border-radius:var(--radius-full)">● Verified</span>
+            <div class="case-metric">
+                <div class="case-metric-value" data-count="4.8">★ 4.8</div>
+                <div class="case-metric-label">User Rating (85 Reviews)</div>
             </div>
-            <div style="height:65px;display:flex;align-items:center;justify-content:center;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:var(--radius-xs);padding:8px">
-                <svg viewBox="0 0 240 40" fill="none" style="max-width:100%"><rect x="10" y="8" width="70" height="24" rx="3" fill="#12141a" stroke="#38bdf8"/><text x="45" y="23" fill="#38bdf8" font-size="8" font-family="monospace" text-anchor="middle">AuthHandshake</text><path d="M80 20 H120" stroke="#38bdf8"/><rect x="120" y="8" width="75" height="24" rx="3" fill="#12141a" stroke="#10b981"/><text x="157" y="23" fill="#10b981" font-size="8" font-family="monospace" text-anchor="middle">AES-256 Vault</text></svg>
+            <div class="case-metric">
+                <div class="case-metric-value" data-count="0">0</div>
+                <div class="case-metric-label">Vulnerabilities in Audit</div>
             </div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);font-family:var(--font-mono)">Encrypted Refresh Token Vault with Automatic Rotation</div>
-        </div>
-        <div class="sp-gallery-item" style="padding:22px;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-md);display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-                <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-light);letter-spacing:0.6px;text-transform:uppercase">Admin Interface</span>
-                <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--status-active);background:var(--status-active-bg);border:1px solid rgba(16,185,129,0.2);padding:2px 6px;border-radius:var(--radius-full)">● Verified</span>
-            </div>
-            <div style="height:65px;display:flex;align-items:center;justify-content:center;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:var(--radius-xs);padding:8px">
-                <svg viewBox="0 0 240 40" fill="none" style="max-width:100%"><rect x="10" y="5" width="220" height="30" rx="3" fill="#12141a" stroke="rgba(255,255,255,0.15)"/><circle cx="25" cy="20" r="4" fill="#38bdf8"/><rect x="40" y="14" width="70" height="6" rx="2" fill="rgba(255,255,255,0.2)"/><rect x="40" y="24" width="40" height="4" rx="1" fill="rgba(255,255,255,0.1)"/><rect x="180" y="13" width="35" height="14" rx="3" fill="#38bdf8"/></svg>
-            </div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);font-family:var(--font-mono)">React & Gutenberg Modular Admin Settings Dashboard</div>
-        </div>
-        <div class="sp-gallery-item" style="padding:22px;background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-md);display:flex;flex-direction:column;gap:12px">
-            <div style="display:flex;justify-content:space-between;align-items:center">
-                <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-light);letter-spacing:0.6px;text-transform:uppercase">Execution Telemetry</span>
-                <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--status-active);background:var(--status-active-bg);border:1px solid rgba(16,185,129,0.2);padding:2px 6px;border-radius:var(--radius-full)">● Verified</span>
-            </div>
-            <div style="height:65px;display:flex;align-items:center;justify-content:center;background:var(--bg-tertiary);border:1px solid var(--border-color);border-radius:var(--radius-xs);padding:8px">
-                <svg viewBox="0 0 240 40" fill="none" style="max-width:100%"><polyline points="10,30 50,22 90,26 130,12 170,16 210,8 230,10" stroke="#10b981" stroke-width="1.5"/><circle cx="210" cy="8" r="3" fill="#10b981"/></svg>
-            </div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);font-family:var(--font-mono)">Real-Time Sync Metrics & Automatic Error Fallback</div>
         </div>
     </div>
-<div class="case-block" data-animate="fade-up"><h2>Results & Impact</h2><p>5,000+ active installations. Reduced form abandonment by 60%. Average completion rate increased from 45% to 82%.</p></div>
-</div>
-<div style="text-align:center;margin:var(--space-10) 0 var(--space-20)" data-animate="fade-up"><a class="btn btn-secondary " href="projects.html">← Back to Projects</a></div>
-</div>
-</main>
+</section>
 
-    <!-- Footer -->
+<div class="container" style="padding-bottom:var(--space-20)">
+    <!-- Interactive Cryptographic Progress Simulation -->
+    <div class="project-spec-hero" data-animate="fade-up" style="margin:var(--space-8) 0;background:#090b0e;border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,0.6)">
+        <div class="preview-mac-bar" style="padding:12px 18px;background:rgba(255,255,255,0.02)">
+            <div class="mac-dots">
+                <span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span>
+            </div>
+            <span class="preview-file-tag" style="font-family:var(--font-mono);font-size:0.75rem">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                crypt_session_manager.rs — Cryptographic State Machine
+            </span>
+            <span class="preview-status-pill" style="font-family:var(--font-mono);font-size:0.7rem"><span class="status-dot-pulse"></span> Zero-Knowledge Vault</span>
+        </div>
+
+        <div style="padding:24px;display:grid;grid-template-columns:1.2fr 1fr;gap:24px;background:#0b0d12">
+            <!-- Simulated Application Progress Stepper -->
+            <div style="background:#05070a;border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);padding:16px;font-family:var(--font-mono)">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(255,255,255,0.06)">
+                    <span style="font-size:0.75rem;color:var(--accent-light);font-weight:600">FORM: Enterprise_Loan_Application_v2</span>
+                    <span style="font-size:0.68rem;color:#10b981;background:rgba(16,185,129,0.1);padding:2px 8px;border-radius:4px">Step 3 of 4 Saved</span>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:0.75rem">
+                    <div style="display:flex;justify-content:space-between;color:var(--text-secondary)">
+                        <span>Financial Verification Progress</span>
+                        <span style="color:#38bdf8;font-weight:600">75% Completed</span>
+                    </div>
+                    <div style="height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden">
+                        <div style="width:75%;height:100%;background:linear-gradient(90deg,#0284c7,#38bdf8)"></div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px;font-size:0.7rem;color:var(--text-muted)">
+                        <div style="display:flex;justify-content:space-between">
+                            <span>Step 1: Entity & Corporate ID</span>
+                            <span style="color:#10b981">✓ Completed</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between">
+                            <span>Step 2: Balance Sheets & Tax ID</span>
+                            <span style="color:#10b981">✓ Completed</span>
+                        </div>
+                        <div style="display:flex;justify-content:space-between">
+                            <span>Step 3: Officer Signatures</span>
+                            <span style="color:#38bdf8">● Active Session</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Encryption & Security Info -->
+            <div style="display:flex;flex-direction:column;gap:12px;font-family:var(--font-mono)">
+                <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);padding:14px">
+                    <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Encrypted Payload Digest</div>
+                    <div style="font-size:0.78rem;color:#38bdf8;word-break:break-all;background:rgba(56,189,248,0.06);padding:6px 8px;border-radius:4px;border:1px solid rgba(56,189,248,0.15)">
+                        cipher_payload: 8a9f2c...4e19b (AES-256-GCM)
+                    </div>
+                    <p style="font-size:0.7rem;color:var(--text-muted);margin-top:6px">Database administrators have zero visibility into unencrypted customer entries.</p>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);padding:14px">
+                    <div style="font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px">Magic Link Expiration</div>
+                    <div style="display:flex;justify-content:space-between;font-size:0.78rem;color:var(--text-secondary)">
+                        <span>Link TTL:</span>
+                        <span style="color:var(--accent-light);font-weight:600">48 Hours (Auto-Purge)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technical Architecture Deep Dive -->
+    <div class="sp-content" style="display:flex;flex-direction:column;gap:var(--space-10)">
+        <div class="case-block" data-animate="fade-up">
+            <h2>The Challenge</h2>
+            <p>
+                Complex multi-page forms (mortgage inquiries, university applications, insurance audits) experience up to 68% drop-off rates when applicants cannot pause and resume their submission across devices. Storing incomplete submissions in cleartext violates privacy compliance (GDPR / HIPAA) and creates significant liability.
+            </p>
+        </div>
+
+        <div class="case-block" data-animate="fade-up">
+            <h2>The Solution</h2>
+            <p>
+                I engineered a cryptographically secured state-machine addon for WPForms. Form values are serialized, signed with an HMAC digest, and encrypted using AES-256-GCM before storage. A single-use authenticated magic link is emailed to the user, allowing one-click resumption from any device without requiring a WordPress user account.
+            </p>
+        </div>
+
+        <!-- Call to Action -->
+        <div style="background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-lg);padding:32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-top:var(--space-8)" data-animate="fade-up">
+            <div>
+                <h3 style="font-family:var(--font-display);font-size:1.25rem;font-weight:700">Need a Security-Compliant Form Solution?</h3>
+                <p style="color:var(--text-secondary);font-size:var(--text-sm);margin-top:4px">I build high-security WordPress extensions meeting enterprise compliance standards.</p>
+            </div>
+            <a href="../../pages/contact.html" class="btn btn-primary">
+                Discuss Your Architecture
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+</main>
+<!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-inner">
@@ -166,5 +239,8 @@
 <button class="back-to-top" id="back-to-top">↑</button>
 <script src="../../js/app.js"></script>
 <script src="../../js/animations.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </body>
 </html>

@@ -16,6 +16,7 @@ const Animations = {
     this.initFormAnimations();
     this.initTestimonialsSlider();
     this.initGitHubGraph();
+    this.initGsapSuite();
   },
 
   // ---- Scroll Reveal Observer ----
@@ -212,6 +213,112 @@ const Animations = {
         updateSlider();
       }, 6000);
     });
+  },
+
+  
+  // ---- GSAP 3 + ScrollTrigger Suite ($10k Agency Tier) ----
+  initGsapSuite() {
+    if (typeof gsap === 'undefined') return;
+
+    if (typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+    }
+
+    // 1. Hero Stagger Entrance
+    const heroElements = document.querySelectorAll('.hero .badge, .hero-title, .hero-desc, .hero-actions, .hero-stats');
+    if (heroElements.length) {
+      gsap.from(heroElements, {
+        opacity: 0,
+        y: 28,
+        duration: 0.9,
+        stagger: 0.12,
+        ease: 'power3.out',
+        clearProps: 'all'
+      });
+    }
+
+    // 2. Section Header Batch Reveals
+    if (typeof ScrollTrigger !== 'undefined') {
+      gsap.utils.toArray('.section-header, .case-metrics, .availability-card').forEach(el => {
+        gsap.from(el, {
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 88%',
+            toggleActions: 'play none none none'
+          },
+          opacity: 0,
+          y: 24,
+          duration: 0.75,
+          ease: 'power2.out'
+        });
+      });
+    }
+
+    // 3. 3D Card Tilt Parallax (Linear / Stripe Standard)
+    if (!('ontouchstart' in window)) {
+      const tiltCards = document.querySelectorAll('.project-card-v2, .service-card-v2, .testimonial-card');
+      tiltCards.forEach(card => {
+        card.style.transformStyle = 'preserve-3d';
+        card.style.perspective = '1000px';
+
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const tiltX = ((y - centerY) / centerY) * -5;
+          const tiltY = ((x - centerX) / centerX) * 5;
+
+          gsap.to(card, {
+            rotateX: tiltX,
+            rotateY: tiltY,
+            scale: 1.015,
+            duration: 0.35,
+            ease: 'power2.out',
+            transformPerspective: 1000
+          });
+        });
+
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, {
+            rotateX: 0,
+            rotateY: 0,
+            scale: 1,
+            duration: 0.5,
+            ease: 'power2.out'
+          });
+        });
+      });
+    }
+
+    // 4. Magnetic Buttons (Subtle Cursor Attraction)
+    if (!('ontouchstart' in window)) {
+      const magneticBtns = document.querySelectorAll('.btn-primary, .nav-cta');
+      magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', e => {
+          const rect = btn.getBoundingClientRect();
+          const x = (e.clientX - rect.left) - (rect.width / 2);
+          const y = (e.clientY - rect.top) - (rect.height / 2);
+
+          gsap.to(btn, {
+            x: x * 0.28,
+            y: y * 0.28,
+            duration: 0.3,
+            ease: 'power2.out'
+          });
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          gsap.to(btn, {
+            x: 0,
+            y: 0,
+            duration: 0.5,
+            ease: 'elastic.out(1, 0.4)'
+          });
+        });
+      });
+    }
   },
 
   // ---- GitHub Contribution Heatmap ----

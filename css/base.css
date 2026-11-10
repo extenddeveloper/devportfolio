@@ -134,3 +134,51 @@ p, .section-desc, .hero-desc, .project-desc-v2, .service-desc-v2, .blog-excerpt-
 h1, h2, h3, h4, .section-title, .hero-title {
   text-wrap: balance;
 }
+
+/* ==========================================================================
+   AMBIENT BLUEPRINT GRID & ACCENT GLOW (LINEAR / STRIPE / VERCEL STANDARD)
+   ========================================================================== */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 90% 75% at 50% 0%, black 25%, transparent 88%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 75% at 50% 0%, black 25%, transparent 88%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 950px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(2, 132, 199, 0.025) 45%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(55px);
+  animation: ambientLightPulse 16s ease-in-out infinite alternate;
+}
+
+@keyframes ambientLightPulse {
+  0% { transform: translateX(-50%) translateY(0); opacity: 0.75; }
+  50% { transform: translateX(-48%) translateY(35px); opacity: 0.95; }
+  100% { transform: translateX(-52%) translateY(15px); opacity: 0.75; }
+}
+
+.site-header, .site-footer, main, section, .page-wrapper, .modal-backdrop {
+  position: relative;
+  z-index: 1;
+}
