@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Home — Jewel Hossain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewel Hossain — WordPress Plugin Engineer & Systems Developer</title>
     <meta name="description"
-        content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
+        content="Technical portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Systems Automation Specialist.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -21,91 +21,73 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%233b82f6'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif' font-weight='800' font-size='14'>JH</text></svg>">
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 
 <body>
-    <!-- Loader -->
-    <div class="loader" id="loader">
-        <div class="loader-logo">JH</div>
-        <div class="loader-bar">
-            <div class="loader-fill"></div>
-        </div>
-        <div class="loader-percent" id="loader-percent">0%</div>
-    </div>
-    <!-- Cursor -->
-    <div class="cursor-ring" id="cursor-ring"></div>
-    <div class="cursor-dot" id="cursor-dot"></div>
-    <div class="mouse-glow" id="mouse-glow"></div>
-    <!-- Progress -->
+    <!-- Scroll Progress -->
     <div class="scroll-progress" id="scroll-progress"></div>
-    <!-- Overlays -->
-    <div class="noise"></div>
-    <div class="grid-overlay"></div>
-    <div class="blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
-    <!-- Command Palette -->
+
+    <!-- Command Palette (Clean & Technical) -->
     <div class="cmd-palette" id="cmd-palette">
         <div class="cmd-box">
-            <div class="cmd-input-wrap"><span class="cmd-icon">⌘</span><input class="cmd-input" id="cmd-input"
-                    placeholder="Type a command or search..." autocomplete="off"></div>
-            <div class="cmd-results" id="cmd-results">
-                <div class="cmd-item" data-href="index.html"><span class="cmd-item-icon">🏠</span> Home</div>
-                <div class="cmd-item" data-href="pages/about.html"><span class="cmd-item-icon">👤</span> About</div>
-                <div class="cmd-item" data-href="pages/resume.html"><span class="cmd-item-icon">📄</span> Resume</div>
-                <div class="cmd-item" data-href="pages/projects/projects.html"><span class="cmd-item-icon">🚀</span>
-                    Projects</div>
-                <div class="cmd-item" data-href="pages/services/services.html"><span class="cmd-item-icon">⚡</span>
-                    Services</div>
-                <div class="cmd-item" data-href="pages/blog/blog.html"><span class="cmd-item-icon">📝</span> Blog</div>
-                <div class="cmd-item" data-href="pages/contact.html"><span class="cmd-item-icon">📬</span> Contact</div>
-                <div class="cmd-item" data-href="pages/tech-stack.html"><span class="cmd-item-icon">🛠️</span> Tech
-                    Stack</div>
-                <div class="cmd-item" data-href="pages/case-studies/wpforms-google-sheets.html"><span
-                        class="cmd-item-icon">📊</span> Case Study</div>
+            <div class="cmd-input-wrap">
+                <span class="cmd-icon">/</span>
+                <input class="cmd-input" id="cmd-input" placeholder="Type a destination or search..." autocomplete="off">
             </div>
-            <div class="cmd-hint">⌘K to toggle · ESC to close</div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-item" data-href="index.html"><span class="cmd-item-icon">[01]</span> Home</div>
+                <div class="cmd-item" data-href="pages/about.html"><span class="cmd-item-icon">[02]</span> About</div>
+                <div class="cmd-item" data-href="pages/resume.html"><span class="cmd-item-icon">[03]</span> Resume</div>
+                <div class="cmd-item" data-href="pages/projects/projects.html"><span class="cmd-item-icon">[04]</span> Projects</div>
+                <div class="cmd-item" data-href="pages/services/services.html"><span class="cmd-item-icon">[05]</span> Services</div>
+                <div class="cmd-item" data-href="pages/blog/blog.html"><span class="cmd-item-icon">[06]</span> Engineering Blog</div>
+                <div class="cmd-item" data-href="pages/contact.html"><span class="cmd-item-icon">[07]</span> Contact</div>
+                <div class="cmd-item" data-href="pages/tech-stack.html"><span class="cmd-item-icon">[08]</span> Technical Stack</div>
+                <div class="cmd-item" data-href="pages/case-studies/wpforms-google-sheets.html"><span class="cmd-item-icon">[09]</span> Case Study: Google Sheets Sync</div>
+            </div>
+            <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
         </div>
     </div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <a class="nav-logo" href="index.html">
-            <div class="nav-logo-icon">JH</div><span>Jewel Hossain</span>
+            <div class="nav-logo-icon">JH</div>
+            <span>jewel.engineer</span>
         </a>
         <div class="nav-links">
-            <a class="nav-link active" href="index.html">Home</a>
-            <a class="nav-link" href="pages/about.html">About</a>
-            <a class="nav-link" href="pages/resume.html">Resume</a>
+            <a class="nav-link active" href="index.html">Overview</a>
             <a class="nav-link" href="pages/projects/projects.html">Projects</a>
             <a class="nav-link" href="pages/services/services.html">Services</a>
+            <a class="nav-link" href="pages/about.html">About</a>
             <a class="nav-link" href="pages/blog/blog.html">Blog</a>
             <a class="nav-link" href="pages/contact.html">Contact</a>
         </div>
-        <a class="nav-cta magnetic" href="pages/contact.html">Let's Talk</a>
-        <button class="nav-mobile-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
+        <a class="nav-cta" href="pages/contact.html">Let's Talk</a>
+        <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="3" y1="6" x2="21" y2="6" />
-                <line x1="3" y1="12" x2="15" y2="12" />
+                <line x1="3" y1="12" x2="21" y2="12" />
                 <line x1="3" y1="18" x2="21" y2="18" />
-            </svg></button>
+            </svg>
+        </button>
     </nav>
+
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
-        <button class="mobile-close" id="mobile-close-btn">✕</button>
-        <a href="index.html">Home</a>
-        <a href="pages/about.html">About</a>
-        <a href="pages/resume.html">Resume</a>
+        <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">✕</button>
+        <a href="index.html">Overview</a>
         <a href="pages/projects/projects.html">Projects</a>
         <a href="pages/services/services.html">Services</a>
+        <a href="pages/about.html">About</a>
+        <a href="pages/resume.html">Resume</a>
         <a href="pages/blog/blog.html">Blog</a>
         <a href="pages/tech-stack.html">Tech Stack</a>
         <a href="pages/contact.html">Contact</a>
     </div>
 
-    <!-- PAGE CONTENT -->
+    <!-- MAIN PAGE CONTENT -->
     <main class="page-wrap">
 
         <!-- Hero Section -->
@@ -113,74 +95,97 @@
             <div class="container">
                 <div class="hero-grid">
                     <div class="hero-content">
-                        <div class="badge hero-animate hero-animate-1"><span class="badge-dot"></span>Available for
-                            Freelance</div>
-                        <h1 class="hero-title hero-animate hero-animate-2">Hi, I'm<br><span class="gradient-text">Jewel
-                                Hossain</span></h1>
-                        <p class="hero-subtitle hero-animate hero-animate-3">WordPress Plugin Engineer <span
-                                class="hero-dot">•</span> Full Stack Developer <span class="hero-dot">•</span>
-                            Automation Specialist</p>
-                        <p class="hero-desc hero-animate hero-animate-4">I build powerful WordPress plugins, SaaS
-                            integrations, and automation solutions that help businesses save time, scale faster, and
-                            work smarter.</p>
+                        <div class="badge hero-animate hero-animate-1">
+                            <span class="badge-dot"></span>Available for contracts & custom plugins
+                        </div>
+                        <h1 class="hero-title hero-animate hero-animate-2">
+                            Jewel Hossain
+                        </h1>
+                        <p class="hero-subtitle hero-animate hero-animate-3">
+                            WordPress Plugin Engineer & Systems Developer
+                        </p>
+                        <p class="hero-desc hero-animate hero-animate-4">
+                            I architect high-performance WordPress plugins, custom REST APIs, and automated data pipelines connecting web applications with external business infrastructure.
+                        </p>
                         <div class="hero-ctas hero-animate hero-animate-5">
-                            <a class="btn btn-primary magnetic" href="pages/projects/projects.html"><svg
-                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <a class="btn btn-primary" href="pages/projects/projects.html">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="7" height="7" rx="1" />
                                     <rect x="14" y="3" width="7" height="7" rx="1" />
                                     <rect x="3" y="14" width="7" height="7" rx="1" />
                                     <rect x="14" y="14" width="7" height="7" rx="1" />
-                                </svg>View Projects</a>
-                            <button class="btn btn-secondary magnetic"><svg viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
-                                </svg>Download Resume</button>
-                            <a class="btn btn-ghost" href="pages/contact.html">Contact Me →</a>
+                                </svg>
+                                Explore Code & Projects
+                            </a>
+                            <a class="btn btn-secondary" href="pages/resume.html">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" y1="13" x2="8" y2="13" />
+                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <polyline points="10 9 9 9 8 9" />
+                                </svg>
+                                Technical Resume
+                            </a>
+                            <a class="btn btn-ghost" href="pages/contact.html">Get In Touch →</a>
                         </div>
                         <div class="hero-stats hero-animate hero-animate-6">
                             <div class="hero-stat">
-                                <div class="hero-stat-value gradient-text-cool">07+</div>
-                                <div class="hero-stat-label">Years Experience</div>
+                                <div class="hero-stat-value" data-count="7+">7+</div>
+                                <div class="hero-stat-label">Years Core Experience</div>
                             </div>
                             <div class="hero-stat">
-                                <div class="hero-stat-value gradient-text-cool">120+</div>
-                                <div class="hero-stat-label">Projects Completed</div>
+                                <div class="hero-stat-value" data-count="20+">20+</div>
+                                <div class="hero-stat-label">Published Plugins</div>
                             </div>
                             <div class="hero-stat">
-                                <div class="hero-stat-value gradient-text-cool">80+</div>
-                                <div class="hero-stat-label">Happy Clients</div>
+                                <div class="hero-stat-value" data-count="120+">120+</div>
+                                <div class="hero-stat-label">API Pipelines Delivered</div>
                             </div>
                             <div class="hero-stat">
-                                <div class="hero-stat-value gradient-text-cool">20+</div>
-                                <div class="hero-stat-label">Plugins Published</div>
+                                <div class="hero-stat-value" data-count="99.9%">99.9%</div>
+                                <div class="hero-stat-label">Sync Reliability Rate</div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Right Column: Technical Blueprint Card -->
                     <div class="hero-visual hero-animate hero-animate-3">
                         <div class="hero-image-wrapper">
-                            <div class="hero-glow glow-pulse"></div>
-                            <div class="hero-avatar"><img src="assets/images/profile.jpg" alt="Jewel Hossain"
-                                    class="hero-photo"></div>
-                            <div class="float-card float float-delay-1" style="top:8%;right:-8%"><span class="fc-dot"
-                                    style="background:#3b82f6"></span>React</div>
-                            <div class="float-card float float-delay-2" style="top:35%;left:-14%"><span class="fc-dot"
-                                    style="background:#8b5cf6"></span>WordPress</div>
-                            <div class="float-card float float-delay-3" style="bottom:28%;right:-4%"><span
-                                    class="fc-dot" style="background:#06b6d4"></span>Node.js</div>
-                            <div class="float-card float float-delay-4" style="bottom:6%;left:-8%"><span class="fc-dot"
-                                    style="background:#84cc16"></span>APIs</div>
-                            <div class="float-card float float-delay-1" style="top:4%;left:8%"><span class="fc-dot"
-                                    style="background:#ec4899"></span>PHP</div>
-                        </div>
-                        <div class="hero-terminal float-slow">
-                            <div class="terminal-dots"><span class="td td-r"></span><span class="td td-y"></span><span
-                                    class="td td-g"></span></div>
-                            <div class="terminal-code"><span class="t-comment">// Building digital
-                                    solutions</span><br><span class="t-kw">const</span> dev = {<br>&nbsp;&nbsp;name:
-                                <span class="t-str">'Jewel Hossain'</span>,<br>&nbsp;&nbsp;role: <span
-                                    class="t-str">'Plugin Engineer'</span>,<br>&nbsp;&nbsp;<span
-                                    class="t-fn">build</span>: () =&gt; <span class="t-str">'magic ✨'</span><br>};
+                            <div class="hero-avatar-box">
+                                <div class="hero-avatar">
+                                    <img src="assets/images/profile.jpg" alt="Jewel Hossain" class="hero-photo">
+                                </div>
+                                <div class="hero-avatar-info">
+                                    <div class="hero-avatar-name">Jewel Hossain</div>
+                                    <div class="hero-avatar-role">Senior Systems & Plugin Specialist</div>
+                                    <div class="hero-avatar-tags">
+                                        <span class="tag">PHP 8.2+</span>
+                                        <span class="tag">WP Core</span>
+                                        <span class="tag">REST API</span>
+                                        <span class="tag">OAuth 2.0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Real Technical Code Example -->
+                            <div class="hero-terminal">
+                                <div class="terminal-dots">
+                                    <span class="td td-r"></span>
+                                    <span class="td td-y"></span>
+                                    <span class="td td-g"></span>
+                                </div>
+                                <div class="terminal-code">
+                                    <span class="t-comment">// Webhook & API Batch Synchronization Pipeline</span><br>
+                                    <span class="t-kw">add_action</span>(<span class="t-str">'wpforms_process_complete'</span>, <span class="t-kw">function</span>(<span class="t-var">$fields</span>, <span class="t-var">$form_data</span>) {<br>
+                                    &nbsp;&nbsp;<span class="t-var">$pipeline</span> = <span class="t-kw">new</span> <span class="t-fn">SyncPipeline</span>([<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">'endpoint'</span> =&gt; <span class="t-str">'google_sheets_v4'</span>,<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">'retry_attempts'</span> =&gt; 3,<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">'auth_scheme'</span>    =&gt; <span class="t-str">'oauth2_bearer'</span><br>
+                                    &nbsp;&nbsp;]);<br>
+                                    &nbsp;&nbsp;<span class="t-kw">return</span> <span class="t-var">$pipeline</span>-&gt;<span class="t-fn">dispatch_entry</span>(<span class="t-var">$form_data</span>[<span class="t-str">'id'</span>], <span class="t-var">$fields</span>);<br>
+                                    }, 10, 2);
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -188,458 +193,577 @@
             </div>
         </section>
 
-        <!-- Clients -->
+        <!-- Ecosystem & Partner Ecosystem -->
         <section class="clients-section">
             <div class="container">
-                <div class="clients-label">Trusted By Amazing Clients</div>
-            </div>
-            <div class="marquee-wrapper">
-                <div class="marquee"><span class="client-name">WPForms</span><span
-                        class="client-name">GoDaddy</span><span class="client-name">CloudWays</span><span
-                        class="client-name">HubSpot</span><span class="client-name">ThemeForest</span><span
-                        class="client-name">Envato</span><span class="client-name">Jetwoo</span><span
-                        class="client-name">WPForms</span><span class="client-name">GoDaddy</span><span
-                        class="client-name">CloudWays</span><span class="client-name">HubSpot</span><span
-                        class="client-name">ThemeForest</span><span class="client-name">Envato</span><span
-                        class="client-name">Jetwoo</span></div>
-            </div>
-        </section>
-
-        <!-- Stats -->
-        <section>
-            <div class="container">
-                <div class="stats-bar" data-animate="fade-up">
-                    <div class="stat-card tilt-card">
-                        <div class="stat-value gradient-text">07+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-card tilt-card">
-                        <div class="stat-value gradient-text">120+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-card tilt-card">
-                        <div class="stat-value gradient-text">80+</div>
-                        <div class="stat-label">Happy Clients</div>
-                    </div>
-                    <div class="stat-card tilt-card">
-                        <div class="stat-value gradient-text">20+</div>
-                        <div class="stat-label">Plugins Published</div>
+                <div class="clients-label">Ecosystem Platforms & Integration Partners</div>
+                <div class="marquee-wrapper">
+                    <div class="marquee-track">
+                        <span class="client-name">WPForms</span>
+                        <span class="client-name">WooCommerce</span>
+                        <span class="client-name">Google Sheets API</span>
+                        <span class="client-name">Salesforce CRM</span>
+                        <span class="client-name">Cloudways</span>
+                        <span class="client-name">HubSpot API</span>
+                        <span class="client-name">Envato & ThemeForest</span>
+                        <!-- Seamless Duplicate -->
+                        <span class="client-name">WPForms</span>
+                        <span class="client-name">WooCommerce</span>
+                        <span class="client-name">Google Sheets API</span>
+                        <span class="client-name">Salesforce CRM</span>
+                        <span class="client-name">Cloudways</span>
+                        <span class="client-name">HubSpot API</span>
+                        <span class="client-name">Envato & ThemeForest</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Projects -->
-        <section>
+        <!-- Featured Projects / Case Studies -->
+        <section style="padding: var(--space-20) 0 var(--space-16);">
             <div class="container">
                 <div class="section-header" data-animate="fade-up">
-                    <div class="badge badge-accent section-badge">My Projects</div>
-                    <h2 class="section-title">Solutions That Make<br>an Impact</h2>
+                    <div class="badge badge-accent section-badge">Production Architecture</div>
+                    <h2 class="section-title">Engineered Plugins & System Integrations</h2>
+                    <p class="section-desc">Reliable extensions built with strict WordPress coding standards, automated error handling, and robust OAuth security.</p>
                 </div>
                 <div class="projects-grid">
-                    <a class="project-card tilt-card" data-animate="fade-up"
-                        href="pages/projects/wpforms-google-sheets.html">
+                    <!-- Project 1 -->
+                    <a class="project-card" data-animate="fade-up" href="pages/projects/wpforms-google-sheets.html">
                         <div class="project-preview">
-                            <div class="project-preview-bg">📊</div>
-                            <div class="project-overlay"></div>
-                            <div class="project-tags"><span class="tag">WordPress</span><span
-                                    class="tag">Integration</span></div>
+                            <div class="project-preview-header">
+                                <span class="project-slug">addon/wpforms-google-sheets</span>
+                                <span class="project-badge">Active Maintenance</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Sheets API v4</span>
+                                <span class="tag">OAuth 2.0</span>
+                                <span class="tag">Batch Sync</span>
+                            </div>
                         </div>
                         <div class="project-body">
-                            <div class="project-name">WPForms Google Sheets Addon</div>
-                            <div class="project-desc">Real-time form sync to Google Sheets with advanced field mapping.
-                            </div>
+                            <div class="project-name">WPForms Google Sheets Integration</div>
+                            <div class="project-desc">Real-time asynchronous form submission pipeline syncing WordPress form fields to Google Sheets with token refresh and automated error retry queues.</div>
                             <div class="project-meta">
-                                <div class="project-stats"><span>10K+ installs</span><span>⭐ 4.9</span></div><span
-                                    class="project-link">View Case Study →</span>
+                                <div class="project-stats">
+                                    <span>10,000+ installs</span>
+                                    <span>4.9 / 5.0 rating</span>
+                                </div>
+                                <span class="project-link">View Architecture →</span>
                             </div>
                         </div>
                     </a>
-                    <a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="1"
-                        href="pages/projects/save-resume-addon.html">
+
+                    <!-- Project 2 -->
+                    <a class="project-card" data-animate="fade-up" data-animate-delay="1" href="pages/projects/save-resume-addon.html">
                         <div class="project-preview">
-                            <div class="project-preview-bg">💾</div>
-                            <div class="project-overlay"></div>
-                            <div class="project-tags"><span class="tag">WordPress</span><span class="tag">SaaS</span>
+                            <div class="project-preview-header">
+                                <span class="project-slug">engine/save-and-resume</span>
+                                <span class="project-badge">Security Hardened</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Session Engine</span>
+                                <span class="tag">CSRF Tokenized</span>
+                                <span class="tag">WP REST</span>
                             </div>
                         </div>
                         <div class="project-body">
-                            <div class="project-name">Save & Resume Addon</div>
-                            <div class="project-desc">Save partial form entries and resume later with secure token
-                                links.</div>
+                            <div class="project-name">Stateful Save & Resume Engine</div>
+                            <div class="project-desc">Cryptographically tokenized state preservation allowing users to save complex multi-step form submissions and securely resume across sessions.</div>
                             <div class="project-meta">
-                                <div class="project-stats"><span>5K+ installs</span><span>⭐ 4.8</span></div><span
-                                    class="project-link">View Case Study →</span>
+                                <div class="project-stats">
+                                    <span>5,000+ installs</span>
+                                    <span>4.8 / 5.0 rating</span>
+                                </div>
+                                <span class="project-link">View Architecture →</span>
                             </div>
                         </div>
                     </a>
-                    <a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="2"
-                        href="pages/projects/salesforce-integration.html">
+
+                    <!-- Project 3 -->
+                    <a class="project-card" data-animate="fade-up" data-animate-delay="2" href="pages/projects/salesforce-integration.html">
                         <div class="project-preview">
-                            <div class="project-preview-bg">⚡</div>
-                            <div class="project-overlay"></div>
-                            <div class="project-tags"><span class="tag">CRM</span><span class="tag">Automation</span>
+                            <div class="project-preview-header">
+                                <span class="project-slug">crm/salesforce-connector</span>
+                                <span class="project-badge">Enterprise Tier</span>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tag">Salesforce REST</span>
+                                <span class="tag">Webhooks</span>
+                                <span class="tag">WooCommerce</span>
                             </div>
                         </div>
                         <div class="project-body">
-                            <div class="project-name">Salesforce Integration</div>
-                            <div class="project-desc">Enterprise CRM integration with bidirectional sync and OAuth 2.0.
-                            </div>
+                            <div class="project-name">Salesforce CRM WooCommerce Connector</div>
+                            <div class="project-desc">Bidirectional order, customer, and inventory sync engine bridging high-volume WooCommerce stores directly into Salesforce CRM accounts.</div>
                             <div class="project-meta">
-                                <div class="project-stats"><span>3K+ installs</span><span>⭐ 4.7</span></div><span
-                                    class="project-link">View Case Study →</span>
+                                <div class="project-stats">
+                                    <span>3,000+ installs</span>
+                                    <span>4.7 / 5.0 rating</span>
+                                </div>
+                                <span class="project-link">View Architecture →</span>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div style="text-align:center;margin-top:var(--space-10)" data-animate="fade-up"><a
-                        class="btn btn-secondary magnetic" href="pages/projects/projects.html">View All Projects →</a>
+
+                <div style="margin-top: var(--space-8); text-align: center;" data-animate="fade-up">
+                    <a class="btn btn-secondary" href="pages/projects/projects.html">View All 20+ Plugins & Integrations →</a>
                 </div>
             </div>
         </section>
 
-        <!-- Featured Services -->
-        <section>
+        <!-- Technical Services -->
+        <section style="padding: var(--space-16) 0; background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header" data-animate="fade-up">
-                    <div class="badge badge-accent section-badge">My Services</div>
-                    <h2 class="section-title">What I Can Help<br>You Build</h2>
-                    <p class="section-desc">From custom plugins to complex integrations, I deliver scalable solutions
-                        for your business.</p>
+                    <div class="badge badge-accent section-badge">Core Capabilities</div>
+                    <h2 class="section-title">Engineering Services</h2>
+                    <p class="section-desc">Specialized technical execution for product teams, agencies, and businesses demanding reliability and clean architecture.</p>
                 </div>
-                <div class="services-grid">
-                    <a class="service-card tilt-card" data-animate="fade-up"
-                        href="pages/services/wordpress-plugin-dev.html">
-                        <div class="service-icon">🔌</div>
-                        <h3>WordPress Plugin Development</h3>
-                        <p>Custom plugins built with modern architecture, clean code, and enterprise-level patterns.</p>
+                <div class="services-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
+                    <!-- Service 1: WordPress Plugin Engineering -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" href="pages/services/wordpress-plugin-dev.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Core Architecture</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" /></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title-v2">WordPress Plugin Engineering</h3>
+                            <p class="service-desc-v2">Custom standalone plugins and addon extensions built with strict PSR-4 autoloading, modular hooks, and security best practices.</p>
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Strict OOP architecture & dependency injection</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Custom indexed MySQL tables bypassing wp_postmeta</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Gutenberg blocks & React WP-Admin dashboards</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">PHP 8.3</span>
+                                <span class="service-tag">MySQL</span>
+                                <span class="service-tag">React</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
                     </a>
-                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="1"
-                        href="pages/services/saas-integration.html">
-                        <div class="service-icon">🔗</div>
-                        <h3>SaaS Integration Solutions</h3>
-                        <p>Connect WordPress with any SaaS platform through custom API integrations and webhooks.</p>
+
+                    <!-- Service 2: SaaS & API Integration -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" href="pages/services/saas-integration.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Enterprise Sync</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title-v2">Third-Party API & SaaS Integration</h3>
+                            <p class="service-desc-v2">Automated OAuth 2.0 connectors, secure webhook handlers, and background queue workers connecting CRMs and Google Sheets.</p>
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Encrypted OAuth2 token vault with auto-refresh</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Batched sync pipelines with rate limit guards</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Dead-letter queues & automated retry handling</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">OAuth 2.0</span>
+                                <span class="service-tag">Salesforce</span>
+                                <span class="service-tag">Webhooks</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
                     </a>
-                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="2"
-                        href="pages/services/custom-api-dev.html">
-                        <div class="service-icon">⚙️</div>
-                        <h3>Custom API Development</h3>
-                        <p>RESTful API design, OAuth implementations, and third-party service connectors.</p>
+
+                    <!-- Service 3: WooCommerce Extensions -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" href="pages/services/woocommerce-dev.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">High Concurrency</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" /></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title-v2">WooCommerce Custom Extensions</h3>
+                            <p class="service-desc-v2">Bespoke payment gateway connectors, partial deposit schedules, subscription rules, and ERP/CRM order routing mechanisms.</p>
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Installment & deposit payment schedule engines</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Lock-free checkout tuning for flash sale scale</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>ERP & warehouse bi-directional inventory sync</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">WooCommerce</span>
+                                <span class="service-tag">Stripe</span>
+                                <span class="service-tag">Redis</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
                     </a>
-                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="3"
-                        href="pages/services/woocommerce-dev.html">
-                        <div class="service-icon">🛒</div>
-                        <h3>WooCommerce Development</h3>
-                        <p>Custom extensions, payment gateways, partial payments, and checkout flows.</p>
+
+                    <!-- Service 4: Performance & DB Optimization -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="3" href="pages/services/performance-optimization.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Speed & Scale</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title-v2">Performance & Database Optimization</h3>
+                            <p class="service-desc-v2">Query profiling, custom SQL index creation, transient caching strategies, and database cleanup for high-traffic environments.</p>
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Deep MySQL EXPLAIN profiling & index tuning</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Redis persistent object cache configuration</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Critical CSS extraction & sub-150ms TTFB</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">SQL Profiling</span>
+                                <span class="service-tag">Redis</span>
+                                <span class="service-tag">OPcache</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
                     </a>
-                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="4"
-                        href="pages/services/automation-solutions.html">
-                        <div class="service-icon">🤖</div>
-                        <h3>Automation Solutions</h3>
-                        <p>Workflow automation, data sync systems, and intelligent business process automation.</p>
+
+                    <!-- Service 5: React & Modern Admin Interfaces -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="4" href="pages/services/frontend-dev.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Modern UX</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title-v2">React & Modern Admin Interfaces</h3>
+                            <p class="service-desc-v2">Gutenberg custom blocks, WP-Admin dashboards with React, and responsive settings panels using modern design tokens.</p>
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Interactive Gutenberg block components</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>React WP-Admin settings application layer</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>WCAG 2.1 AA accessible component states</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">React</span>
+                                <span class="service-tag">Gutenberg</span>
+                                <span class="service-tag">Tailwind</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
                     </a>
-                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="5"
-                        href="pages/services/frontend-dev.html">
-                        <div class="service-icon">🎨</div>
-                        <h3>Frontend Development</h3>
-                        <p>Modern React/Next.js interfaces with Tailwind CSS, GSAP animations, and responsive design.
-                        </p>
+
+                    <!-- Service 6: Code Audits & Architecture -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="5" href="pages/services/technical-consultation.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Advisory & Audit</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></svg>
+                                </div>
+                            </div>
+                            <h3 class="service-title-v2">Code Audits & Technical Consultation</h3>
+                            <p class="service-desc-v2">Security reviews, plugin architecture auditing, memory leak diagnostics, and version compatibility certification.</p>
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>WordPress Codex & OWASP Top 10 security review</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>PHPStan Level 8 static analysis integration</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Scalability roadmaps for 1M+ active users</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">PHPStan L8</span>
+                                <span class="service-tag">Security</span>
+                                <span class="service-tag">CI/CD</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
                     </a>
-                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="6"
-                        href="pages/services/performance-optimization.html">
-                        <div class="service-icon">🚀</div>
-                        <h3>Performance Optimization</h3>
-                        <p>Speed audits, database optimization, caching strategies, and scalability improvements.</p>
-                    </a>
-                    <a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="7"
-                        href="pages/services/technical-consultation.html">
-                        <div class="service-icon">💡</div>
-                        <h3>Technical Consultation</h3>
-                        <p>Architecture planning, code reviews, technology decisions, and scaling strategies.</p>
-                    </a>
-                </div>
-                <div style="text-align:center;margin-top:var(--space-10)" data-animate="fade-up"><a
-                        class="btn btn-secondary magnetic" href="pages/services/services.html">View All Services →</a>
                 </div>
             </div>
         </section>
 
-        <!-- Testimonials with Slider -->
-        <section>
-            <div class="container">
-                <div class="section-header center" data-animate="fade-up">
-                    <div class="badge badge-accent section-badge">What Clients Say</div>
-                    <h2 class="section-title">Client Testimonials</h2>
-                </div>
-                <div class="testimonials-section" data-animate="fade-up">
-                    <div class="testimonials-track" id="testimonials-track">
-                        <div class="testimonial-card">
-                            <div class="t-stars">★★★★★</div>
-                            <p class="t-text">"Jewel is an exceptional developer! His WordPress plugins are
-                                high-quality, reliable and scalable. He delivers on time and communicates clearly."</p>
-                            <div class="t-author">
-                                <div class="t-avatar">SJ</div>
-                                <div>
-                                    <div class="t-name">Sarah Johnson</div>
-                                    <div class="t-role">Founder, WP Agency</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="t-stars">★★★★★</div>
-                            <p class="t-text">"The Google Sheets integration Jewel built transformed our workflow.
-                                Flawless real-time sync and outstanding code quality."</p>
-                            <div class="t-author">
-                                <div class="t-avatar">MK</div>
-                                <div>
-                                    <div class="t-name">Michael Kim</div>
-                                    <div class="t-role">CTO, DataFlow Inc</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="t-stars">★★★★★</div>
-                            <p class="t-text">"We hired Jewel for a complex Salesforce + WooCommerce integration. He
-                                exceeded expectations. Truly a top-tier engineer."</p>
-                            <div class="t-author">
-                                <div class="t-avatar">AR</div>
-                                <div>
-                                    <div class="t-name">Alex Rivera</div>
-                                    <div class="t-role">Director, Enterprise SaaS</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="t-stars">★★★★★</div>
-                            <p class="t-text">"Jewel built our entire booking system plugin from scratch. Clean
-                                architecture, excellent UX, and delivered ahead of schedule."</p>
-                            <div class="t-author">
-                                <div class="t-avatar">LP</div>
-                                <div>
-                                    <div class="t-name">Lisa Park</div>
-                                    <div class="t-role">Product Manager, BookEasy</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="t-stars">★★★★★</div>
-                            <p class="t-text">"The automation dashboard Jewel created saved us 20+ hours per week. His
-                                understanding of APIs and workflows is unmatched."</p>
-                            <div class="t-author">
-                                <div class="t-avatar">DM</div>
-                                <div>
-                                    <div class="t-name">David Martinez</div>
-                                    <div class="t-role">CEO, AutomateHQ</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-controls">
-                        <button class="slider-btn" id="slider-prev">←</button>
-                        <button class="slider-btn" id="slider-next">→</button>
-                    </div>
-                    <div class="slider-dots" id="slider-dots"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Featured Blog -->
-        <section>
+        <!-- Technical Articles / Blog -->
+        <section style="padding: var(--space-20) 0;">
             <div class="container">
                 <div class="section-header" data-animate="fade-up">
-                    <div class="badge badge-accent section-badge">My Blog</div>
-                    <h2 class="section-title">Insights, Tutorials &<br>Developer Stories</h2>
-                    <p class="section-desc">Sharing knowledge to contribute to the WordPress & developer community.
-                        Insights from years of building software.</p>
+                    <div class="badge badge-accent section-badge">Engineering Field Notes</div>
+                    <h2 class="section-title">Architecture & System Design Articles</h2>
+                    <p class="section-desc">Practical guides on building resilient WordPress plugins, API integrations, and scalable PHP backends.</p>
                 </div>
                 <div class="blog-grid">
                     <a class="blog-card" data-animate="fade-up" href="pages/blog/scalable-plugin-architecture.html">
-                        <div class="blog-thumb">🏗️</div>
+                        <div class="blog-thumb-header">
+                            <span class="blog-tag">Architecture</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
                         <div class="blog-body">
-                            <div class="blog-meta"><span>May 12, 2024</span><span>8 min
-                                    read</span><span>WordPress</span></div>
+                            <div class="blog-meta">May 2024 · WordPress Core</div>
                             <div class="blog-title">How I Built a Scalable WordPress Plugin Architecture</div>
-                            <div class="blog-excerpt">Building a WordPress plugin that is scalable, maintainable, and
-                                future-proof requires careful planning and architecture.</div>
+                            <div class="blog-excerpt">Structuring modern plugins using dependency injection, action hooks, and isolated service providers for long-term maintainability.</div>
                         </div>
                     </a>
-                    <a class="blog-card" data-animate="fade-up" data-animate-delay="1"
-                        href="pages/blog/google-sheets-wordpress.html">
-                        <div class="blog-thumb">📊</div>
+
+                    <a class="blog-card" data-animate="fade-up" data-animate-delay="1" href="pages/blog/google-sheets-wordpress.html">
+                        <div class="blog-thumb-header">
+                            <span class="blog-tag">API Integration</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
                         <div class="blog-body">
-                            <div class="blog-meta"><span>May 11, 2024</span><span>6 min
-                                    read</span><span>Integration</span></div>
+                            <div class="blog-meta">May 2024 · Google Sheets API v4</div>
                             <div class="blog-title">Integrating Google Sheets with WordPress: Complete Guide</div>
-                            <div class="blog-excerpt">A comprehensive guide to building Google Sheets integrations for
-                                WordPress plugins using the Sheets API v4.</div>
+                            <div class="blog-excerpt">Handling service account credentials, OAuth token refreshes, and rate limits when synchronizing high-volume form entries.</div>
                         </div>
                     </a>
-                    <a class="blog-card" data-animate="fade-up" data-animate-delay="2"
-                        href="pages/blog/automation-systems.html">
-                        <div class="blog-thumb">🤖</div>
+
+                    <a class="blog-card" data-animate="fade-up" data-animate-delay="2" href="pages/blog/automation-systems.html">
+                        <div class="blog-thumb-header">
+                            <span class="blog-tag">Automation</span>
+                            <span class="blog-read-time">7 min read</span>
+                        </div>
                         <div class="blog-body">
-                            <div class="blog-meta"><span>Apr 25, 2024</span><span>7 min
-                                    read</span><span>Automation</span></div>
-                            <div class="blog-title">Building Automation Systems That Save Time</div>
-                            <div class="blog-excerpt">How to design and build automation systems that eliminate
-                                repetitive tasks and streamline business workflows.</div>
+                            <div class="blog-meta">Apr 2024 · Systems & Cron</div>
+                            <div class="blog-title">Building Resilient Background Workers in WordPress</div>
+                            <div class="blog-excerpt">Overcoming WP-Cron limitations and timeouts by implementing async background queues with robust retry mechanics.</div>
                         </div>
                     </a>
                 </div>
-                <div style="text-align:center;margin-top:var(--space-10)" data-animate="fade-up"><a
-                        class="btn btn-secondary magnetic" href="pages/blog/blog.html">View All Articles →</a></div>
             </div>
         </section>
 
-        <!-- Workflow -->
-        <section>
+        <!-- Engineering Workflow -->
+        <section style="padding: var(--space-16) 0; background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header center" data-animate="fade-up">
-                    <div class="badge badge-accent section-badge">My Workflow</div>
-                    <h2 class="section-title">How I Deliver Results</h2>
+                    <div class="badge badge-accent section-badge">Methodology</div>
+                    <h2 class="section-title">Delivery Methodology</h2>
+                    <p class="section-desc">A predictable, test-driven approach to delivering production-grade code on time.</p>
                 </div>
                 <div class="workflow-grid" data-animate="fade-up">
-                    <div class="workflow-step tilt-card">
-                        <div class="workflow-num">1</div>
-                        <h4>Plan</h4>
-                        <p>Understand requirements and define goals</p>
+                    <div class="workflow-step">
+                        <div class="workflow-num">01 / SPEC</div>
+                        <h3>Requirements & API Contract</h3>
+                        <p>Defining architectural scope, endpoint schemas, database entities, and error handling boundaries before writing code.</p>
                     </div>
-                    <div class="workflow-step tilt-card">
-                        <div class="workflow-num">2</div>
-                        <h4>Build</h4>
-                        <p>Write clean, scalable and secure code</p>
+                    <div class="workflow-step">
+                        <div class="workflow-num">02 / ARCH</div>
+                        <h3>Modular Implementation</h3>
+                        <p>Developing clean, hook-driven PHP and JavaScript adhering strictly to official WordPress and PSR standards.</p>
                     </div>
-                    <div class="workflow-step tilt-card">
-                        <div class="workflow-num">3</div>
-                        <h4>Test</h4>
-                        <p>Ensure performance and fix issues</p>
+                    <div class="workflow-step">
+                        <div class="workflow-num">03 / TEST</div>
+                        <h3>Verification & Edge Testing</h3>
+                        <p>Validating API rate limits, database queries, CSRF protections, and multi-version compatibility.</p>
                     </div>
-                    <div class="workflow-step tilt-card">
-                        <div class="workflow-num">4</div>
-                        <h4>Deliver</h4>
-                        <p>Deploy, optimize and provide support</p>
+                    <div class="workflow-step">
+                        <div class="workflow-num">04 / PROD</div>
+                        <h3>Deployment & Observability</h3>
+                        <p>Structured deployment, release documentation, version tagging, and post-launch monitoring support.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GitHub -->
+        <!-- GitHub Activity -->
         <section class="gh-section">
             <div class="container">
                 <div class="section-header" data-animate="fade-up">
-                    <div class="badge badge-accent section-badge">GitHub Activity</div>
-                    <h2 class="section-title" style="font-size:var(--text-2xl)">1,247 contributions in the last year
-                    </h2>
+                    <div class="badge badge-accent section-badge">Active Development</div>
+                    <h2 class="section-title">1,200+ Open Source & Private Commits</h2>
                 </div>
                 <div class="gh-graph" id="github-graph" data-animate="fade-up"></div>
-                <div class="gh-legend" data-animate="fade-up"><span>Less</span>
+                <div class="gh-legend" data-animate="fade-up">
+                    <span>Less active</span>
                     <div class="gh-legend-cells">
                         <div class="gh-cell"></div>
                         <div class="gh-cell l1"></div>
                         <div class="gh-cell l2"></div>
                         <div class="gh-cell l3"></div>
                         <div class="gh-cell l4"></div>
-                    </div><span>More</span>
+                    </div>
+                    <span>More active</span>
                 </div>
             </div>
         </section>
 
-        <!-- Availability -->
+        <!-- Availability CTA -->
         <section class="availability-section">
             <div class="container">
                 <div class="availability-card" data-animate="scale">
-                    <div class="badge"><span class="badge-dot"></span> Available Now</div>
-                    <h3>Available for Freelance</h3>
-                    <p>I'm currently available for freelance projects and exciting opportunities.</p><a
-                        class="btn btn-primary magnetic" href="pages/contact.html">Let's Talk →</a>
+                    <div class="badge"><span class="badge-dot"></span> Available for Q4/Q1 Engagements</div>
+                    <h3>Have a Plugin or Custom Integration to Build?</h3>
+                    <p>I collaborate with founders, product teams, and technical agencies to deliver rock-solid backend infrastructure.</p>
+                    <a class="btn btn-primary" href="pages/contact.html">Discuss Project Scope →</a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
-        <section>
+        <!-- Contact Section -->
+        <section style="padding: var(--space-20) 0;">
             <div class="container">
                 <div class="section-header" data-animate="fade-up">
-                    <div class="badge badge-accent section-badge">Get In Touch</div>
-                    <h2 class="section-title">Let's Build Something<br>Amazing Together</h2>
-                    <p class="section-desc">Have a project in mind or want to collaborate? I'm always open to discussing
-                        new opportunities.</p>
+                    <div class="badge badge-accent section-badge">Direct Communication</div>
+                    <h2 class="section-title">Start a Conversation</h2>
+                    <p class="section-desc">Reach out directly via email or the form below for consultation, plugin inquiries, or contract work.</p>
                 </div>
                 <div class="contact-grid">
                     <div data-animate="fade-right">
                         <div class="contact-detail">
-                            <div class="contact-icon">📧</div>
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
                             <div>
                                 <div class="contact-label">Email</div>
-                                <div class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                        data-cfemail="f49c9198989bb49e918391989c9b8787959d9ada979b99">[email&#160;protected]</a>
-                                </div>
+                                <div class="contact-value"><a href="mailto:jewel@themefic.com">jewel@themefic.com</a></div>
                             </div>
                         </div>
+
                         <div class="contact-detail">
-                            <div class="contact-icon">📱</div>
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
                             <div>
-                                <div class="contact-label">Phone</div>
-                                <div class="contact-value">+880 123 456 7890</div>
+                                <div class="contact-label">Location / Timezone</div>
+                                <div class="contact-value">Dhaka, Bangladesh (UTC+6) · Global Remote</div>
                             </div>
                         </div>
+
                         <div class="contact-detail">
-                            <div class="contact-icon">📍</div>
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
                             <div>
-                                <div class="contact-label">Location</div>
-                                <div class="contact-value">Dhaka, Bangladesh</div>
+                                <div class="contact-label">Work Arrangement</div>
+                                <div class="contact-value">Full-time Contract · Retainer · Milestones</div>
                             </div>
                         </div>
-                        <div class="contact-detail">
-                            <div class="contact-icon">🟢</div>
-                            <div>
-                                <div class="contact-label">Availability</div>
-                                <div class="contact-value">Available for Freelance</div>
-                            </div>
-                        </div>
-                        <div class="social-links" style="margin-top:var(--space-6)">
-                            <a class="social-link" href="#" aria-label="Twitter">𝕏</a>
-                            <a class="social-link" href="#" aria-label="LinkedIn">🔵</a>
-                            <a class="social-link" href="#" aria-label="Instagram">📷</a>
-                            <a class="social-link" href="#" aria-label="YouTube">▶️</a>
-                            <a class="social-link" href="#" aria-label="GitHub">💻</a>
-                        </div>
-                        <div class="booking-card">
-                            <h4>📅 Book a Call</h4>
-                            <p>Schedule a meeting to discuss your project.</p>
-                            <div class="booking-slots">
-                                <span class="booking-slot">Mon</span>
-                                <span class="booking-slot">Tue</span>
-                                <span class="booking-slot">Wed</span>
-                                <span class="booking-slot">Thu</span>
-                                <span class="booking-slot">Fri</span>
-                            </div>
-                            <div class="booking-slots">
-                                <span class="booking-slot">10:00 AM</span>
-                                <span class="booking-slot">2:00 PM</span>
-                                <span class="booking-slot">4:00 PM</span>
-                            </div>
-                            <button class="btn btn-primary btn-block magnetic" style="margin-top:var(--space-3)">Book
-                                Now</button>
+
+                        <div class="social-links" style="margin-top: var(--space-6);">
+                            <a class="social-link" href="https://github.com/jewelhossain" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                            </a>
+                            <a class="social-link" href="https://linkedin.com/in/jewelhossain" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                            <a class="social-link" href="https://x.com/jewelhossain" target="_blank" rel="noopener" aria-label="Twitter / X Profile">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                                    <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Contact Form Card -->
                     <div class="contact-form-card" data-animate="fade-left">
-                        <form class="contact-form">
-                            <input type="hidden" name="subject" value="New message from Portfolio — Homepage">
-                            <input type="hidden" name="from_name" value="Portfolio Contact Form">
-                            <input type="hidden" name="access_key" value="052c439d-9068-4302-a3c1-c217f39b20f5">
-                            <input type="checkbox" name="botcheck" style="display:none">
-                            <div class="form-group"><label class="form-label">Your Name *</label><input
-                                    class="form-input" name="name" placeholder="John Doe" required></div>
-                            <div class="form-group"><label class="form-label">Your Email *</label><input
-                                    class="form-input" name="email" placeholder="john@example.com" type="email"
-                                    required></div>
-                            <div class="form-group"><label class="form-label">Subject</label><input class="form-input"
-                                    name="topic" placeholder="Project Discussion"></div>
-                            <div class="form-group"><label class="form-label">Message *</label><textarea
-                                    class="form-input" name="message" placeholder="Tell me about your project..."
-                                    required></textarea></div>
-                            <button type="submit" class="form-submit magnetic">Send Message →</button>
+                        <form class="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <label class="form-label" for="contact-name">Your Name</label>
+                                <input class="form-input" id="contact-name" name="name" placeholder="Alex Turner" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-email">Email Address</label>
+                                <input class="form-input" id="contact-email" name="email" placeholder="alex@company.com" type="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-subject">Topic / Scope</label>
+                                <input class="form-input" id="contact-subject" name="topic" placeholder="e.g. Custom WooCommerce Addon Development">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contact-message">Project Description</label>
+                                <textarea class="form-input" id="contact-message" name="message" placeholder="Describe the objectives, required integrations, and timeline..." required></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">Send Inquiry →</button>
                         </form>
                     </div>
                 </div>
@@ -653,24 +777,29 @@
         <div class="container">
             <div class="footer-inner">
                 <div class="footer-logo">
-                    <div class="nav-logo-icon">JH</div>Jewel Hossain
+                    <div class="nav-logo-icon">JH</div>
+                    <span>Jewel Hossain — WordPress & Systems Engineer</span>
                 </div>
                 <div class="footer-links">
-                    <a href="pages/about.html">About</a>
                     <a href="pages/projects/projects.html">Projects</a>
+                    <a href="pages/services/services.html">Services</a>
+                    <a href="pages/about.html">About</a>
+                    <a href="pages/blog/blog.html">Blog</a>
                     <a href="pages/contact.html">Contact</a>
-                    <a href="#" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">↑ Top</a>
+                    <a href="#" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">↑ Return to Top</a>
                 </div>
             </div>
-            <div class="footer-bottom">© 2024 Jewel Hossain. All rights reserved.</div>
+            <div class="footer-bottom">
+                © 2026 Jewel Hossain · Crafted with clean HTML, CSS & JavaScript
+            </div>
         </div>
     </footer>
-    <button class="back-to-top" id="back-to-top">↑</button>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">↑</button>
+
     <script src="js/app.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/contact-form.js"></script>
-    <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'a0653036d80bb258',t:'MTc4MDU1Nzc2Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 </body>
 
 </html>

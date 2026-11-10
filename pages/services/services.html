@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Services — Jewel Hossain</title>
-<meta name="description" content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
+<title>Services — Jewel Hossain | WordPress & Systems Engineer</title>
+<meta name="description" content="Specialized engineering services: WordPress plugin architecture, enterprise CRM integrations, high-throughput APIs, and performance tuning.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,95 +16,443 @@
 <link rel="stylesheet" href="../../css/pages.css">
 <link rel="stylesheet" href="../../css/responsive.css">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%233b82f6'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif' font-weight='800' font-size='14'>JH</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Loader -->
-<div class="loader" id="loader"><div class="loader-logo">JH</div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-percent" id="loader-percent">0%</div></div>
-<!-- Cursor -->
-<div class="cursor-ring" id="cursor-ring"></div>
-<div class="cursor-dot" id="cursor-dot"></div>
-<div class="mouse-glow" id="mouse-glow"></div>
-<!-- Progress -->
-<div class="scroll-progress" id="scroll-progress"></div>
-<!-- Overlays -->
-<div class="noise"></div>
-<div class="grid-overlay"></div>
-<div class="blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
-<!-- Command Palette -->
-<div class="cmd-palette" id="cmd-palette">
-<div class="cmd-box">
-<div class="cmd-input-wrap"><span class="cmd-icon">⌘</span><input class="cmd-input" id="cmd-input" placeholder="Type a command or search..." autocomplete="off"></div>
-<div class="cmd-results" id="cmd-results">
-<div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">🏠</span> Home</div>
-<div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">👤</span> About</div>
-<div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">📄</span> Resume</div>
-<div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">🚀</span> Projects</div>
-<div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">⚡</span> Services</div>
-<div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">📝</span> Blog</div>
-<div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">📬</span> Contact</div>
-<div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">🛠️</span> Tech Stack</div>
-<div class="cmd-item" data-href="../../pages/case-studies/wpforms-google-sheets.html"><span class="cmd-item-icon">📊</span> Case Study</div>
-</div>
-<div class="cmd-hint">⌘K to toggle · ESC to close</div>
-</div>
-</div>
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-<a class="nav-logo" href="../../index.html"><div class="nav-logo-icon">JH</div><span>Jewel Hossain</span></a>
-<div class="nav-links">
-<a class="nav-link" href="../../index.html">Home</a>
-<a class="nav-link" href="../../pages/about.html">About</a>
-<a class="nav-link" href="../../pages/resume.html">Resume</a>
-<a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
-<a class="nav-link active" href="../../pages/services/services.html">Services</a>
-<a class="nav-link" href="../../pages/blog/blog.html">Blog</a>
-<a class="nav-link" href="../../pages/contact.html">Contact</a>
-</div>
-<a class="nav-cta magnetic" href="../../pages/contact.html">Let's Talk</a>
-<button class="nav-mobile-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</nav>
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-<button class="mobile-close" id="mobile-close-btn">✕</button>
-<a href="../../index.html">Home</a>
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/resume.html">Resume</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/services/services.html">Services</a>
-<a href="../../pages/blog/blog.html">Blog</a>
-<a href="../../pages/tech-stack.html">Tech Stack</a>
-<a href="../../pages/contact.html">Contact</a>
-</div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-<!-- PAGE CONTENT -->
-<main class="page-wrap">
+    <!-- Command Palette -->
+    <div class="cmd-palette" id="cmd-palette">
+        <div class="cmd-box">
+            <div class="cmd-input-wrap">
+                <span class="cmd-icon">/</span>
+                <input class="cmd-input" id="cmd-input" placeholder="Type a destination or search..." autocomplete="off">
+            </div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">[01]</span> Home</div>
+                <div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">[02]</span> About</div>
+                <div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">[03]</span> Resume</div>
+                <div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">[04]</span> Projects</div>
+                <div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">[05]</span> Services</div>
+                <div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">[06]</span> Engineering Blog</div>
+                <div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">[07]</span> Contact</div>
+                <div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">[08]</span> Technical Stack</div>
+            </div>
+            <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
+        </div>
+    </div>
 
-<section style="padding-top:150px"><div class="container">
-<div class="section-header" data-animate="fade-up"><div class="badge badge-accent section-badge">My Services</div><h2 class="section-title">What I Can Help<br>You Build</h2><p class="section-desc">From custom plugins to complex integrations, I deliver scalable solutions.</p></div>
-<div class="services-grid"><a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="0" href="wordpress-plugin-dev.html"><div class="service-icon">🔌</div><h3>WordPress Plugin Development</h3><p>Custom plugins with OOP architecture, Gutenberg blocks, and WordPress.org ready code.</p></a><a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="1" href="saas-integration.html"><div class="service-icon">🔗</div><h3>SaaS Integration Solutions</h3><p>Connect WordPress with Salesforce, HubSpot, Zoho, Slack through custom API integrations.</p></a><a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="2" href="custom-api-dev.html"><div class="service-icon">⚙️</div><h3>Custom API Development</h3><p>RESTful API design, GraphQL, OAuth 2.0, webhooks, and service connectors.</p></a><a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="3" href="woocommerce-dev.html"><div class="service-icon">🛒</div><h3>WooCommerce Development</h3><p>Extensions, payment gateways, partial payments, subscriptions, checkout optimization.</p></a><a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="4" href="automation-solutions.html"><div class="service-icon">🤖</div><h3>Automation Solutions</h3><p>Workflow automation, data sync, scheduled tasks, and business process automation.</p></a><a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="5" href="frontend-dev.html"><div class="service-icon">🎨</div><h3>Frontend Development</h3><p>React/Next.js with Tailwind CSS, GSAP, responsive design, pixel-perfect implementation.</p></a><a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="6" href="performance-optimization.html"><div class="service-icon">🚀</div><h3>Performance Optimization</h3><p>Speed audits, DB optimization, caching, CDN, and scalability improvements.</p></a><a class="service-card tilt-card" data-animate="fade-up" data-animate-delay="7" href="technical-consultation.html"><div class="service-icon">💡</div><h3>Technical Consultation</h3><p>Architecture planning, tech stack decisions, code reviews, and scaling strategies.</p></a></div>
-<div style="text-align:center;margin-top:var(--space-16)" data-animate="fade-up"><a class="btn btn-primary magnetic" href="../contact.html">Let's Work Together →</a></div>
-</div></section>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a class="nav-logo" href="../../index.html">
+            <div class="nav-logo-icon">JH</div>
+            <span>jewel.engineer</span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="../../index.html">Overview</a>
+            <a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
+            <a class="nav-link active" href="../../pages/services/services.html">Services</a>
+            <a class="nav-link" href="../../pages/about.html">About</a>
+            <a class="nav-link" href="../../pages/blog/blog.html">Blog</a>
+            <a class="nav-link" href="../../pages/contact.html">Contact</a>
+        </div>
+        <a class="nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+    </nav>
 
-</main>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">✕</button>
+        <a href="../../index.html">Overview</a>
+        <a href="../../pages/projects/projects.html">Projects</a>
+        <a href="../../pages/services/services.html">Services</a>
+        <a href="../../pages/about.html">About</a>
+        <a href="../../pages/resume.html">Resume</a>
+        <a href="../../pages/blog/blog.html">Blog</a>
+        <a href="../../pages/tech-stack.html">Tech Stack</a>
+        <a href="../../pages/contact.html">Contact</a>
+    </div>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-inner">
-<div class="footer-logo"><div class="nav-logo-icon">JH</div>Jewel Hossain</div>
-<div class="footer-links">
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/contact.html">Contact</a>
-<a href="#" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">↑ Top</a>
-</div>
-</div>
-<div class="footer-bottom">© 2024 Jewel Hossain. All rights reserved.</div>
-</div>
-</footer>
-<button class="back-to-top" id="back-to-top">↑</button>
-<script src="../../js/app.js"></script>
-<script src="../../js/animations.js"></script>
+    <!-- PAGE CONTENT -->
+    <main class="page-wrap">
+
+        <section style="padding-top:140px;padding-bottom:var(--space-16)">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">Specialized Engineering Services</div>
+                    <h1 class="section-title">Production Systems & Custom<br>WordPress Architectures</h1>
+                    <p class="section-desc">From decoupled enterprise plugins to real-time sync pipelines handling millions of webhook events.</p>
+                </div>
+
+                <!-- Rich Services Grid (8 Tactile Cards) -->
+                <div class="services-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
+
+                    <!-- Service 1: WordPress Plugin Development -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" href="wordpress-plugin-dev.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Core Architecture</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                                </div>
+                            </div>
+                            <h2 class="service-title-v2">WordPress Plugin Engineering</h2>
+                            <p class="service-desc-v2">Object-oriented, strictly typed plugins built to scale across 50,000+ active installations with zero regressions.</p>
+                            
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Strict PSR-4 autoloading & dependency injection</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Custom indexed MySQL tables bypassing wp_postmeta</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Gutenberg custom blocks & React WP-Admin settings</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">PHP 8.3</span>
+                                <span class="service-tag">MySQL</span>
+                                <span class="service-tag">React</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Service 2: SaaS & CRM Integrations -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" href="saas-integration.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Enterprise Sync</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                                </div>
+                            </div>
+                            <h2 class="service-title-v2">SaaS & CRM Integrations</h2>
+                            <p class="service-desc-v2">Mission-critical bi-directional pipelines connecting WordPress workflows to Salesforce, HubSpot, Zoho, and Google Sheets.</p>
+                            
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Encrypted OAuth 2.0 token vault with automatic refresh</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Batched API requests respecting third-party rate limits</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Dead-letter queue with automated retry alerts</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">OAuth 2.0</span>
+                                <span class="service-tag">Salesforce</span>
+                                <span class="service-tag">Sheets API</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Service 3: Custom API Development -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" href="custom-api-dev.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">System APIs</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                                </div>
+                            </div>
+                            <h2 class="service-title-v2">Custom API Development</h2>
+                            <p class="service-desc-v2">High-throughput RESTful & GraphQL endpoints with robust HMAC verification, rate-limiting, and microservice connectors.</p>
+                            
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>WP REST API v2 extensions with JSON Schema validation</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>HMAC-SHA256 signature verification for webhooks</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Microservice event dispatchers with sub-30ms response times</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">RESTful</span>
+                                <span class="service-tag">GraphQL</span>
+                                <span class="service-tag">HMAC</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Service 4: WooCommerce Engineering -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" href="woocommerce-dev.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">High Concurrency</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                                </div>
+                            </div>
+                            <h2 class="service-title-v2">WooCommerce Custom Development</h2>
+                            <p class="service-desc-v2">Enterprise checkout workflows, custom payment gateways, partial payments, and multi-currency subscription systems.</p>
+                            
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Custom deposit & installment payment schedule engines</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Lock-free checkout tuning to survive high-volume flash sales</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>ERP & warehouse inventory bi-directional synchronization</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">WooCommerce</span>
+                                <span class="service-tag">Stripe</span>
+                                <span class="service-tag">Redis</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Service 5: Automation & Task Queues -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" href="automation-solutions.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Background Queues</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                </div>
+                            </div>
+                            <h2 class="service-title-v2">Background Automation Solutions</h2>
+                            <p class="service-desc-v2">Offload heavy sync and transformation workloads to async queues to ensure frontend requests never block.</p>
+                            
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Action Scheduler & Redis-backed job worker infrastructure</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Batch processing pipelines handling 100,000+ records seamlessly</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Continuous queue health monitoring & automatic failure alerts</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">Action Scheduler</span>
+                                <span class="service-tag">Redis</span>
+                                <span class="service-tag">Webhooks</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Service 6: Frontend & Headless Applications -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" href="frontend-dev.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Modern UX</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                                </div>
+                            </div>
+                            <h2 class="service-title-v2">Frontend & Headless Development</h2>
+                            <p class="service-desc-v2">Modern reactive interfaces powered by React, Next.js, Tailwind CSS, and headless WordPress REST/GraphQL APIs.</p>
+                            
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Headless Next.js with Incremental Static Regeneration</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Design system token architectures (Linear/Stripe aesthetic)</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Full WCAG 2.1 AA accessibility & 60fps micro-interactions</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">Next.js</span>
+                                <span class="service-tag">React</span>
+                                <span class="service-tag">Tailwind</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Service 7: Performance & Database Optimization -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" href="performance-optimization.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Speed & Scale</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                </div>
+                            </div>
+                            <h2 class="service-title-v2">Performance & Database Tuning</h2>
+                            <p class="service-desc-v2">Eliminate query bottlenecks, autoloaded options bloat, and transient congestion to achieve sub-150ms TTFB.</p>
+                            
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Deep MySQL EXPLAIN query profiling & index re-architecting</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Redis persistent object cache configuration with zero stampede</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Asset tree shaking, critical CSS extraction, and Core Web Vitals 95+</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">SQL Profiling</span>
+                                <span class="service-tag">Redis</span>
+                                <span class="service-tag">OPcache</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Service 8: Technical Architecture & Code Audits -->
+                    <a class="service-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" href="technical-consultation.html">
+                        <div>
+                            <div class="service-header-v2">
+                                <span class="service-domain-pill">Advisory & Audit</span>
+                                <div class="service-icon-box">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                            </div>
+                            <h2 class="service-title-v2">Architecture & Security Audits</h2>
+                            <p class="service-desc-v2">Independent code reviews, OWASP vulnerability assessments, and technical roadmap planning for high-stakes launches.</p>
+                            
+                            <ul class="service-checklist">
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>WordPress Codex & OWASP Top 10 security vulnerability audit</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Automated CI/CD setup with PHPStan Level 8 & Pest test suites</span>
+                                </li>
+                                <li class="service-check-item">
+                                    <svg class="service-check-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3.5 8.5 6.5 11.5 12.5 4.5"/></svg>
+                                    <span>Scalability roadmap for scaling from 1,000 to 1M+ active users</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="service-footer-v2">
+                            <div class="service-tech-tags">
+                                <span class="service-tag">PHPStan L8</span>
+                                <span class="service-tag">Security</span>
+                                <span class="service-tag">CI/CD</span>
+                            </div>
+                            <span class="service-action-link">
+                                Scope & Specs
+                                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Call to action -->
+                <div style="text-align:center;margin-top:var(--space-16)" data-animate="fade-up">
+                    <a class="btn btn-primary" href="../../pages/contact.html">
+                        Initiate a Technical Consultation
+                        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="nav-logo-icon">JH</div>
+                    <span>Jewel Hossain — WordPress & Systems Engineer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="../../pages/projects/projects.html">Projects</a>
+                    <a href="../../pages/services/services.html">Services</a>
+                    <a href="../../pages/about.html">About</a>
+                    <a href="../../pages/blog/blog.html">Blog</a>
+                    <a href="../../pages/contact.html">Contact</a>
+                    <a href="#" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">↑ Return to Top</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Jewel Hossain · Crafted with clean HTML, CSS & JavaScript
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top">↑</button>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/animations.js"></script>
 </body>
 </html>

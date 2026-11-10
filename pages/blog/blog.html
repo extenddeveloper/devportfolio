@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Blog — Jewel Hossain</title>
-<meta name="description" content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
+<title>Engineering Blog — Jewel Hossain | WordPress & Systems</title>
+<meta name="description" content="Technical deep dives on WordPress plugin architecture, enterprise API pipelines, and high-concurrency systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,95 +16,307 @@
 <link rel="stylesheet" href="../../css/pages.css">
 <link rel="stylesheet" href="../../css/responsive.css">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%233b82f6'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif' font-weight='800' font-size='14'>JH</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Loader -->
-<div class="loader" id="loader"><div class="loader-logo">JH</div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-percent" id="loader-percent">0%</div></div>
-<!-- Cursor -->
-<div class="cursor-ring" id="cursor-ring"></div>
-<div class="cursor-dot" id="cursor-dot"></div>
-<div class="mouse-glow" id="mouse-glow"></div>
-<!-- Progress -->
-<div class="scroll-progress" id="scroll-progress"></div>
-<!-- Overlays -->
-<div class="noise"></div>
-<div class="grid-overlay"></div>
-<div class="blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
-<!-- Command Palette -->
-<div class="cmd-palette" id="cmd-palette">
-<div class="cmd-box">
-<div class="cmd-input-wrap"><span class="cmd-icon">⌘</span><input class="cmd-input" id="cmd-input" placeholder="Type a command or search..." autocomplete="off"></div>
-<div class="cmd-results" id="cmd-results">
-<div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">🏠</span> Home</div>
-<div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">👤</span> About</div>
-<div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">📄</span> Resume</div>
-<div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">🚀</span> Projects</div>
-<div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">⚡</span> Services</div>
-<div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">📝</span> Blog</div>
-<div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">📬</span> Contact</div>
-<div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">🛠️</span> Tech Stack</div>
-<div class="cmd-item" data-href="../../pages/case-studies/wpforms-google-sheets.html"><span class="cmd-item-icon">📊</span> Case Study</div>
-</div>
-<div class="cmd-hint">⌘K to toggle · ESC to close</div>
-</div>
-</div>
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-<a class="nav-logo" href="../../index.html"><div class="nav-logo-icon">JH</div><span>Jewel Hossain</span></a>
-<div class="nav-links">
-<a class="nav-link" href="../../index.html">Home</a>
-<a class="nav-link" href="../../pages/about.html">About</a>
-<a class="nav-link" href="../../pages/resume.html">Resume</a>
-<a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
-<a class="nav-link" href="../../pages/services/services.html">Services</a>
-<a class="nav-link active" href="../../pages/blog/blog.html">Blog</a>
-<a class="nav-link" href="../../pages/contact.html">Contact</a>
-</div>
-<a class="nav-cta magnetic" href="../../pages/contact.html">Let's Talk</a>
-<button class="nav-mobile-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</nav>
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-<button class="mobile-close" id="mobile-close-btn">✕</button>
-<a href="../../index.html">Home</a>
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/resume.html">Resume</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/services/services.html">Services</a>
-<a href="../../pages/blog/blog.html">Blog</a>
-<a href="../../pages/tech-stack.html">Tech Stack</a>
-<a href="../../pages/contact.html">Contact</a>
-</div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-<!-- PAGE CONTENT -->
-<main class="page-wrap">
+    <!-- Command Palette -->
+    <div class="cmd-palette" id="cmd-palette">
+        <div class="cmd-box">
+            <div class="cmd-input-wrap">
+                <span class="cmd-icon">/</span>
+                <input class="cmd-input" id="cmd-input" placeholder="Type a destination or search..." autocomplete="off">
+            </div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">[01]</span> Home</div>
+                <div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">[02]</span> About</div>
+                <div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">[03]</span> Resume</div>
+                <div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">[04]</span> Projects</div>
+                <div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">[05]</span> Services</div>
+                <div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">[06]</span> Engineering Blog</div>
+                <div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">[07]</span> Contact</div>
+                <div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">[08]</span> Technical Stack</div>
+            </div>
+            <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
+        </div>
+    </div>
 
-<section style="padding-top:150px"><div class="container">
-<div class="section-header" data-animate="fade-up"><div class="badge badge-accent section-badge">My Blog</div><h2 class="section-title">Insights, Tutorials &<br>Developer Stories</h2></div>
-<div class="filter-group" data-animate="fade-up"><span class="filter-btn active">All</span><span class="filter-btn">WordPress</span><span class="filter-btn">Tutorials</span><span class="filter-btn">Automation</span></div>
-<div class="blog-grid"><a class="blog-card" data-animate="fade-up" data-animate-delay="0" href="scalable-plugin-architecture.html"><div class="blog-thumb">🏗️</div><div class="blog-body"><div class="blog-meta"><span>May 12, 2024</span><span>8 min</span><span>WordPress</span></div><div class="blog-title">How I Built a Scalable WordPress Plugin Architecture</div><div class="blog-excerpt">Building scalable and future-proof plugins requires careful planning.</div></div></a><a class="blog-card" data-animate="fade-up" data-animate-delay="1" href="google-sheets-wordpress.html"><div class="blog-thumb">📊</div><div class="blog-body"><div class="blog-meta"><span>May 11, 2024</span><span>6 min</span><span>Integration</span></div><div class="blog-title">Integrating Google Sheets with WordPress</div><div class="blog-excerpt">Complete guide to building Google Sheets integrations using Sheets API v4.</div></div></a><a class="blog-card" data-animate="fade-up" data-animate-delay="2" href="automation-systems.html"><div class="blog-thumb">🤖</div><div class="blog-body"><div class="blog-meta"><span>Apr 25, 2024</span><span>7 min</span><span>Automation</span></div><div class="blog-title">Building Automation Systems That Save Time</div><div class="blog-excerpt">Design automation systems that eliminate repetitive tasks.</div></div></a><a class="blog-card" data-animate="fade-up" data-animate-delay="3" href="wp-plugin-best-practices.html"><div class="blog-thumb">✅</div><div class="blog-body"><div class="blog-meta"><span>Apr 08, 2024</span><span>8 min</span><span>WordPress</span></div><div class="blog-title">Best Practices for WP Plugin Development</div><div class="blog-excerpt">Essential coding standards and architectural patterns.</div></div></a></div>
-</div></section>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a class="nav-logo" href="../../index.html">
+            <div class="nav-logo-icon">JH</div>
+            <span>jewel.engineer</span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="../../index.html">Overview</a>
+            <a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
+            <a class="nav-link" href="../../pages/services/services.html">Services</a>
+            <a class="nav-link" href="../../pages/about.html">About</a>
+            <a class="nav-link active" href="../../pages/blog/blog.html">Blog</a>
+            <a class="nav-link" href="../../pages/contact.html">Contact</a>
+        </div>
+        <a class="nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+    </nav>
 
-</main>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">✕</button>
+        <a href="../../index.html">Overview</a>
+        <a href="../../pages/projects/projects.html">Projects</a>
+        <a href="../../pages/services/services.html">Services</a>
+        <a href="../../pages/about.html">About</a>
+        <a href="../../pages/resume.html">Resume</a>
+        <a href="../../pages/blog/blog.html">Blog</a>
+        <a href="../../pages/tech-stack.html">Tech Stack</a>
+        <a href="../../pages/contact.html">Contact</a>
+    </div>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-inner">
-<div class="footer-logo"><div class="nav-logo-icon">JH</div>Jewel Hossain</div>
-<div class="footer-links">
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/contact.html">Contact</a>
-<a href="#" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">↑ Top</a>
-</div>
-</div>
-<div class="footer-bottom">© 2024 Jewel Hossain. All rights reserved.</div>
-</div>
-</footer>
-<button class="back-to-top" id="back-to-top">↑</button>
-<script src="../../js/app.js"></script>
-<script src="../../js/animations.js"></script>
+    <!-- PAGE CONTENT -->
+    <main class="page-wrap">
+
+        <section style="padding-top:140px;padding-bottom:var(--space-16)">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">Technical Blog & Research</div>
+                    <h1 class="section-title">Insights, Tutorials &<br>Architecture Deep Dives</h1>
+                    <p class="section-desc">Practical writeups on building high-reliability WordPress plugins and enterprise cloud integrations.</p>
+                </div>
+
+                <!-- Interactive Filter Tabs -->
+                <div class="filter-group" data-animate="fade-up" style="justify-content:center;margin-bottom:var(--space-10)">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">WordPress</button>
+                    <button class="filter-btn">Integration</button>
+                    <button class="filter-btn">Automation</button>
+                </div>
+
+                <!-- Rich Blog Grid -->
+                <div class="blog-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
+
+                    <!-- Post 1: Scalable Plugin Architecture -->
+                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" data-category="wordpress architecture" href="scalable-plugin-architecture.html">
+                        <div class="blog-thumb-v2">
+                            <div class="blog-thumb-top">
+                                <span class="blog-diagram-tag">SYSTEM BLUEPRINT</span>
+                                <span class="blog-read-badge">8 min read</span>
+                            </div>
+                            <!-- Vector Architecture Schematic -->
+                            <div class="blog-schematic">
+                                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="16" width="68" height="28" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                    <text x="44" y="34" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle" font-weight="600">PluginCore</text>
+                                    
+                                    <path d="M78 30 H112" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3 3"/>
+                                    <polygon points="112,27 118,30 112,33" fill="#38bdf8"/>
+                                    
+                                    <rect x="118" y="16" width="76" height="28" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                    <text x="156" y="34" fill="#94a3b8" font-size="9" font-family="monospace" text-anchor="middle">HookManager</text>
+                                    
+                                    <path d="M194 30 H224" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                    <polygon points="224,27 230,30 224,33" fill="rgba(255,255,255,0.4)"/>
+                                    
+                                    <rect x="230" y="16" width="60" height="28" rx="4" fill="#101216" stroke="rgba(16,185,129,0.5)" stroke-width="1.2"/>
+                                    <text x="260" y="34" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">DB & Cache</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="blog-body-v2">
+                            <div class="blog-meta-v2">
+                                <span>May 12, 2024</span>
+                                <span class="meta-dot">·</span>
+                                <span>8 min read</span>
+                                <span class="meta-dot">·</span>
+                                <span class="blog-cat-badge">WordPress Architecture</span>
+                            </div>
+                            <h2 class="blog-title-v2">How I Built a Scalable WordPress Plugin Architecture</h2>
+                            <p class="blog-excerpt-v2">Building scalable, decoupled plugins that safely power 50k+ active installations without regressions or monolithic dependencies.</p>
+                            <div class="blog-link-row">
+                                <span>Read Technical Deep Dive</span>
+                                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Post 2: Google Sheets API v4 -->
+                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" data-category="integration tutorials" href="google-sheets-wordpress.html">
+                        <div class="blog-thumb-v2">
+                            <div class="blog-thumb-top">
+                                <span class="blog-diagram-tag">API PIPELINE</span>
+                                <span class="blog-read-badge">6 min read</span>
+                            </div>
+                            <!-- Vector Architecture Schematic -->
+                            <div class="blog-schematic">
+                                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="16" width="68" height="28" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                    <text x="44" y="34" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">FormSubmit</text>
+                                    
+                                    <path d="M78 30 H112" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                    <polygon points="112,27 118,30 112,33" fill="rgba(255,255,255,0.4)"/>
+                                    
+                                    <rect x="118" y="16" width="76" height="28" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                    <text x="156" y="34" fill="#38bdf8" font-size="9" font-family="monospace" text-anchor="middle">OAuth2Vault</text>
+                                    
+                                    <path d="M194 30 H224" stroke="#10b981" stroke-width="1.2" stroke-dasharray="3 3"/>
+                                    <polygon points="224,27 230,30 224,33" fill="#10b981"/>
+                                    
+                                    <rect x="230" y="16" width="60" height="28" rx="4" fill="#101216" stroke="#10b981" stroke-width="1.2"/>
+                                    <text x="260" y="34" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">Sheets v4</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="blog-body-v2">
+                            <div class="blog-meta-v2">
+                                <span>May 11, 2024</span>
+                                <span class="meta-dot">·</span>
+                                <span>6 min read</span>
+                                <span class="meta-dot">·</span>
+                                <span class="blog-cat-badge">API Integration</span>
+                            </div>
+                            <h2 class="blog-title-v2">Integrating Google Sheets with WordPress via Sheets API v4</h2>
+                            <p class="blog-excerpt-v2">A production blueprint for syncing form submissions in real time with batched append requests, automatic token refreshes, and backoff retries.</p>
+                            <div class="blog-link-row">
+                                <span>Read Technical Deep Dive</span>
+                                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Post 3: Background Automation Systems -->
+                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" data-category="automation tutorials" href="automation-systems.html">
+                        <div class="blog-thumb-v2">
+                            <div class="blog-thumb-top">
+                                <span class="blog-diagram-tag">ASYNC QUEUES</span>
+                                <span class="blog-read-badge">7 min read</span>
+                            </div>
+                            <!-- Vector Architecture Schematic -->
+                            <div class="blog-schematic">
+                                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="16" width="68" height="28" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                    <text x="44" y="34" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">AsyncEvent</text>
+                                    
+                                    <path d="M78 30 H112" stroke="#38bdf8" stroke-width="1.2"/>
+                                    <polygon points="112,27 118,30 112,33" fill="#38bdf8"/>
+                                    
+                                    <rect x="118" y="16" width="76" height="28" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                    <text x="156" y="34" fill="#38bdf8" font-size="9" font-family="monospace" text-anchor="middle">ActionScheduler</text>
+                                    
+                                    <path d="M194 30 H224" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                    <polygon points="224,27 230,30 224,33" fill="rgba(255,255,255,0.4)"/>
+                                    
+                                    <rect x="230" y="16" width="60" height="28" rx="4" fill="#101216" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                    <text x="260" y="34" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">WebhookQueue</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="blog-body-v2">
+                            <div class="blog-meta-v2">
+                                <span>Apr 25, 2024</span>
+                                <span class="meta-dot">·</span>
+                                <span>7 min read</span>
+                                <span class="meta-dot">·</span>
+                                <span class="blog-cat-badge">Automation & Queues</span>
+                            </div>
+                            <h2 class="blog-title-v2">Building Automation Systems That Save 100+ Hours</h2>
+                            <p class="blog-excerpt-v2">How to decouple long-running CRM data transformations and notifications from web requests to guarantee instantaneous page response times.</p>
+                            <div class="blog-link-row">
+                                <span>Read Technical Deep Dive</span>
+                                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Post 4: Best Practices for WP Plugins -->
+                    <a class="blog-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="3" data-category="wordpress tutorials" href="wp-plugin-best-practices.html">
+                        <div class="blog-thumb-v2">
+                            <div class="blog-thumb-top">
+                                <span class="blog-diagram-tag">QUALITY GATES</span>
+                                <span class="blog-read-badge">8 min read</span>
+                            </div>
+                            <!-- Vector Architecture Schematic -->
+                            <div class="blog-schematic">
+                                <svg viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="10" y="16" width="68" height="28" rx="4" fill="#16181e" stroke="rgba(16,185,129,0.5)" stroke-width="1.2"/>
+                                    <text x="44" y="34" fill="#10b981" font-size="9" font-family="monospace" text-anchor="middle">PHPStan L8</text>
+                                    
+                                    <path d="M78 30 H112" stroke="#10b981" stroke-width="1.2"/>
+                                    <polygon points="112,27 118,30 112,33" fill="#10b981"/>
+                                    
+                                    <rect x="118" y="16" width="76" height="28" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                    <text x="156" y="34" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">WPCS Rules</text>
+                                    
+                                    <path d="M194 30 H224" stroke="#38bdf8" stroke-width="1.2"/>
+                                    <polygon points="224,27 230,30 224,33" fill="#38bdf8"/>
+                                    
+                                    <rect x="230" y="16" width="60" height="28" rx="4" fill="#101216" stroke="#38bdf8" stroke-width="1.2"/>
+                                    <text x="260" y="34" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">Pest CI/CD</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="blog-body-v2">
+                            <div class="blog-meta-v2">
+                                <span>Apr 08, 2024</span>
+                                <span class="meta-dot">·</span>
+                                <span>8 min read</span>
+                                <span class="meta-dot">·</span>
+                                <span class="blog-cat-badge">WordPress Standards</span>
+                            </div>
+                            <h2 class="blog-title-v2">Best Practices for Enterprise WP Plugin Development</h2>
+                            <p class="blog-excerpt-v2">Strict coding standards, database query hygiene, capability barriers, and cryptographic verification for professional WordPress engineering.</p>
+                            <div class="blog-link-row">
+                                <span>Read Technical Deep Dive</span>
+                                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Call to action -->
+                <div style="text-align:center;margin-top:var(--space-16)" data-animate="fade-up">
+                    <a class="btn btn-primary" href="../../pages/contact.html">
+                        Subscribe to Future Technical Releases
+                        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="nav-logo-icon">JH</div>
+                    <span>Jewel Hossain — WordPress & Systems Engineer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="../../pages/projects/projects.html">Projects</a>
+                    <a href="../../pages/services/services.html">Services</a>
+                    <a href="../../pages/about.html">About</a>
+                    <a href="../../pages/blog/blog.html">Blog</a>
+                    <a href="../../pages/contact.html">Contact</a>
+                    <a href="#" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">↑ Return to Top</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Jewel Hossain · Crafted with clean HTML, CSS & JavaScript
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top">↑</button>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/animations.js"></script>
 </body>
 </html>

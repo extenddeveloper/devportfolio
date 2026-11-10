@@ -16,66 +16,68 @@
 <link rel="stylesheet" href="../../css/pages.css">
 <link rel="stylesheet" href="../../css/responsive.css">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%233b82f6'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif' font-weight='800' font-size='14'>JH</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Loader -->
-<div class="loader" id="loader"><div class="loader-logo">JH</div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-percent" id="loader-percent">0%</div></div>
-<!-- Cursor -->
-<div class="cursor-ring" id="cursor-ring"></div>
-<div class="cursor-dot" id="cursor-dot"></div>
-<div class="mouse-glow" id="mouse-glow"></div>
-<!-- Progress -->
-<div class="scroll-progress" id="scroll-progress"></div>
-<!-- Overlays -->
-<div class="noise"></div>
-<div class="grid-overlay"></div>
-<div class="blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
-<!-- Command Palette -->
-<div class="cmd-palette" id="cmd-palette">
-<div class="cmd-box">
-<div class="cmd-input-wrap"><span class="cmd-icon">⌘</span><input class="cmd-input" id="cmd-input" placeholder="Type a command or search..." autocomplete="off"></div>
-<div class="cmd-results" id="cmd-results">
-<div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">🏠</span> Home</div>
-<div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">👤</span> About</div>
-<div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">📄</span> Resume</div>
-<div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">🚀</span> Projects</div>
-<div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">⚡</span> Services</div>
-<div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">📝</span> Blog</div>
-<div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">📬</span> Contact</div>
-<div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">🛠️</span> Tech Stack</div>
-<div class="cmd-item" data-href="../../pages/case-studies/wpforms-google-sheets.html"><span class="cmd-item-icon">📊</span> Case Study</div>
-</div>
-<div class="cmd-hint">⌘K to toggle · ESC to close</div>
-</div>
-</div>
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-<a class="nav-logo" href="../../index.html"><div class="nav-logo-icon">JH</div><span>Jewel Hossain</span></a>
-<div class="nav-links">
-<a class="nav-link" href="../../index.html">Home</a>
-<a class="nav-link" href="../../pages/about.html">About</a>
-<a class="nav-link" href="../../pages/resume.html">Resume</a>
-<a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
-<a class="nav-link" href="../../pages/services/services.html">Services</a>
-<a class="nav-link active" href="../../pages/blog/blog.html">Blog</a>
-<a class="nav-link" href="../../pages/contact.html">Contact</a>
-</div>
-<a class="nav-cta magnetic" href="../../pages/contact.html">Let's Talk</a>
-<button class="nav-mobile-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</nav>
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-<button class="mobile-close" id="mobile-close-btn">✕</button>
-<a href="../../index.html">Home</a>
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/resume.html">Resume</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/services/services.html">Services</a>
-<a href="../../pages/blog/blog.html">Blog</a>
-<a href="../../pages/tech-stack.html">Tech Stack</a>
-<a href="../../pages/contact.html">Contact</a>
-</div>
+<!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Command Palette -->
+    <div class="cmd-palette" id="cmd-palette">
+        <div class="cmd-box">
+            <div class="cmd-input-wrap">
+                <span class="cmd-icon">/</span>
+                <input class="cmd-input" id="cmd-input" placeholder="Type a destination or search..." autocomplete="off">
+            </div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">[01]</span> Home</div>
+                <div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">[02]</span> About</div>
+                <div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">[03]</span> Resume</div>
+                <div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">[04]</span> Projects</div>
+                <div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">[05]</span> Services</div>
+                <div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">[06]</span> Engineering Blog</div>
+                <div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">[07]</span> Contact</div>
+                <div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">[08]</span> Technical Stack</div>
+            </div>
+            <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a class="nav-logo" href="../../index.html">
+            <div class="nav-logo-icon">JH</div>
+            <span>jewel.engineer</span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="../../index.html">Overview</a>
+            <a class="nav-link " href="../../pages/projects/projects.html">Projects</a>
+            <a class="nav-link " href="../../pages/services/services.html">Services</a>
+            <a class="nav-link " href="../../pages/about.html">About</a>
+            <a class="nav-link active" href="../../pages/blog/blog.html">Blog</a>
+            <a class="nav-link " href="../../pages/contact.html">Contact</a>
+        </div>
+        <a class="nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">✕</button>
+        <a href="../../index.html">Overview</a>
+        <a href="../../pages/projects/projects.html">Projects</a>
+        <a href="../../pages/services/services.html">Services</a>
+        <a href="../../pages/about.html">About</a>
+        <a href="../../pages/resume.html">Resume</a>
+        <a href="../../pages/blog/blog.html">Blog</a>
+        <a href="../../pages/tech-stack.html">Tech Stack</a>
+        <a href="../../pages/contact.html">Contact</a>
+    </div>
 
 <!-- PAGE CONTENT -->
 <main class="page-wrap">
@@ -92,27 +94,47 @@
 │   └── class-public.php
 ├── my-plugin.php
 └── uninstall.php</pre><h2>2. Core Architecture</h2><p>Implement a main plugin class with dependency injection for testability and SOLID principles.</p><h2>3. Security First</h2><p>Nonce verification, capability checks, sanitization, and output escaping throughout.</p><h2>4. Performance</h2><p>Transient caching, lazy loading, efficient queries, and optimized asset loading.</p></div>
-<div class="share-block" style="margin-top:var(--space-10)" data-animate="fade-up"><h4>Share Article</h4><div class="social-links"><div class="social-link">𝕏</div><div class="social-link">in</div><div class="social-link">📧</div></div></div>
+<div class="share-block" style="margin-top:var(--space-10)" data-animate="fade-up">
+    <h4>Share Article</h4>
+    <div class="social-links">
+        <a href="https://twitter.com/intent/tweet" target="_blank" rel="noopener" class="social-link" title="Share on Twitter / X" aria-label="Share on X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" rel="noopener" class="social-link" title="Share on LinkedIn" aria-label="Share on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:?subject=Article" class="social-link" title="Share via Email" aria-label="Share via Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+    </div>
+</div></div>
 <div class="subscribe-block" style="margin-top:var(--space-5);margin-bottom:var(--space-20)" data-animate="fade-up"><h4>Subscribe</h4><p>Stay updated with new articles.</p><div class="subscribe-row"><input class="form-input" placeholder="Your email"><button class="btn btn-primary">Subscribe</button></div></div>
-<div style="text-align:center;margin-bottom:var(--space-20)"><a class="btn btn-secondary magnetic" href="blog.html">← Back to Blog</a></div>
+<div style="text-align:center;margin-bottom:var(--space-20)"><a class="btn btn-secondary " href="blog.html">← Back to Blog</a></div>
 </div></section>
 </main>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-inner">
-<div class="footer-logo"><div class="nav-logo-icon">JH</div>Jewel Hossain</div>
-<div class="footer-links">
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/contact.html">Contact</a>
-<a href="#" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">↑ Top</a>
-</div>
-</div>
-<div class="footer-bottom">© 2024 Jewel Hossain. All rights reserved.</div>
-</div>
-</footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="nav-logo-icon">JH</div>
+                    <span>Jewel Hossain — WordPress & Systems Engineer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="../../pages/projects/projects.html">Projects</a>
+                    <a href="../../pages/services/services.html">Services</a>
+                    <a href="../../pages/about.html">About</a>
+                    <a href="../../pages/blog/blog.html">Blog</a>
+                    <a href="../../pages/contact.html">Contact</a>
+                    <a href="#" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">↑ Return to Top</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Jewel Hossain · Crafted with clean HTML, CSS & JavaScript
+            </div>
+        </div>
+    </footer>
 <button class="back-to-top" id="back-to-top">↑</button>
 <script src="../../js/app.js"></script>
 <script src="../../js/animations.js"></script>

@@ -1,34 +1,16 @@
 /* ========================================
-   MAIN APPLICATION CONTROLLER
-   Shared across all pages
+   MAIN APPLICATION CONTROLLER (UNSLOPPED)
+   Instant page loads, clean interactions
    ======================================== */
 'use strict';
 
 const App = {
   init() {
-    this.initLoader();
     this.initScrollProgress();
     this.initBackToTop();
     this.initMobileMenu();
     this.initCommandPalette();
     this.setActiveNav();
-    if ('ontouchstart' in window) document.body.classList.add('touch-device');
-  },
-
-  // ---- Loader ----
-  initLoader() {
-    const loader = document.getElementById('loader');
-    const pct = document.getElementById('loader-percent');
-    if (!loader) return;
-    let c = 0;
-    const iv = setInterval(() => {
-      c += Math.random() * 18 + 3;
-      if (c >= 100) {
-        c = 100; clearInterval(iv);
-        setTimeout(() => { loader.classList.add('hidden'); Animations.observeAll(); }, 300);
-      }
-      if (pct) pct.textContent = Math.floor(c) + '%';
-    }, 70);
   },
 
   // ---- Active Nav ----
@@ -80,9 +62,14 @@ const App = {
     if (!p) return;
 
     document.addEventListener('keydown', e => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') { e.preventDefault(); p.classList.toggle('open'); if (p.classList.contains('open')) setTimeout(() => inp?.focus(), 120); }
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        p.classList.toggle('open');
+        if (p.classList.contains('open')) setTimeout(() => inp?.focus(), 80);
+      }
       if (e.key === 'Escape') p.classList.remove('open');
     });
+
     p.addEventListener('click', e => { if (e.target === p) p.classList.remove('open'); });
 
     res?.querySelectorAll('.cmd-item').forEach(item => {

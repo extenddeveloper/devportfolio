@@ -16,93 +16,102 @@
 <link rel="stylesheet" href="../../css/pages.css">
 <link rel="stylesheet" href="../../css/responsive.css">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%233b82f6'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif' font-weight='800' font-size='14'>JH</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Loader -->
-<div class="loader" id="loader"><div class="loader-logo">JH</div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-percent" id="loader-percent">0%</div></div>
-<!-- Cursor -->
-<div class="cursor-ring" id="cursor-ring"></div>
-<div class="cursor-dot" id="cursor-dot"></div>
-<div class="mouse-glow" id="mouse-glow"></div>
-<!-- Progress -->
-<div class="scroll-progress" id="scroll-progress"></div>
-<!-- Overlays -->
-<div class="noise"></div>
-<div class="grid-overlay"></div>
-<div class="blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
-<!-- Command Palette -->
-<div class="cmd-palette" id="cmd-palette">
-<div class="cmd-box">
-<div class="cmd-input-wrap"><span class="cmd-icon">⌘</span><input class="cmd-input" id="cmd-input" placeholder="Type a command or search..." autocomplete="off"></div>
-<div class="cmd-results" id="cmd-results">
-<div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">🏠</span> Home</div>
-<div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">👤</span> About</div>
-<div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">📄</span> Resume</div>
-<div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">🚀</span> Projects</div>
-<div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">⚡</span> Services</div>
-<div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">📝</span> Blog</div>
-<div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">📬</span> Contact</div>
-<div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">🛠️</span> Tech Stack</div>
-<div class="cmd-item" data-href="../../pages/case-studies/wpforms-google-sheets.html"><span class="cmd-item-icon">📊</span> Case Study</div>
-</div>
-<div class="cmd-hint">⌘K to toggle · ESC to close</div>
-</div>
-</div>
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-<a class="nav-logo" href="../../index.html"><div class="nav-logo-icon">JH</div><span>Jewel Hossain</span></a>
-<div class="nav-links">
-<a class="nav-link" href="../../index.html">Home</a>
-<a class="nav-link" href="../../pages/about.html">About</a>
-<a class="nav-link" href="../../pages/resume.html">Resume</a>
-<a class="nav-link" href="../../pages/projects/projects.html">Projects</a>
-<a class="nav-link active" href="../../pages/services/services.html">Services</a>
-<a class="nav-link" href="../../pages/blog/blog.html">Blog</a>
-<a class="nav-link" href="../../pages/contact.html">Contact</a>
-</div>
-<a class="nav-cta magnetic" href="../../pages/contact.html">Let's Talk</a>
-<button class="nav-mobile-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</nav>
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-<button class="mobile-close" id="mobile-close-btn">✕</button>
-<a href="../../index.html">Home</a>
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/resume.html">Resume</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/services/services.html">Services</a>
-<a href="../../pages/blog/blog.html">Blog</a>
-<a href="../../pages/tech-stack.html">Tech Stack</a>
-<a href="../../pages/contact.html">Contact</a>
-</div>
+<!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Command Palette -->
+    <div class="cmd-palette" id="cmd-palette">
+        <div class="cmd-box">
+            <div class="cmd-input-wrap">
+                <span class="cmd-icon">/</span>
+                <input class="cmd-input" id="cmd-input" placeholder="Type a destination or search..." autocomplete="off">
+            </div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">[01]</span> Home</div>
+                <div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">[02]</span> About</div>
+                <div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">[03]</span> Resume</div>
+                <div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">[04]</span> Projects</div>
+                <div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">[05]</span> Services</div>
+                <div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">[06]</span> Engineering Blog</div>
+                <div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">[07]</span> Contact</div>
+                <div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">[08]</span> Technical Stack</div>
+            </div>
+            <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a class="nav-logo" href="../../index.html">
+            <div class="nav-logo-icon">JH</div>
+            <span>jewel.engineer</span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="../../index.html">Overview</a>
+            <a class="nav-link " href="../../pages/projects/projects.html">Projects</a>
+            <a class="nav-link active" href="../../pages/services/services.html">Services</a>
+            <a class="nav-link " href="../../pages/about.html">About</a>
+            <a class="nav-link " href="../../pages/blog/blog.html">Blog</a>
+            <a class="nav-link " href="../../pages/contact.html">Contact</a>
+        </div>
+        <a class="nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">✕</button>
+        <a href="../../index.html">Overview</a>
+        <a href="../../pages/projects/projects.html">Projects</a>
+        <a href="../../pages/services/services.html">Services</a>
+        <a href="../../pages/about.html">About</a>
+        <a href="../../pages/resume.html">Resume</a>
+        <a href="../../pages/blog/blog.html">Blog</a>
+        <a href="../../pages/tech-stack.html">Tech Stack</a>
+        <a href="../../pages/contact.html">Contact</a>
+    </div>
 
 <!-- PAGE CONTENT -->
 <main class="page-wrap">
 
 <section style="padding-top:150px"><div class="container">
-<div class="section-header" data-animate="fade-up"><div class="badge badge-accent section-badge">🤖 Service</div><h2 class="section-title">Automation Solutions</h2><p class="section-desc">Workflow automation and intelligent business process systems.</p></div>
-<div class="about-highlights" style="margin-bottom:var(--space-16)"><div class="about-highlight" data-animate="fade-up" data-animate-delay="1"><div class="about-highlight-icon">🔄</div><h4>Workflow Engine</h4><p>Complex multi-step automations</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="2"><div class="about-highlight-icon">📊</div><h4>Data Sync</h4><p>Cross-platform data synchronization</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="3"><div class="about-highlight-icon">⏰</div><h4>Scheduling</h4><p>Cron-based and event-driven tasks</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="4"><div class="about-highlight-icon">📈</div><h4>Analytics</h4><p>Track automation performance</p></div></div>
-<div class="case-block" data-animate="fade-up"><h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-4);color:var(--accent-purple-light)">My Process</h2><p style="color:var(--text-secondary);line-height:1.8">I map your business processes, identify automation opportunities, build reliable systems, and optimize over time.</p></div>
-<div style="text-align:center;margin-top:var(--space-12)" data-animate="fade-up"><a class="btn btn-primary btn-lg magnetic" href="../contact.html">Get a Quote →</a> <a class="btn btn-secondary" href="services.html">← All Services</a></div>
+<div class="section-header" data-animate="fade-up"><div class="badge badge-accent section-badge">Service Specification</div><h2 class="section-title">Automation Solutions</h2><p class="section-desc">Workflow automation and intelligent business process systems.</p></div>
+<div class="about-highlights" style="margin-bottom:var(--space-16)"><div class="about-highlight" data-animate="fade-up" data-animate-delay="1"><div class="about-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><h4>Workflow Engine</h4><p>Complex multi-step automations</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="2"><div class="about-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h4>Data Sync</h4><p>Cross-platform data synchronization</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="3"><div class="about-highlight-icon">⏰</div><h4>Scheduling</h4><p>Cron-based and event-driven tasks</p></div><div class="about-highlight" data-animate="fade-up" data-animate-delay="4"><div class="about-highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h4>Analytics</h4><p>Track automation performance</p></div></div>
+<div class="case-block" data-animate="fade-up"><h2 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-4);color:var(--text-primary)">My Process</h2><p style="color:var(--text-secondary);line-height:1.8">I map your business processes, identify automation opportunities, build reliable systems, and optimize over time.</p></div>
+<div style="text-align:center;margin-top:var(--space-12)" data-animate="fade-up"><a class="btn btn-primary btn-lg " href="../contact.html">Get a Quote →</a> <a class="btn btn-secondary" href="services.html">← All Services</a></div>
 </div></section>
 </main>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-inner">
-<div class="footer-logo"><div class="nav-logo-icon">JH</div>Jewel Hossain</div>
-<div class="footer-links">
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/contact.html">Contact</a>
-<a href="#" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">↑ Top</a>
-</div>
-</div>
-<div class="footer-bottom">© 2024 Jewel Hossain. All rights reserved.</div>
-</div>
-</footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="nav-logo-icon">JH</div>
+                    <span>Jewel Hossain — WordPress & Systems Engineer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="../../pages/projects/projects.html">Projects</a>
+                    <a href="../../pages/services/services.html">Services</a>
+                    <a href="../../pages/about.html">About</a>
+                    <a href="../../pages/blog/blog.html">Blog</a>
+                    <a href="../../pages/contact.html">Contact</a>
+                    <a href="#" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">↑ Return to Top</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Jewel Hossain · Crafted with clean HTML, CSS & JavaScript
+            </div>
+        </div>
+    </footer>
 <button class="back-to-top" id="back-to-top">↑</button>
 <script src="../../js/app.js"></script>
 <script src="../../js/animations.js"></script>

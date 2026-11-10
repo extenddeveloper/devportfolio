@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Projects — Jewel Hossain</title>
-<meta name="description" content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
+<title>Projects — Jewel Hossain | WordPress & Systems Engineer</title>
+<meta name="description" content="Production-grade WordPress plugins and high-assurance integrations powering over 50,000 active websites.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,104 +16,386 @@
 <link rel="stylesheet" href="../../css/pages.css">
 <link rel="stylesheet" href="../../css/responsive.css">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%233b82f6'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif' font-weight='800' font-size='14'>JH</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Loader -->
-<div class="loader" id="loader"><div class="loader-logo">JH</div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-percent" id="loader-percent">0%</div></div>
-<!-- Cursor -->
-<div class="cursor-ring" id="cursor-ring"></div>
-<div class="cursor-dot" id="cursor-dot"></div>
-<div class="mouse-glow" id="mouse-glow"></div>
-<!-- Progress -->
-<div class="scroll-progress" id="scroll-progress"></div>
-<!-- Overlays -->
-<div class="noise"></div>
-<div class="grid-overlay"></div>
-<div class="blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
-<!-- Command Palette -->
-<div class="cmd-palette" id="cmd-palette">
-<div class="cmd-box">
-<div class="cmd-input-wrap"><span class="cmd-icon">⌘</span><input class="cmd-input" id="cmd-input" placeholder="Type a command or search..." autocomplete="off"></div>
-<div class="cmd-results" id="cmd-results">
-<div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">🏠</span> Home</div>
-<div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">👤</span> About</div>
-<div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">📄</span> Resume</div>
-<div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">🚀</span> Projects</div>
-<div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">⚡</span> Services</div>
-<div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">📝</span> Blog</div>
-<div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">📬</span> Contact</div>
-<div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">🛠️</span> Tech Stack</div>
-<div class="cmd-item" data-href="../../pages/case-studies/wpforms-google-sheets.html"><span class="cmd-item-icon">📊</span> Case Study</div>
-</div>
-<div class="cmd-hint">⌘K to toggle · ESC to close</div>
-</div>
-</div>
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-<a class="nav-logo" href="../../index.html"><div class="nav-logo-icon">JH</div><span>Jewel Hossain</span></a>
-<div class="nav-links">
-<a class="nav-link" href="../../index.html">Home</a>
-<a class="nav-link" href="../../pages/about.html">About</a>
-<a class="nav-link" href="../../pages/resume.html">Resume</a>
-<a class="nav-link active" href="../../pages/projects/projects.html">Projects</a>
-<a class="nav-link" href="../../pages/services/services.html">Services</a>
-<a class="nav-link" href="../../pages/blog/blog.html">Blog</a>
-<a class="nav-link" href="../../pages/contact.html">Contact</a>
-</div>
-<a class="nav-cta magnetic" href="../../pages/contact.html">Let's Talk</a>
-<button class="nav-mobile-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</nav>
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-<button class="mobile-close" id="mobile-close-btn">✕</button>
-<a href="../../index.html">Home</a>
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/resume.html">Resume</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/services/services.html">Services</a>
-<a href="../../pages/blog/blog.html">Blog</a>
-<a href="../../pages/tech-stack.html">Tech Stack</a>
-<a href="../../pages/contact.html">Contact</a>
-</div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-<!-- PAGE CONTENT -->
-<main class="page-wrap">
+    <!-- Command Palette -->
+    <div class="cmd-palette" id="cmd-palette">
+        <div class="cmd-box">
+            <div class="cmd-input-wrap">
+                <span class="cmd-icon">/</span>
+                <input class="cmd-input" id="cmd-input" placeholder="Type a destination or search..." autocomplete="off">
+            </div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-item" data-href="../../index.html"><span class="cmd-item-icon">[01]</span> Home</div>
+                <div class="cmd-item" data-href="../../pages/about.html"><span class="cmd-item-icon">[02]</span> About</div>
+                <div class="cmd-item" data-href="../../pages/resume.html"><span class="cmd-item-icon">[03]</span> Resume</div>
+                <div class="cmd-item" data-href="../../pages/projects/projects.html"><span class="cmd-item-icon">[04]</span> Projects</div>
+                <div class="cmd-item" data-href="../../pages/services/services.html"><span class="cmd-item-icon">[05]</span> Services</div>
+                <div class="cmd-item" data-href="../../pages/blog/blog.html"><span class="cmd-item-icon">[06]</span> Engineering Blog</div>
+                <div class="cmd-item" data-href="../../pages/contact.html"><span class="cmd-item-icon">[07]</span> Contact</div>
+                <div class="cmd-item" data-href="../../pages/tech-stack.html"><span class="cmd-item-icon">[08]</span> Technical Stack</div>
+            </div>
+            <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
+        </div>
+    </div>
 
-<section style="padding-top:150px"><div class="container">
-<div class="section-header" data-animate="fade-up"><div class="badge badge-accent section-badge">My Projects</div><h2 class="section-title">Solutions That Make<br>an Impact</h2><p class="section-desc">Production-grade plugins powering thousands of websites.</p></div>
-<div class="filter-group" data-animate="fade-up"><span class="filter-btn active">All</span><span class="filter-btn">WordPress</span><span class="filter-btn">Integration</span><span class="filter-btn">Automation</span><span class="filter-btn">SaaS</span></div>
-<div class="projects-grid"><a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="0" href="wpforms-google-sheets.html"><div class="project-preview"><div class="project-preview-bg">📊</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">WordPress</span><span class="tag">Integration</span></div></div><div class="project-body"><div class="project-name">WPForms Google Sheets Addon</div><div class="project-desc">Real-time form sync to Google Sheets.</div><div class="project-meta"><div class="project-stats"><span>10K+ installs</span><span>⭐ 4.9</span></div><span class="project-link">View →</span></div></div></a>
-<a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="1" href="save-resume-addon.html"><div class="project-preview"><div class="project-preview-bg">💾</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">WordPress</span><span class="tag">SaaS</span></div></div><div class="project-body"><div class="project-name">Save & Resume Addon</div><div class="project-desc">Save form progress and resume later.</div><div class="project-meta"><div class="project-stats"><span>5K+ installs</span><span>⭐ 4.8</span></div><span class="project-link">View →</span></div></div></a>
-<a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="2" href="salesforce-integration.html"><div class="project-preview"><div class="project-preview-bg">⚡</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">CRM</span><span class="tag">Automation</span></div></div><div class="project-body"><div class="project-name">Salesforce Integration</div><div class="project-desc">Enterprise CRM with bidirectional sync.</div><div class="project-meta"><div class="project-stats"><span>3K+ installs</span><span>⭐ 4.7</span></div><span class="project-link">View →</span></div></div></a>
-<a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="0" href="wpforms-google-sheets.html"><div class="project-preview"><div class="project-preview-bg">💬</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">Integration</span><span class="tag">Automation</span></div></div><div class="project-body"><div class="project-name">Slack Integration</div><div class="project-desc">Send form data to Slack channels.</div><div class="project-meta"><div class="project-stats"><span>4K+ installs</span><span>⭐ 4.8</span></div><span class="project-link">View →</span></div></div></a>
-<a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="1" href="wpforms-google-sheets.html"><div class="project-preview"><div class="project-preview-bg">💳</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">WooCommerce</span><span class="tag">Payment</span></div></div><div class="project-body"><div class="project-name">WooCommerce Partial Payment</div><div class="project-desc">Deposits and payment plans.</div><div class="project-meta"><div class="project-stats"><span>2K+ installs</span><span>⭐ 4.6</span></div><span class="project-link">View →</span></div></div></a>
-<a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="2" href="wpforms-google-sheets.html"><div class="project-preview"><div class="project-preview-bg">🔗</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">WordPress</span><span class="tag">Tools</span></div></div><div class="project-body"><div class="project-name">URL Shortener Plugin</div><div class="project-desc">URL shortener with analytics.</div><div class="project-meta"><div class="project-stats"><span>6K+ installs</span><span>⭐ 4.7</span></div><span class="project-link">View →</span></div></div></a>
-<a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="0" href="wpforms-google-sheets.html"><div class="project-preview"><div class="project-preview-bg">📅</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">WordPress</span><span class="tag">SaaS</span></div></div><div class="project-body"><div class="project-name">Booking System Plugin</div><div class="project-desc">Appointment booking with calendar.</div><div class="project-meta"><div class="project-stats"><span>3K+ installs</span><span>⭐ 4.5</span></div><span class="project-link">View →</span></div></div></a>
-<a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="1" href="wpforms-google-sheets.html"><div class="project-preview"><div class="project-preview-bg">🗄️</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">CF7</span><span class="tag">Database</span></div></div><div class="project-body"><div class="project-name">CF7 Database Manager</div><div class="project-desc">Store & export CF7 submissions.</div><div class="project-meta"><div class="project-stats"><span>8K+ installs</span><span>⭐ 4.8</span></div><span class="project-link">View →</span></div></div></a>
-<a class="project-card tilt-card" data-animate="fade-up" data-animate-delay="2" href="wpforms-google-sheets.html"><div class="project-preview"><div class="project-preview-bg">📈</div><div class="project-overlay"></div><div class="project-tags"><span class="tag">Dashboard</span><span class="tag">Automation</span></div></div><div class="project-body"><div class="project-name">Automation Dashboard</div><div class="project-desc">Monitor integrations & sync status.</div><div class="project-meta"><div class="project-stats"><span>1K+ installs</span><span>⭐ 4.9</span></div><span class="project-link">View →</span></div></div></a>
-</div>
-</div></section>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a class="nav-logo" href="../../index.html">
+            <div class="nav-logo-icon">JH</div>
+            <span>jewel.engineer</span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="../../index.html">Overview</a>
+            <a class="nav-link active" href="../../pages/projects/projects.html">Projects</a>
+            <a class="nav-link" href="../../pages/services/services.html">Services</a>
+            <a class="nav-link" href="../../pages/about.html">About</a>
+            <a class="nav-link" href="../../pages/blog/blog.html">Blog</a>
+            <a class="nav-link" href="../../pages/contact.html">Contact</a>
+        </div>
+        <a class="nav-cta" href="../../pages/contact.html">Let's Talk</a>
+        <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+    </nav>
 
-</main>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">✕</button>
+        <a href="../../index.html">Overview</a>
+        <a href="../../pages/projects/projects.html">Projects</a>
+        <a href="../../pages/services/services.html">Services</a>
+        <a href="../../pages/about.html">About</a>
+        <a href="../../pages/resume.html">Resume</a>
+        <a href="../../pages/blog/blog.html">Blog</a>
+        <a href="../../pages/tech-stack.html">Tech Stack</a>
+        <a href="../../pages/contact.html">Contact</a>
+    </div>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-inner">
-<div class="footer-logo"><div class="nav-logo-icon">JH</div>Jewel Hossain</div>
-<div class="footer-links">
-<a href="../../pages/about.html">About</a>
-<a href="../../pages/projects/projects.html">Projects</a>
-<a href="../../pages/contact.html">Contact</a>
-<a href="#" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">↑ Top</a>
-</div>
-</div>
-<div class="footer-bottom">© 2024 Jewel Hossain. All rights reserved.</div>
-</div>
-</footer>
-<button class="back-to-top" id="back-to-top">↑</button>
-<script src="../../js/app.js"></script>
-<script src="../../js/animations.js"></script>
+    <!-- PAGE CONTENT -->
+    <main class="page-wrap">
+
+        <section style="padding-top:140px;padding-bottom:var(--space-16)">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">Production Systems & Plugins</div>
+                    <h1 class="section-title">Tested Architecture.<br>Real-World Scale.</h1>
+                    <p class="section-desc">Production-grade WordPress plugins and cloud integrations powering thousands of websites.</p>
+                </div>
+
+                <!-- Interactive Filter Tabs -->
+                <div class="filter-group" data-animate="fade-up" style="justify-content:center;margin-bottom:var(--space-10)">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">WordPress</button>
+                    <button class="filter-btn">Integration</button>
+                    <button class="filter-btn">Automation</button>
+                    <button class="filter-btn">WooCommerce</button>
+                </div>
+
+                <!-- Rich Projects Grid (6 Blueprint Cards) -->
+                <div class="projects-grid" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
+
+                    <!-- Project 1: WPForms Google Sheets Addon -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" data-category="wordpress integration automation" href="wpforms-google-sheets.html">
+                        <div class="project-preview-v2">
+                            <span class="project-preview-badge">● 10M+ Rows Synced</span>
+                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                <text x="50" y="44" fill="#38bdf8" font-size="9" font-family="monospace" text-anchor="middle" font-weight="600">WPForms Hook</text>
+                                
+                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="3 3"/>
+                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
+                                
+                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <text x="156" y="44" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">OAuth Vault</text>
+                                
+                                <path d="M186 40 H215" stroke="#10b981" stroke-width="1.2"/>
+                                <polygon points="215,37 221,40 215,43" fill="#10b981"/>
+                                
+                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="#10b981" stroke-width="1.2"/>
+                                <text x="245" y="44" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">Sheets v4</text>
+                            </svg>
+                        </div>
+                        <div class="project-body-v2">
+                            <div class="project-tags-v2">
+                                <span class="project-tag-v2">WordPress</span>
+                                <span class="project-tag-v2">Sheets API</span>
+                                <span class="project-tag-v2">OAuth 2.0</span>
+                            </div>
+                            <h2 class="project-title-v2">WPForms Google Sheets Addon</h2>
+                            <p class="project-desc-v2">Real-time form synchronization with Google Sheets API v4. Features automated OAuth 2.0 refresh, batched appends, and retry queues.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-v2">
+                                    <span class="project-stat-accent">10K+ Installs</span>
+                                    <span>4.9 ★ (120+)</span>
+                                </div>
+                                <span class="project-cta-v2">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 2: Save & Resume Addon -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" data-category="wordpress" href="save-resume-addon.html">
+                        <div class="project-preview-v2">
+                            <span class="project-preview-badge">● Encrypted Vault</span>
+                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">Multi-Step Form</text>
+                                
+                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2"/>
+                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
+                                
+                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">AES-256 Vault</text>
+                                
+                                <path d="M186 40 H215" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <polygon points="215,37 221,40 215,43" fill="rgba(255,255,255,0.4)"/>
+                                
+                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                <text x="245" y="44" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">Magic Link</text>
+                            </svg>
+                        </div>
+                        <div class="project-body-v2">
+                            <div class="project-tags-v2">
+                                <span class="project-tag-v2">WordPress</span>
+                                <span class="project-tag-v2">AES-256</span>
+                                <span class="project-tag-v2">Session Store</span>
+                            </div>
+                            <h2 class="project-title-v2">Save & Resume Addon</h2>
+                            <p class="project-desc-v2">Cryptographically secure form progress persistence. Allows visitors to save partial submissions and continue seamlessly via authenticated magic links.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-v2">
+                                    <span class="project-stat-accent">5K+ Installs</span>
+                                    <span>4.8 ★ (85)</span>
+                                </div>
+                                <span class="project-cta-v2">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 3: Salesforce Integration -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" data-category="integration automation" href="salesforce-integration.html">
+                        <div class="project-preview-v2">
+                            <span class="project-preview-badge">● Bi-Directional</span>
+                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">Lead Submits</text>
+                                
+                                <path d="M85 36 H120" stroke="#38bdf8" stroke-width="1.2"/>
+                                <polygon points="120,33 126,36 120,39" fill="#38bdf8"/>
+                                <path d="M120 44 H85" stroke="#10b981" stroke-width="1.2"/>
+                                <polygon points="85,41 79,44 85,47" fill="#10b981"/>
+                                
+                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">FieldMapper</text>
+                                
+                                <path d="M186 40 H215" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <polygon points="215,37 221,40 215,43" fill="rgba(255,255,255,0.4)"/>
+                                
+                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                <text x="245" y="44" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">Salesforce</text>
+                            </svg>
+                        </div>
+                        <div class="project-body-v2">
+                            <div class="project-tags-v2">
+                                <span class="project-tag-v2">Salesforce CRM</span>
+                                <span class="project-tag-v2">REST API</span>
+                                <span class="project-tag-v2">Webhooks</span>
+                            </div>
+                            <h2 class="project-title-v2">Salesforce Integration Engine</h2>
+                            <p class="project-desc-v2">Enterprise CRM sync pipeline mapping WordPress submissions directly into Salesforce Leads, Contacts, and Custom Objects with duplicate checks.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-v2">
+                                    <span class="project-stat-accent">3K+ Installs</span>
+                                    <span>4.7 ★ (40)</span>
+                                </div>
+                                <span class="project-cta-v2">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 4: CF7 Database Engine -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="0" data-category="wordpress" href="wpforms-google-sheets.html">
+                        <div class="project-preview-v2">
+                            <span class="project-preview-badge">● Indexed Tables</span>
+                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">CF7 Payload</text>
+                                
+                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2"/>
+                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
+                                
+                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">SQL Indexer</text>
+                                
+                                <path d="M186 40 H215" stroke="#10b981" stroke-width="1.2"/>
+                                <polygon points="215,37 221,40 215,43" fill="#10b981"/>
+                                
+                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="#10b981" stroke-width="1.2"/>
+                                <text x="245" y="44" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">CSV Stream</text>
+                            </svg>
+                        </div>
+                        <div class="project-body-v2">
+                            <div class="project-tags-v2">
+                                <span class="project-tag-v2">Contact Form 7</span>
+                                <span class="project-tag-v2">MySQL Optimization</span>
+                                <span class="project-tag-v2">Memory Safe</span>
+                            </div>
+                            <h2 class="project-title-v2">CF7 Database & Export Engine</h2>
+                            <p class="project-desc-v2">Dedicated indexed database store for Contact Form 7 submissions. Bypasses postmeta overhead and enables streaming exports of 100k+ rows.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-v2">
+                                    <span class="project-stat-accent">8K+ Installs</span>
+                                    <span>4.8 ★ (90)</span>
+                                </div>
+                                <span class="project-cta-v2">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 5: WooCommerce Partial Payments -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="1" data-category="woocommerce" href="wpforms-google-sheets.html">
+                        <div class="project-preview-v2">
+                            <span class="project-preview-badge">● Stripe Core</span>
+                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">Order Checkout</text>
+                                
+                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2"/>
+                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
+                                
+                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">Deposit Split</text>
+                                
+                                <path d="M186 40 H215" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <polygon points="215,37 221,40 215,43" fill="rgba(255,255,255,0.4)"/>
+                                
+                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="rgba(255,255,255,0.15)" stroke-width="1.2"/>
+                                <text x="245" y="44" fill="#94a3b8" font-size="8.5" font-family="monospace" text-anchor="middle">Auto Settle</text>
+                            </svg>
+                        </div>
+                        <div class="project-body-v2">
+                            <div class="project-tags-v2">
+                                <span class="project-tag-v2">WooCommerce</span>
+                                <span class="project-tag-v2">Payment Gateways</span>
+                                <span class="project-tag-v2">Schedules</span>
+                            </div>
+                            <h2 class="project-title-v2">WooCommerce Partial Payment Engine</h2>
+                            <p class="project-desc-v2">Flexible installment and layaway system for WooCommerce. Supports percentage deposits, milestone billing, and automated customer reminders.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-v2">
+                                    <span class="project-stat-accent">2K+ Installs</span>
+                                    <span>4.6 ★ (35)</span>
+                                </div>
+                                <span class="project-cta-v2">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Project 6: URL Shortener & Analytics Core -->
+                    <a class="project-card-v2 spotlight-card" data-animate="fade-up" data-animate-delay="2" data-category="automation" href="wpforms-google-sheets.html">
+                        <div class="project-preview-v2">
+                            <span class="project-preview-badge">● Sub-5ms TTFB</span>
+                            <svg class="project-blueprint-svg" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="15" y="24" width="70" height="32" rx="4" fill="#16181e" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+                                <text x="50" y="44" fill="#f8fafc" font-size="9" font-family="monospace" text-anchor="middle">Short Link</text>
+                                
+                                <path d="M85 40 H120" stroke="#38bdf8" stroke-width="1.2"/>
+                                <polygon points="120,37 126,40 120,43" fill="#38bdf8"/>
+                                
+                                <rect x="126" y="24" width="60" height="32" rx="4" fill="#16181e" stroke="#38bdf8" stroke-width="1.2"/>
+                                <text x="156" y="44" fill="#38bdf8" font-size="8.5" font-family="monospace" text-anchor="middle">Redis Router</text>
+                                
+                                <path d="M186 40 H215" stroke="#10b981" stroke-width="1.2"/>
+                                <polygon points="215,37 221,40 215,43" fill="#10b981"/>
+                                
+                                <rect x="221" y="24" width="48" height="32" rx="4" fill="#101216" stroke="#10b981" stroke-width="1.2"/>
+                                <text x="245" y="44" fill="#10b981" font-size="8.5" font-family="monospace" text-anchor="middle">301 Redirect</text>
+                            </svg>
+                        </div>
+                        <div class="project-body-v2">
+                            <div class="project-tags-v2">
+                                <span class="project-tag-v2">High Scale</span>
+                                <span class="project-tag-v2">Redis</span>
+                                <span class="project-tag-v2">Click Telemetry</span>
+                            </div>
+                            <h2 class="project-title-v2">High-Speed URL Shortener Core</h2>
+                            <p class="project-desc-v2">Microsecond-latency link routing plugin utilizing Redis in-memory lookup. Captures geo-location, browser agents, and conversion attribution.</p>
+                            <div class="project-footer-v2">
+                                <div class="project-stats-v2">
+                                    <span class="project-stat-accent">6K+ Installs</span>
+                                    <span>4.7 ★ (55)</span>
+                                </div>
+                                <span class="project-cta-v2">
+                                    Architecture Specs
+                                    <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Call to action -->
+                <div style="text-align:center;margin-top:var(--space-16)" data-animate="fade-up">
+                    <a class="btn btn-primary" href="../../pages/contact.html">
+                        Discuss a Custom Plugin or Integration
+                        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="nav-logo-icon">JH</div>
+                    <span>Jewel Hossain — WordPress & Systems Engineer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="../../pages/projects/projects.html">Projects</a>
+                    <a href="../../pages/services/services.html">Services</a>
+                    <a href="../../pages/about.html">About</a>
+                    <a href="../../pages/blog/blog.html">Blog</a>
+                    <a href="../../pages/contact.html">Contact</a>
+                    <a href="#" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">↑ Return to Top</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Jewel Hossain · Crafted with clean HTML, CSS & JavaScript
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top">↑</button>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/animations.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>About — Jewel Hossain</title>
-<meta name="description" content="Portfolio of Jewel Hossain — WordPress Plugin Engineer, Full Stack Developer, and Automation Specialist.">
+<title>About — Jewel Hossain | WordPress & Systems Engineer</title>
+<meta name="description" content="WordPress Plugin Engineer & Systems Developer with 7+ years of building production-grade plugins and enterprise API integrations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -16,108 +16,307 @@
 <link rel="stylesheet" href="../css/pages.css">
 <link rel="stylesheet" href="../css/responsive.css">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%233b82f6'/><stop offset='1' stop-color='%238b5cf6'/></linearGradient></defs><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='white' font-family='sans-serif' font-weight='800' font-size='14'>JH</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2312141a'/><text x='50%25' y='55%25' text-anchor='middle' dominant-baseline='central' fill='%23f8fafc' font-family='monospace' font-weight='700' font-size='13'>JH</text></svg>">
 </head>
 <body>
-<!-- Loader -->
-<div class="loader" id="loader"><div class="loader-logo">JH</div><div class="loader-bar"><div class="loader-fill"></div></div><div class="loader-percent" id="loader-percent">0%</div></div>
-<!-- Cursor -->
-<div class="cursor-ring" id="cursor-ring"></div>
-<div class="cursor-dot" id="cursor-dot"></div>
-<div class="mouse-glow" id="mouse-glow"></div>
-<!-- Progress -->
-<div class="scroll-progress" id="scroll-progress"></div>
-<!-- Overlays -->
-<div class="noise"></div>
-<div class="grid-overlay"></div>
-<div class="blobs"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
-<!-- Command Palette -->
-<div class="cmd-palette" id="cmd-palette">
-<div class="cmd-box">
-<div class="cmd-input-wrap"><span class="cmd-icon">⌘</span><input class="cmd-input" id="cmd-input" placeholder="Type a command or search..." autocomplete="off"></div>
-<div class="cmd-results" id="cmd-results">
-<div class="cmd-item" data-href="../index.html"><span class="cmd-item-icon">🏠</span> Home</div>
-<div class="cmd-item" data-href="../pages/about.html"><span class="cmd-item-icon">👤</span> About</div>
-<div class="cmd-item" data-href="../pages/resume.html"><span class="cmd-item-icon">📄</span> Resume</div>
-<div class="cmd-item" data-href="../pages/projects/projects.html"><span class="cmd-item-icon">🚀</span> Projects</div>
-<div class="cmd-item" data-href="../pages/services/services.html"><span class="cmd-item-icon">⚡</span> Services</div>
-<div class="cmd-item" data-href="../pages/blog/blog.html"><span class="cmd-item-icon">📝</span> Blog</div>
-<div class="cmd-item" data-href="../pages/contact.html"><span class="cmd-item-icon">📬</span> Contact</div>
-<div class="cmd-item" data-href="../pages/tech-stack.html"><span class="cmd-item-icon">🛠️</span> Tech Stack</div>
-<div class="cmd-item" data-href="../pages/case-studies/wpforms-google-sheets.html"><span class="cmd-item-icon">📊</span> Case Study</div>
-</div>
-<div class="cmd-hint">⌘K to toggle · ESC to close</div>
-</div>
-</div>
-<!-- Navbar -->
-<nav class="navbar" id="navbar">
-<a class="nav-logo" href="../index.html"><div class="nav-logo-icon">JH</div><span>Jewel Hossain</span></a>
-<div class="nav-links">
-<a class="nav-link" href="../index.html">Home</a>
-<a class="nav-link active" href="../pages/about.html">About</a>
-<a class="nav-link" href="../pages/resume.html">Resume</a>
-<a class="nav-link" href="../pages/projects/projects.html">Projects</a>
-<a class="nav-link" href="../pages/services/services.html">Services</a>
-<a class="nav-link" href="../pages/blog/blog.html">Blog</a>
-<a class="nav-link" href="../pages/contact.html">Contact</a>
-</div>
-<a class="nav-cta magnetic" href="../pages/contact.html">Let's Talk</a>
-<button class="nav-mobile-btn" id="mobile-menu-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
-</nav>
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobile-menu">
-<button class="mobile-close" id="mobile-close-btn">✕</button>
-<a href="../index.html">Home</a>
-<a href="../pages/about.html">About</a>
-<a href="../pages/resume.html">Resume</a>
-<a href="../pages/projects/projects.html">Projects</a>
-<a href="../pages/services/services.html">Services</a>
-<a href="../pages/blog/blog.html">Blog</a>
-<a href="../pages/tech-stack.html">Tech Stack</a>
-<a href="../pages/contact.html">Contact</a>
-</div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-<!-- PAGE CONTENT -->
-<main class="page-wrap">
+    <!-- Command Palette -->
+    <div class="cmd-palette" id="cmd-palette">
+        <div class="cmd-box">
+            <div class="cmd-input-wrap">
+                <span class="cmd-icon">/</span>
+                <input class="cmd-input" id="cmd-input" placeholder="Type a destination or search..." autocomplete="off">
+            </div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-item" data-href="../index.html"><span class="cmd-item-icon">[01]</span> Home</div>
+                <div class="cmd-item" data-href="../pages/about.html"><span class="cmd-item-icon">[02]</span> About</div>
+                <div class="cmd-item" data-href="../pages/resume.html"><span class="cmd-item-icon">[03]</span> Resume</div>
+                <div class="cmd-item" data-href="../pages/projects/projects.html"><span class="cmd-item-icon">[04]</span> Projects</div>
+                <div class="cmd-item" data-href="../pages/services/services.html"><span class="cmd-item-icon">[05]</span> Services</div>
+                <div class="cmd-item" data-href="../pages/blog/blog.html"><span class="cmd-item-icon">[06]</span> Engineering Blog</div>
+                <div class="cmd-item" data-href="../pages/contact.html"><span class="cmd-item-icon">[07]</span> Contact</div>
+                <div class="cmd-item" data-href="../pages/tech-stack.html"><span class="cmd-item-icon">[08]</span> Technical Stack</div>
+            </div>
+            <div class="cmd-hint">Press ⌘K or Ctrl+K to toggle · ESC to dismiss</div>
+        </div>
+    </div>
 
-<section style="padding-top:150px"><div class="container">
-<div class="section-header" data-animate="fade-up"><div class="badge badge-accent section-badge">About Me</div><h2 class="section-title">Building Scalable Solutions<br>With Code & Creativity</h2></div>
-<div class="about-grid">
-<div data-animate="fade-right"><div class="about-img-box"><img src="../assets/images/about-portrait.png" alt="Jewel Hossain"><div class="about-img-overlay"><span class="about-img-label">📍 Based in Bangladesh</span></div></div></div>
-<div data-animate="fade-left">
-<h3 class="font-display" style="font-size:var(--text-2xl);font-weight:700;margin-bottom:var(--space-4)">My Journey</h3>
-<p style="color:var(--text-secondary);line-height:1.8;margin-bottom:var(--space-4)">I'm a WordPress Plugin Engineer with 7+ years of experience building scalable, production-grade plugins powering thousands of websites. My journey started with curiosity about WordPress internals and evolved into a passion for creating tools that solve real problems.</p>
-<p style="color:var(--text-secondary);line-height:1.8;margin-bottom:var(--space-4)">I've specialized in WPForms and Contact Form 7 ecosystems, building addons for Google Sheets, Salesforce, Slack, and more. I combine WordPress expertise with modern full-stack skills in React, Node.js, and API architectures.</p>
-<div class="about-highlights">
-<div class="about-highlight" data-animate="fade-up" data-animate-delay="1"><div class="about-highlight-icon">🔌</div><h4>WordPress Plugin Expert</h4><p>Advanced plugin architecture & ecosystem development</p></div>
-<div class="about-highlight" data-animate="fade-up" data-animate-delay="2"><div class="about-highlight-icon">🔗</div><h4>Full Stack Developer</h4><p>React, Node.js, PHP, REST APIs, databases</p></div>
-<div class="about-highlight" data-animate="fade-up" data-animate-delay="3"><div class="about-highlight-icon">🤖</div><h4>Automation Specialist</h4><p>CRM integrations, workflow automation, webhooks</p></div>
-<div class="about-highlight" data-animate="fade-up" data-animate-delay="4"><div class="about-highlight-icon">🏗️</div><h4>Building Digital Solutions</h4><p>SaaS-level WordPress solutions at scale</p></div>
-</div>
-<div class="philosophy-block" data-animate="fade-up"><p>Code is not just my profession, it's my passion to solve problems and create impact.</p><div class="attribution">— Jewel Hossain</div></div>
-</div>
-</div>
-</div></section>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <a class="nav-logo" href="../index.html">
+            <div class="nav-logo-icon">JH</div>
+            <span>jewel.engineer</span>
+        </a>
+        <div class="nav-links">
+            <a class="nav-link" href="../index.html">Overview</a>
+            <a class="nav-link" href="../pages/projects/projects.html">Projects</a>
+            <a class="nav-link" href="../pages/services/services.html">Services</a>
+            <a class="nav-link active" href="../pages/about.html">About</a>
+            <a class="nav-link" href="../pages/blog/blog.html">Blog</a>
+            <a class="nav-link" href="../pages/contact.html">Contact</a>
+        </div>
+        <a class="nav-cta" href="../pages/contact.html">Let's Talk</a>
+        <button class="nav-mobile-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+        </button>
+    </nav>
 
-</main>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-close" id="mobile-close-btn" aria-label="Close menu">✕</button>
+        <a href="../index.html">Overview</a>
+        <a href="../pages/projects/projects.html">Projects</a>
+        <a href="../pages/services/services.html">Services</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/resume.html">Resume</a>
+        <a href="../pages/blog/blog.html">Blog</a>
+        <a href="../pages/tech-stack.html">Tech Stack</a>
+        <a href="../pages/contact.html">Contact</a>
+    </div>
 
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<div class="footer-inner">
-<div class="footer-logo"><div class="nav-logo-icon">JH</div>Jewel Hossain</div>
-<div class="footer-links">
-<a href="../pages/about.html">About</a>
-<a href="../pages/projects/projects.html">Projects</a>
-<a href="../pages/contact.html">Contact</a>
-<a href="#" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">↑ Top</a>
-</div>
-</div>
-<div class="footer-bottom">© 2024 Jewel Hossain. All rights reserved.</div>
-</div>
-</footer>
-<button class="back-to-top" id="back-to-top">↑</button>
-<script src="../js/app.js"></script>
-<script src="../js/animations.js"></script>
+    <!-- PAGE CONTENT -->
+    <main class="page-wrap">
+
+        <!-- About Hero Section -->
+        <section class="about-hero-section">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">Engineering Profile</div>
+                    <h1 class="section-title">Architecting Scalable WordPress Ecosystems<br>& Enterprise Integrations</h1>
+                    <p class="section-desc">7+ years developing mission-critical plugins, high-throughput API pipelines, and resilient backend systems.</p>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left Column: Portrait & Stats -->
+                    <div data-animate="fade-right">
+                        <div class="about-img-box">
+                            <img src="../assets/images/about-portrait.png" alt="Jewel Hossain — WordPress & Systems Engineer">
+                            <div class="about-img-overlay">
+                                <span class="about-img-label">
+                                    <span class="badge-dot"></span> Available for Selected Architecture Projects
+                                </span>
+                                <div style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary)">
+                                    Dhaka, Bangladesh · UTC+6 · Remote Worldwide
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-quick-stats">
+                            <div class="about-stat-pill">
+                                <span class="about-stat-num">7+</span>
+                                <span class="about-stat-txt">Years Engineering</span>
+                            </div>
+                            <div class="about-stat-pill">
+                                <span class="about-stat-num">50K+</span>
+                                <span class="about-stat-txt">Active Installs</span>
+                            </div>
+                            <div class="about-stat-pill">
+                                <span class="about-stat-num">10M+</span>
+                                <span class="about-stat-txt">API Syncs Processed</span>
+                            </div>
+                            <div class="about-stat-pill">
+                                <span class="about-stat-num">99.9%</span>
+                                <span class="about-stat-txt">Pipeline Reliability</span>
+                            </div>
+                        </div>
+
+                        <!-- Direct Profile Links -->
+                        <div class="social-links" style="margin-top:var(--space-5);justify-content:center">
+                            <a href="https://github.com/jewelhossain" target="_blank" rel="noopener" class="social-link" title="GitHub" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
+                            <a href="https://linkedin.com/in/jewelhossain" target="_blank" rel="noopener" class="social-link" title="LinkedIn" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            </a>
+                            <a href="https://x.com/jewelhossain" target="_blank" rel="noopener" class="social-link" title="Twitter / X" aria-label="Twitter / X">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="mailto:contact@jewel.engineer" class="social-link" title="Email" aria-label="Email">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            </a>
+                            <a href="https://profiles.wordpress.org/jewelhossain" target="_blank" rel="noopener" class="social-link" title="WordPress.org Profile" aria-label="WordPress.org">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.74-1.5l3.87-10.6 2.87 8.44a8.17 8.17 0 0 1-2 3.66zm6.38-4.94a8.17 8.17 0 0 1-1.39 2.58l-2.48-7.39 1.77-5.14a8.2 8.2 0 0 1 2.1 9.95zM3.8 12a8.16 8.16 0 0 1 4-7l-5.18 14.2A8.16 8.16 0 0 1 3.8 12zm8.2-8.2a8.16 8.16 0 0 1 5.48 2.18L14 16.2 11.2 8.1a2.86 2.86 0 0 0-.2-.5 1.5 1.5 0 0 0-1.5-.7h-.3l2.8-3.1z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Narrative & Pillars -->
+                    <div data-animate="fade-left">
+                        <h2 class="font-display" style="font-size:var(--text-xl);font-weight:700;margin-bottom:var(--space-4);color:var(--text-primary)">
+                            Building High-Assurance Systems on the Open Web
+                        </h2>
+                        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:var(--space-4);font-size:var(--text-sm);max-width:68ch">
+                            I am a WordPress Plugin Engineer and Systems Developer specializing in decoupled plugin architectures, complex third-party SaaS integrations, and high-concurrency database optimizations. Over the past 7+ years, I have architected extensions trusted by enterprise clients and thousands of agency teams worldwide.
+                        </p>
+                        <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:var(--space-6);font-size:var(--text-sm);max-width:68ch">
+                            My core expertise centers on the WPForms, Contact Form 7, and WooCommerce ecosystems, building robust bridges to Google Sheets API, Salesforce CRM, HubSpot, and custom webhook dispatchers. I write strictly typed PHP 8.3 with PSR-4 autoloading, PSR-12 formatting, and automated CI/CD test coverage.
+                        </p>
+
+                        <!-- Engineering Pillars -->
+                        <div class="about-highlights">
+                            <div class="about-highlight">
+                                <div class="about-highlight-header">
+                                    <div class="about-highlight-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                                </div>
+                                    <h3 style="margin:0">Decoupled OOP Architecture</h3>
+                                </div>
+                                <p>Strict dependency injection, PSR-4 autoloading, and modular services designed for 100% zero-regression updates.</p>
+                            </div>
+                            <div class="about-highlight">
+                                <div class="about-highlight-header">
+                                    <div class="about-highlight-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                                </div>
+                                    <h3 style="margin:0">Resilient API Pipelines</h3>
+                                </div>
+                                <p>Automated OAuth2 token refresh, exponential backoff retries, and dead-letter queues to survive third-party outages.</p>
+                            </div>
+                            <div class="about-highlight">
+                                <div class="about-highlight-header">
+                                    <div class="about-highlight-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                                </div>
+                                    <h3 style="margin:0">Optimized Data Stores</h3>
+                                </div>
+                                <p>Custom indexed MySQL tables bypassing wp_postmeta bottlenecks, persistent Redis caching, and sub-50ms queries.</p>
+                            </div>
+                            <div class="about-highlight">
+                                <div class="about-highlight-header">
+                                    <div class="about-highlight-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                                </div>
+                                    <h3 style="margin:0">Modern Frontend & React</h3>
+                                </div>
+                                <p>Tailored WP-Admin settings apps using React & Gutenberg component libraries, plus headless Next.js frontends.</p>
+                            </div>
+                        </div>
+
+                        <!-- Philosophy Block -->
+                        <div class="philosophy-block">
+                            <p>
+                                "Code in production is a liability unless it is strictly typed, defensively designed, and built to survive external API failures without user intervention."
+                            </p>
+                            <div class="attribution">— Architectural Principle</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Milestones Timeline -->
+        <section class="timeline-section">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">Experience & Impact</div>
+                    <h2 class="section-title">Milestones & Systems Delivered</h2>
+                    <p class="section-desc">A track record of engineering scalable software that teams rely upon daily.</p>
+                </div>
+
+                <div class="timeline" data-animate="fade-up">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023 — Present</div>
+                        <h3 class="timeline-title">Principal WordPress Plugin Engineer</h3>
+                        <div class="timeline-company">Enterprise Ecosystem Products · Active Fleet of 50K+ Sites</div>
+                        <p class="timeline-desc">
+                            Leading architecture for high-volume form addons and CRM pipelines. Designed a queue-backed Google Sheets v4 sync engine handling 10M+ rows with 99.9% uptime. Implemented automated static analysis (PHPStan Level 8) and CI/CD pipelines across all plugin repositories.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2021 — 2023</div>
+                        <h3 class="timeline-title">Senior Systems & API Integration Engineer</h3>
+                        <div class="timeline-company">Custom SaaS Connectors & WooCommerce Architecture</div>
+                        <p class="timeline-desc">
+                            Architected bi-directional Salesforce and HubSpot connectors with automatic schema mapping. Developed custom WooCommerce payment gateway extensions with multi-phase deposit schedules and webhook synchronization.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2018 — 2021</div>
+                        <h3 class="timeline-title">Full Stack WordPress Developer</h3>
+                        <div class="timeline-company">Systems & Digital Solutions</div>
+                        <p class="timeline-desc">
+                            Built custom WordPress plugins, bespoke admin dashboards with React, and RESTful API endpoints for client applications. Optimized database schemas and introduced object caching for sites with over 500k monthly visitors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Principles -->
+        <section class="principles-section">
+            <div class="container">
+                <div class="section-header" data-animate="fade-up">
+                    <div class="badge badge-accent section-badge">Engineering Values</div>
+                    <h2 class="section-title">How I Build Software</h2>
+                    <p class="section-desc">Standards that ensure longevity, security, and developer ergonomics.</p>
+                </div>
+
+                <div class="principles-grid" data-animate="fade-up">
+                    <div class="principle-card">
+                        <div class="principle-num">[01]</div>
+                        <h3>Zero Regressions by Default</h3>
+                        <p>Every critical path is guarded with unit and integration tests. Changes are validated with PHPStan, Pest PHP, and WordPress Coding Standards (WPCS) before deployment.</p>
+                    </div>
+                    <div class="principle-card">
+                        <div class="principle-num">[02]</div>
+                        <h3>Asynchronous Everything</h3>
+                        <p>External network I/O never blocks user page requests. Heavy sync tasks run in isolated background workers using Action Scheduler and Redis queues with automatic retry policies.</p>
+                    </div>
+                    <div class="principle-card">
+                        <div class="principle-num">[03]</div>
+                        <h3>Defensive Security Design</h3>
+                        <p>Every AJAX and REST endpoint enforces explicit capability checks, cryptographic nonces, strict input sanitization, and parameterized SQL queries to eliminate vulnerabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Call to action -->
+                <div style="text-align:center;margin-top:var(--space-12)" data-animate="fade-up">
+                    <a class="btn btn-primary" href="../pages/contact.html">
+                        Discuss Your Project Architecture
+                        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <div class="nav-logo-icon">JH</div>
+                    <span>Jewel Hossain — WordPress & Systems Engineer</span>
+                </div>
+                <div class="footer-links">
+                    <a href="../pages/projects/projects.html">Projects</a>
+                    <a href="../pages/services/services.html">Services</a>
+                    <a href="../pages/about.html">About</a>
+                    <a href="../pages/blog/blog.html">Blog</a>
+                    <a href="../pages/contact.html">Contact</a>
+                    <a href="#" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">↑ Return to Top</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Jewel Hossain · Crafted with clean HTML, CSS & JavaScript
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top">↑</button>
+    <script src="../js/app.js"></script>
+    <script src="../js/animations.js"></script>
 </body>
 </html>
